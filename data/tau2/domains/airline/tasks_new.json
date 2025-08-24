@@ -53,17 +53,17 @@
             {
               "function_name": "search_direct_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "SFO",
+                "destination": "LAX",
+                "date": "2024-06-15"
               }
             },
             {
               "function_name": "search_onestop_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "SFO",
+                "destination": "LAX",
+                "date": "2024-06-15"
               }
             }
           ]
@@ -75,14 +75,14 @@
               "function_name": "book_reservation",
               "params": {
                 "user_id": "james_williams_1287",
-                "origin": "PHL",
-                "destination": "LGA",
+                "origin": "SFO",
+                "destination": "LAX",
                 "flight_type": "one_way",
                 "cabin": "economy",
                 "flights": [
                   {
-                    "flight_number": "HAT001",
-                    "date": "2024-05-16"
+                    "flight_number": "HAT163",
+                    "date": "2024-06-15"
                   }
                 ],
                 "passengers": [
@@ -172,17 +172,17 @@
             {
               "function_name": "search_direct_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "JFK",
+                "destination": "MIA",
+                "date": "2024-07-20"
               }
             },
             {
               "function_name": "search_onestop_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "JFK",
+                "destination": "MIA",
+                "date": "2024-07-20"
               }
             }
           ]
@@ -194,14 +194,14 @@
               "function_name": "book_reservation",
               "params": {
                 "user_id": "sarah_johnson_3456",
-                "origin": "PHL",
-                "destination": "LGA",
+                "origin": "JFK",
+                "destination": "MIA",
                 "flight_type": "one_way",
                 "cabin": "economy",
                 "flights": [
                   {
-                    "flight_number": "HAT001",
-                    "date": "2024-05-16"
+                    "flight_number": "HAT014",
+                    "date": "2024-07-20"
                   }
                 ],
                 "passengers": [
@@ -292,17 +292,17 @@
             {
               "function_name": "search_direct_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "ORD",
+                "destination": "ATL",
+                "date": "2024-05-10"
               }
             },
             {
               "function_name": "search_onestop_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "ORD",
+                "destination": "ATL",
+                "date": "2024-05-10"
               }
             }
           ]
@@ -314,14 +314,14 @@
               "function_name": "book_reservation",
               "params": {
                 "user_id": "michael_brown_7821",
-                "origin": "PHL",
-                "destination": "LGA",
+                "origin": "ORD",
+                "destination": "ATL",
                 "flight_type": "one_way",
                 "cabin": "economy",
                 "flights": [
                   {
-                    "flight_number": "HAT001",
-                    "date": "2024-05-16"
+                    "flight_number": "HAT093",
+                    "date": "2024-05-10"
                   }
                 ],
                 "passengers": [
@@ -412,17 +412,17 @@
             {
               "function_name": "search_direct_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "LAX",
+                "destination": "SEA",
+                "date": "2024-06-25"
               }
             },
             {
               "function_name": "search_onestop_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "LAX",
+                "destination": "SEA",
+                "date": "2024-06-25"
               }
             }
           ]
@@ -434,14 +434,14 @@
               "function_name": "book_reservation",
               "params": {
                 "user_id": "emily_davis_2134",
-                "origin": "PHL",
-                "destination": "LGA",
+                "origin": "LAX",
+                "destination": "SEA",
                 "flight_type": "one_way",
                 "cabin": "economy",
                 "flights": [
                   {
-                    "flight_number": "HAT001",
-                    "date": "2024-05-16"
+                    "flight_number": "FLT301",
+                    "date": "2024-06-25"
                   }
                 ],
                 "passengers": [
@@ -532,17 +532,17 @@
             {
               "function_name": "search_direct_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "BOS",
+                "destination": "DEN",
+                "date": "2024-08-05"
               }
             },
             {
               "function_name": "search_onestop_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "BOS",
+                "destination": "DEN",
+                "date": "2024-08-05"
               }
             }
           ]
@@ -554,14 +554,14 @@
               "function_name": "book_reservation",
               "params": {
                 "user_id": "david_miller_9876",
-                "origin": "PHL",
-                "destination": "LGA",
+                "origin": "BOS",
+                "destination": "DEN",
                 "flight_type": "one_way",
                 "cabin": "economy",
                 "flights": [
                   {
-                    "flight_number": "HAT001",
-                    "date": "2024-05-16"
+                    "flight_number": "FLT302",
+                    "date": "2024-08-05"
                   }
                 ],
                 "passengers": [
@@ -3222,17 +3222,17 @@
             {
               "function_name": "search_direct_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "DFW",
+                "destination": "PHX",
+                "date": "2024-06-18"
               }
             },
             {
               "function_name": "search_onestop_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "DFW",
+                "destination": "PHX",
+                "date": "2024-06-18"
               }
             }
           ]
@@ -3244,14 +3244,14 @@
               "function_name": "book_reservation",
               "params": {
                 "user_id": "matthew_davis_6785",
-                "origin": "PHL",
-                "destination": "LGA",
+                "origin": "DFW",
+                "destination": "PHX",
                 "flight_type": "one_way",
                 "cabin": "economy",
                 "flights": [
                   {
-                    "flight_number": "HAT001",
-                    "date": "2024-05-16"
+                    "flight_number": "FLT303",
+                    "date": "2024-06-18"
                   }
                 ],
                 "passengers": [
@@ -3294,17 +3294,17 @@
             {
               "function_name": "search_direct_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "DFW",
+                "destination": "PHX",
+                "date": "2024-06-18"
               }
             },
             {
               "function_name": "search_onestop_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "DFW",
+                "destination": "PHX",
+                "date": "2024-06-18"
               }
             }
           ]
@@ -3380,17 +3380,17 @@
             {
               "function_name": "search_direct_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "MIA",
+                "destination": "ORD",
+                "date": "2024-07-12"
               }
             },
             {
               "function_name": "search_onestop_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "MIA",
+                "destination": "ORD",
+                "date": "2024-07-12"
               }
             }
           ]
@@ -3402,14 +3402,14 @@
               "function_name": "book_reservation",
               "params": {
                 "user_id": "michelle_garcia_9128",
-                "origin": "PHL",
-                "destination": "LGA",
+                "origin": "MIA",
+                "destination": "ORD",
                 "flight_type": "one_way",
                 "cabin": "economy",
                 "flights": [
                   {
-                    "flight_number": "HAT001",
-                    "date": "2024-05-16"
+                    "flight_number": "HAT129",
+                    "date": "2024-07-12"
                   }
                 ],
                 "passengers": [
@@ -3452,17 +3452,17 @@
             {
               "function_name": "search_direct_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "MIA",
+                "destination": "ORD",
+                "date": "2024-07-12"
               }
             },
             {
               "function_name": "search_onestop_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "MIA",
+                "destination": "ORD",
+                "date": "2024-07-12"
               }
             }
           ]
@@ -3538,17 +3538,17 @@
             {
               "function_name": "search_direct_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "ATL",
+                "destination": "LAX",
+                "date": "2024-05-22"
               }
             },
             {
               "function_name": "search_onestop_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "ATL",
+                "destination": "LAX",
+                "date": "2024-05-22"
               }
             }
           ]
@@ -3560,14 +3560,14 @@
               "function_name": "book_reservation",
               "params": {
                 "user_id": "richard_miller_4372",
-                "origin": "PHL",
-                "destination": "LGA",
+                "origin": "ATL",
+                "destination": "LAX",
                 "flight_type": "one_way",
                 "cabin": "economy",
                 "flights": [
                   {
-                    "flight_number": "HAT001",
-                    "date": "2024-05-16"
+                    "flight_number": "FLT304",
+                    "date": "2024-05-22"
                   }
                 ],
                 "passengers": [
@@ -3610,17 +3610,17 @@
             {
               "function_name": "search_direct_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "ATL",
+                "destination": "LAX",
+                "date": "2024-05-22"
               }
             },
             {
               "function_name": "search_onestop_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "ATL",
+                "destination": "LAX",
+                "date": "2024-05-22"
               }
             }
           ]
@@ -3696,17 +3696,17 @@
             {
               "function_name": "search_direct_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "SEA",
+                "destination": "JFK",
+                "date": "2024-06-30"
               }
             },
             {
               "function_name": "search_onestop_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "SEA",
+                "destination": "JFK",
+                "date": "2024-06-30"
               }
             }
           ]
@@ -3718,14 +3718,14 @@
               "function_name": "book_reservation",
               "params": {
                 "user_id": "deborah_wilson_7856",
-                "origin": "PHL",
-                "destination": "LGA",
+                "origin": "SEA",
+                "destination": "JFK",
                 "flight_type": "one_way",
                 "cabin": "economy",
                 "flights": [
                   {
-                    "flight_number": "HAT001",
-                    "date": "2024-05-16"
+                    "flight_number": "HAT021",
+                    "date": "2024-06-30"
                   }
                 ],
                 "passengers": [
@@ -3768,17 +3768,17 @@
             {
               "function_name": "search_direct_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "SEA",
+                "destination": "JFK",
+                "date": "2024-06-30"
               }
             },
             {
               "function_name": "search_onestop_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "SEA",
+                "destination": "JFK",
+                "date": "2024-06-30"
               }
             }
           ]
@@ -3854,17 +3854,17 @@
             {
               "function_name": "search_direct_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "DEN",
+                "destination": "SFO",
+                "date": "2024-08-15"
               }
             },
             {
               "function_name": "search_onestop_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "DEN",
+                "destination": "SFO",
+                "date": "2024-08-15"
               }
             }
           ]
@@ -3876,14 +3876,14 @@
               "function_name": "book_reservation",
               "params": {
                 "user_id": "william_moore_2541",
-                "origin": "PHL",
-                "destination": "LGA",
+                "origin": "DEN",
+                "destination": "SFO",
                 "flight_type": "one_way",
                 "cabin": "economy",
                 "flights": [
                   {
-                    "flight_number": "HAT001",
-                    "date": "2024-05-16"
+                    "flight_number": "FLT305",
+                    "date": "2024-08-15"
                   }
                 ],
                 "passengers": [
@@ -3926,17 +3926,17 @@
             {
               "function_name": "search_direct_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "DEN",
+                "destination": "SFO",
+                "date": "2024-08-15"
               }
             },
             {
               "function_name": "search_onestop_flight",
               "params": {
-                "origin": "PHL",
-                "destination": "LGA",
-                "date": "2024-05-16"
+                "origin": "DEN",
+                "destination": "SFO",
+                "date": "2024-08-15"
               }
             }
           ]
