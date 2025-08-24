@@ -47,8 +47,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -78,21 +77,6 @@
           ]
         },
         {
-          "action_id": "process_return",
-          "allowed_tools": [
-            {
-              "function_name": "return_delivered_order_items",
-              "params": {
-                "order_id": "#W2378156",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
-        },
-        {
           "action_id": "process_exchange",
           "allowed_tools": [
             {
@@ -112,9 +96,8 @@
         }
       ],
       "communicate_info": [
-        "#W2378156",
-        "$342.81",
-        "Vacuum Cleaner"
+        "$1819.92",
+        "#W2378156"
       ]
     }
   },
@@ -167,8 +150,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -232,9 +214,8 @@
         }
       ],
       "communicate_info": [
-        "#W2378156",
-        "$342.81",
-        "Vacuum Cleaner"
+        "$1819.92",
+        "#W2378156"
       ]
     }
   },
@@ -286,8 +267,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -330,29 +310,11 @@
               }
             }
           ]
-        },
-        {
-          "action_id": "process_exchange",
-          "allowed_tools": [
-            {
-              "function_name": "exchange_delivered_order_items",
-              "params": {
-                "order_id": "#W2378156",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
         }
       ],
       "communicate_info": [
-        "50 products available",
-        "yusuf_rossi_9620"
+        "$1819.92",
+        "#W2378156"
       ]
     }
   },
@@ -405,9 +367,8 @@
     "evaluation_criteria": {
       "nl_assertions": [
         "Agent verified customer identity before proceeding",
-        "Agent confirmed order status allows requested modifications",
-        "Agent collected complete and accurate information",
-        "Agent processed request with proper confirmation"
+        "Agent confirmed modification request details",
+        "Agent processed modification with proper confirmation"
       ],
       "action_sets": [
         {
@@ -433,11 +394,25 @@
               }
             }
           ]
+        },
+        {
+          "action_id": "modify_items",
+          "allowed_tools": [
+            {
+              "function_name": "modify_pending_order_items",
+              "params": {
+                "order_id": "N/A",
+                "item_ids": "N/A",
+                "new_item_ids": "N/A",
+                "payment_method_id": "N/A"
+              }
+            }
+          ]
         }
       ],
       "communicate_info": [
-        "50 products available",
-        "yusuf_rossi_9620"
+        "$1819.92",
+        "#W2378156"
       ]
     }
   },
@@ -490,9 +465,8 @@
     "evaluation_criteria": {
       "nl_assertions": [
         "Agent verified customer identity before proceeding",
-        "Agent confirmed order status allows requested modifications",
-        "Agent collected complete and accurate information",
-        "Agent processed request with proper confirmation"
+        "Agent confirmed modification request details",
+        "Agent processed modification with proper confirmation"
       ],
       "action_sets": [
         {
@@ -518,11 +492,25 @@
               }
             }
           ]
+        },
+        {
+          "action_id": "modify_items",
+          "allowed_tools": [
+            {
+              "function_name": "modify_pending_order_items",
+              "params": {
+                "order_id": "N/A",
+                "item_ids": "N/A",
+                "new_item_ids": "N/A",
+                "payment_method_id": "N/A"
+              }
+            }
+          ]
         }
       ],
       "communicate_info": [
-        "50 products available",
-        "yusuf_rossi_9620"
+        "$1819.92",
+        "#W2378156"
       ]
     }
   },
@@ -575,8 +563,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -640,9 +627,8 @@
         }
       ],
       "communicate_info": [
-        "#W2378156",
-        "$342.81",
-        "Vacuum Cleaner"
+        "$1819.92",
+        "#W2378156"
       ]
     }
   },
@@ -695,8 +681,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -760,9 +745,8 @@
         }
       ],
       "communicate_info": [
-        "#W2378156",
-        "$342.81",
-        "Vacuum Cleaner"
+        "$1819.92",
+        "#W2378156"
       ]
     }
   },
@@ -814,8 +798,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -845,21 +828,6 @@
           ]
         },
         {
-          "action_id": "process_return",
-          "allowed_tools": [
-            {
-              "function_name": "return_delivered_order_items",
-              "params": {
-                "order_id": "#W2378156",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
-        },
-        {
           "action_id": "process_exchange",
           "allowed_tools": [
             {
@@ -879,9 +847,8 @@
         }
       ],
       "communicate_info": [
-        "#W2378156",
-        "$342.81",
-        "Vacuum Cleaner"
+        "$1819.92",
+        "#W2378156"
       ]
     }
   },
@@ -934,8 +901,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -999,9 +965,8 @@
         }
       ],
       "communicate_info": [
-        "#W2378156",
-        "$342.81",
-        "Vacuum Cleaner"
+        "$1819.92",
+        "#W2378156"
       ]
     }
   },
@@ -1054,8 +1019,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -1119,9 +1083,8 @@
         }
       ],
       "communicate_info": [
-        "#W2378156",
-        "$342.81",
-        "Vacuum Cleaner"
+        "$1819.92",
+        "#W2378156"
       ]
     }
   },
@@ -1174,8 +1137,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -1218,30 +1180,11 @@
               }
             }
           ]
-        },
-        {
-          "action_id": "process_exchange",
-          "allowed_tools": [
-            {
-              "function_name": "exchange_delivered_order_items",
-              "params": {
-                "order_id": "#W2611340",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
         }
       ],
       "communicate_info": [
-        "#W2611340",
-        "$47.84",
-        "Water Bottle"
+        "$536.65",
+        "#W2611340"
       ]
     }
   },
@@ -1294,8 +1237,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -1338,30 +1280,11 @@
               }
             }
           ]
-        },
-        {
-          "action_id": "process_exchange",
-          "allowed_tools": [
-            {
-              "function_name": "exchange_delivered_order_items",
-              "params": {
-                "order_id": "#W4817420",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "delivered"
+        "$1380.79",
+        "#W4817420"
       ]
     }
   },
@@ -1414,10 +1337,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
-        "Agent collected complete and accurate return/exchange information",
-        "Agent processed return/exchange with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed cancellation request details",
+        "Agent processed cancellation with proper confirmation"
       ],
       "action_sets": [
         {
@@ -1460,28 +1382,21 @@
           ]
         },
         {
-          "action_id": "process_exchange",
+          "action_id": "cancel_order",
           "allowed_tools": [
             {
-              "function_name": "exchange_delivered_order_items",
+              "function_name": "cancel_pending_order",
               "params": {
-                "order_id": "#W6304490",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
+                "order_id": "N/A",
+                "reason": "N/A"
               }
             }
           ]
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "delivered"
+        "$1537.02",
+        "#W6304490"
       ]
     }
   },
@@ -1534,10 +1449,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
-        "Agent collected complete and accurate return/exchange information",
-        "Agent processed return/exchange with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed cancellation request details",
+        "Agent processed cancellation with proper confirmation"
       ],
       "action_sets": [
         {
@@ -1580,28 +1494,21 @@
           ]
         },
         {
-          "action_id": "process_exchange",
+          "action_id": "cancel_order",
           "allowed_tools": [
             {
-              "function_name": "exchange_delivered_order_items",
+              "function_name": "cancel_pending_order",
               "params": {
-                "order_id": "#W5918442",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
+                "order_id": "N/A",
+                "reason": "N/A"
               }
             }
           ]
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "delivered"
+        "$1463.70",
+        "#W5918442"
       ]
     }
   },
@@ -1654,10 +1561,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
-        "Agent collected complete and accurate return/exchange information",
-        "Agent processed return/exchange with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed cancellation request details",
+        "Agent processed cancellation with proper confirmation"
       ],
       "action_sets": [
         {
@@ -1700,28 +1606,21 @@
           ]
         },
         {
-          "action_id": "process_exchange",
+          "action_id": "cancel_order",
           "allowed_tools": [
             {
-              "function_name": "exchange_delivered_order_items",
+              "function_name": "cancel_pending_order",
               "params": {
-                "order_id": "#W2974929",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
+                "order_id": "N/A",
+                "reason": "N/A"
               }
             }
           ]
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "delivered"
+        "$182.03",
+        "#W2974929"
       ]
     }
   },
@@ -1774,9 +1673,8 @@
     "evaluation_criteria": {
       "nl_assertions": [
         "Agent verified customer identity before proceeding",
-        "Agent confirmed order status allows requested modifications",
-        "Agent collected complete and accurate information",
-        "Agent processed request with proper confirmation"
+        "Agent confirmed modification request details",
+        "Agent processed modification with proper confirmation"
       ],
       "action_sets": [
         {
@@ -1802,12 +1700,25 @@
               }
             }
           ]
+        },
+        {
+          "action_id": "modify_items",
+          "allowed_tools": [
+            {
+              "function_name": "modify_pending_order_items",
+              "params": {
+                "order_id": "N/A",
+                "item_ids": "N/A",
+                "new_item_ids": "N/A",
+                "payment_method_id": "N/A"
+              }
+            }
+          ]
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "delivered"
+        "$591.58",
+        "#W9077205"
       ]
     }
   },
@@ -1860,10 +1771,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
-        "Agent collected complete and accurate return/exchange information",
-        "Agent processed return/exchange with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed cancellation request details",
+        "Agent processed cancellation with proper confirmation"
       ],
       "action_sets": [
         {
@@ -1906,28 +1816,21 @@
           ]
         },
         {
-          "action_id": "process_exchange",
+          "action_id": "cancel_order",
           "allowed_tools": [
             {
-              "function_name": "exchange_delivered_order_items",
+              "function_name": "cancel_pending_order",
               "params": {
-                "order_id": "#W9549057",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
+                "order_id": "N/A",
+                "reason": "N/A"
               }
             }
           ]
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "delivered"
+        "$302.60",
+        "#W9549057"
       ]
     }
   },
@@ -1980,9 +1883,8 @@
     "evaluation_criteria": {
       "nl_assertions": [
         "Agent verified customer identity before proceeding",
-        "Agent confirmed order status allows requested modifications",
-        "Agent collected complete and accurate information",
-        "Agent processed request with proper confirmation"
+        "Agent confirmed modification request details",
+        "Agent processed modification with proper confirmation"
       ],
       "action_sets": [
         {
@@ -2011,9 +1913,8 @@
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "delivered"
+        "$3996.14",
+        "#W8935389"
       ]
     }
   },
@@ -2066,8 +1967,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -2131,9 +2031,8 @@
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "delivered"
+        "$338.88",
+        "#W2631563"
       ]
     }
   },
@@ -2186,8 +2085,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -2251,9 +2149,8 @@
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "delivered"
+        "$4079.45",
+        "#W6779827"
       ]
     }
   },
@@ -2306,9 +2203,8 @@
     "evaluation_criteria": {
       "nl_assertions": [
         "Agent verified customer identity before proceeding",
-        "Agent confirmed order status allows requested modifications",
-        "Agent collected complete and accurate information",
-        "Agent processed request with proper confirmation"
+        "Agent provided accurate and helpful information",
+        "Agent addressed customer inquiry professionally"
       ],
       "action_sets": [
         {
@@ -2337,9 +2233,8 @@
         }
       ],
       "communicate_info": [
-        "#W8341134",
         "$29.28",
-        "delivered"
+        "#W8341134"
       ]
     }
   },
@@ -2392,8 +2287,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -2457,9 +2351,8 @@
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "50 products available"
+        "$1635.75",
+        "#W3069600"
       ]
     }
   },
@@ -2512,10 +2405,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before making address changes",
-        "Agent confirmed order status allows address modifications",
-        "Agent collected complete and accurate new address information",
-        "Agent processed address change with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed modification request details",
+        "Agent processed modification with proper confirmation"
       ],
       "action_sets": [
         {
@@ -2559,12 +2451,40 @@
               }
             }
           ]
+        },
+        {
+          "action_id": "update_address",
+          "allowed_tools": [
+            {
+              "function_name": "modify_pending_order_address",
+              "params": {
+                "order_id": "N/A",
+                "address1": "N/A",
+                "address2": "N/A",
+                "city": "N/A",
+                "state": "N/A",
+                "country": "N/A",
+                "zip": "N/A"
+              }
+            },
+            {
+              "function_name": "modify_user_address",
+              "params": {
+                "user_id": "N/A",
+                "address1": "N/A",
+                "address2": "N/A",
+                "city": "N/A",
+                "state": "N/A",
+                "country": "N/A",
+                "zip": "N/A"
+              }
+            }
+          ]
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "delivered"
+        "$640.02",
+        "#W7647404"
       ]
     }
   },
@@ -2617,8 +2537,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -2679,12 +2598,25 @@
               }
             }
           ]
+        },
+        {
+          "action_id": "modify_items",
+          "allowed_tools": [
+            {
+              "function_name": "modify_pending_order_items",
+              "params": {
+                "order_id": "N/A",
+                "item_ids": "N/A",
+                "new_item_ids": "N/A",
+                "payment_method_id": "N/A"
+              }
+            }
+          ]
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "delivered"
+        "$1221.52",
+        "#W5455653"
       ]
     }
   },
@@ -2737,10 +2669,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
-        "Agent collected complete and accurate return/exchange information",
-        "Agent processed return/exchange with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed cancellation request details",
+        "Agent processed cancellation with proper confirmation"
       ],
       "action_sets": [
         {
@@ -2768,43 +2699,21 @@
           ]
         },
         {
-          "action_id": "process_return",
+          "action_id": "cancel_order",
           "allowed_tools": [
             {
-              "function_name": "return_delivered_order_items",
+              "function_name": "cancel_pending_order",
               "params": {
-                "order_id": "#W8808563",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
-        },
-        {
-          "action_id": "process_exchange",
-          "allowed_tools": [
-            {
-              "function_name": "exchange_delivered_order_items",
-              "params": {
-                "order_id": "#W8808563",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
+                "order_id": "N/A",
+                "reason": "N/A"
               }
             }
           ]
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "delivered"
+        "$1338.94",
+        "#W8808563"
       ]
     }
   },
@@ -2857,8 +2766,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -2901,30 +2809,11 @@
               }
             }
           ]
-        },
-        {
-          "action_id": "process_exchange",
-          "allowed_tools": [
-            {
-              "function_name": "exchange_delivered_order_items",
-              "params": {
-                "order_id": "#W5065081",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "delivered"
+        "$2502.04",
+        "#W5065081"
       ]
     }
   },
@@ -2976,8 +2865,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -3020,30 +2908,11 @@
               }
             }
           ]
-        },
-        {
-          "action_id": "process_exchange",
-          "allowed_tools": [
-            {
-              "function_name": "exchange_delivered_order_items",
-              "params": {
-                "order_id": "#W3361211",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "delivered"
+        "$1464.00",
+        "#W3361211"
       ]
     }
   },
@@ -3096,8 +2965,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -3161,9 +3029,8 @@
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "delivered"
+        "$608.91",
+        "#W3220387"
       ]
     }
   },
@@ -3216,10 +3083,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
-        "Agent collected complete and accurate return/exchange information",
-        "Agent processed return/exchange with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed cancellation request details",
+        "Agent processed cancellation with proper confirmation"
       ],
       "action_sets": [
         {
@@ -3262,28 +3128,21 @@
           ]
         },
         {
-          "action_id": "process_exchange",
+          "action_id": "cancel_order",
           "allowed_tools": [
             {
-              "function_name": "exchange_delivered_order_items",
+              "function_name": "cancel_pending_order",
               "params": {
-                "order_id": "#W5362037",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
+                "order_id": "N/A",
+                "reason": "N/A"
               }
             }
           ]
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "delivered"
+        "$741.10",
+        "#W5362037"
       ]
     }
   },
@@ -3335,8 +3194,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -3366,21 +3224,6 @@
           ]
         },
         {
-          "action_id": "process_return",
-          "allowed_tools": [
-            {
-              "function_name": "return_delivered_order_items",
-              "params": {
-                "order_id": "#W7728728",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
-        },
-        {
           "action_id": "process_exchange",
           "allowed_tools": [
             {
@@ -3400,9 +3243,8 @@
         }
       ],
       "communicate_info": [
-        "#W8341134",
-        "$29.28",
-        "50 products available"
+        "$484.58",
+        "#W7728728"
       ]
     }
   },
@@ -3455,10 +3297,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
-        "Agent collected complete and accurate return/exchange information",
-        "Agent processed return/exchange with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed cancellation request details",
+        "Agent processed cancellation with proper confirmation"
       ],
       "action_sets": [
         {
@@ -3517,12 +3358,23 @@
               }
             }
           ]
+        },
+        {
+          "action_id": "cancel_order",
+          "allowed_tools": [
+            {
+              "function_name": "cancel_pending_order",
+              "params": {
+                "order_id": "N/A",
+                "reason": "N/A"
+              }
+            }
+          ]
         }
       ],
       "communicate_info": [
-        "#W3043531",
-        "$46.85",
-        "Smart Thermostat"
+        "$2591.65",
+        "#W3043531"
       ]
     }
   },
@@ -3575,10 +3427,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
-        "Agent collected complete and accurate return/exchange information",
-        "Agent processed return/exchange with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed cancellation request details",
+        "Agent processed cancellation with proper confirmation"
       ],
       "action_sets": [
         {
@@ -3621,28 +3472,21 @@
           ]
         },
         {
-          "action_id": "process_exchange",
+          "action_id": "cancel_order",
           "allowed_tools": [
             {
-              "function_name": "exchange_delivered_order_items",
+              "function_name": "cancel_pending_order",
               "params": {
-                "order_id": "#W1547606",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
+                "order_id": "N/A",
+                "reason": "N/A"
               }
             }
           ]
         }
       ],
       "communicate_info": [
-        "#W1547606",
-        "$2729.32",
-        "Action Camera"
+        "$3232.90",
+        "#W1547606"
       ]
     }
   },
@@ -3695,10 +3539,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
-        "Agent collected complete and accurate return/exchange information",
-        "Agent processed return/exchange with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed cancellation request details",
+        "Agent processed cancellation with proper confirmation"
       ],
       "action_sets": [
         {
@@ -3741,28 +3584,21 @@
           ]
         },
         {
-          "action_id": "process_exchange",
+          "action_id": "cancel_order",
           "allowed_tools": [
             {
-              "function_name": "exchange_delivered_order_items",
+              "function_name": "cancel_pending_order",
               "params": {
-                "order_id": "#W2809253",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
+                "order_id": "N/A",
+                "reason": "N/A"
               }
             }
           ]
         }
       ],
       "communicate_info": [
-        "#W1547606",
-        "$2729.32",
-        "Action Camera"
+        "$1931.99",
+        "#W2809253"
       ]
     }
   },
@@ -3815,10 +3651,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
-        "Agent collected complete and accurate return/exchange information",
-        "Agent processed return/exchange with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed cancellation request details",
+        "Agent processed cancellation with proper confirmation"
       ],
       "action_sets": [
         {
@@ -3861,28 +3696,50 @@
           ]
         },
         {
-          "action_id": "process_exchange",
+          "action_id": "cancel_order",
           "allowed_tools": [
             {
-              "function_name": "exchange_delivered_order_items",
+              "function_name": "cancel_pending_order",
               "params": {
-                "order_id": "#W8557584",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
+                "order_id": "N/A",
+                "reason": "N/A"
+              }
+            }
+          ]
+        },
+        {
+          "action_id": "update_address",
+          "allowed_tools": [
+            {
+              "function_name": "modify_pending_order_address",
+              "params": {
+                "order_id": "N/A",
+                "address1": "N/A",
+                "address2": "N/A",
+                "city": "N/A",
+                "state": "N/A",
+                "country": "N/A",
+                "zip": "N/A"
+              }
+            },
+            {
+              "function_name": "modify_user_address",
+              "params": {
+                "user_id": "N/A",
+                "address1": "N/A",
+                "address2": "N/A",
+                "city": "N/A",
+                "state": "N/A",
+                "country": "N/A",
+                "zip": "N/A"
               }
             }
           ]
         }
       ],
       "communicate_info": [
-        "#W1547606",
-        "$2729.32",
-        "Action Camera"
+        "$622.73",
+        "#W8557584"
       ]
     }
   },
@@ -3935,10 +3792,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
-        "Agent collected complete and accurate return/exchange information",
-        "Agent processed return/exchange with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed cancellation request details",
+        "Agent processed cancellation with proper confirmation"
       ],
       "action_sets": [
         {
@@ -3981,28 +3837,50 @@
           ]
         },
         {
-          "action_id": "process_exchange",
+          "action_id": "cancel_order",
           "allowed_tools": [
             {
-              "function_name": "exchange_delivered_order_items",
+              "function_name": "cancel_pending_order",
               "params": {
-                "order_id": "#W7762997",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
+                "order_id": "N/A",
+                "reason": "N/A"
+              }
+            }
+          ]
+        },
+        {
+          "action_id": "update_address",
+          "allowed_tools": [
+            {
+              "function_name": "modify_pending_order_address",
+              "params": {
+                "order_id": "N/A",
+                "address1": "N/A",
+                "address2": "N/A",
+                "city": "N/A",
+                "state": "N/A",
+                "country": "N/A",
+                "zip": "N/A"
+              }
+            },
+            {
+              "function_name": "modify_user_address",
+              "params": {
+                "user_id": "N/A",
+                "address1": "N/A",
+                "address2": "N/A",
+                "city": "N/A",
+                "state": "N/A",
+                "country": "N/A",
+                "zip": "N/A"
               }
             }
           ]
         }
       ],
       "communicate_info": [
-        "#W1547606",
-        "$2729.32",
-        "Action Camera"
+        "$645.77",
+        "#W7762997"
       ]
     }
   },
@@ -4054,8 +3932,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -4100,28 +3977,23 @@
           ]
         },
         {
-          "action_id": "process_exchange",
+          "action_id": "modify_items",
           "allowed_tools": [
             {
-              "function_name": "exchange_delivered_order_items",
+              "function_name": "modify_pending_order_items",
               "params": {
-                "order_id": "#W4386313",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
+                "order_id": "N/A",
+                "item_ids": "N/A",
+                "new_item_ids": "N/A",
+                "payment_method_id": "N/A"
               }
             }
           ]
         }
       ],
       "communicate_info": [
-        "#W1547606",
-        "$2729.32",
-        "Action Camera"
+        "$519.07",
+        "#W4386313"
       ]
     }
   },
@@ -4174,10 +4046,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
-        "Agent collected complete and accurate return/exchange information",
-        "Agent processed return/exchange with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed cancellation request details",
+        "Agent processed cancellation with proper confirmation"
       ],
       "action_sets": [
         {
@@ -4205,43 +4076,21 @@
           ]
         },
         {
-          "action_id": "process_return",
+          "action_id": "cancel_order",
           "allowed_tools": [
             {
-              "function_name": "return_delivered_order_items",
+              "function_name": "cancel_pending_order",
               "params": {
-                "order_id": "#W7913362",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
-        },
-        {
-          "action_id": "process_exchange",
-          "allowed_tools": [
-            {
-              "function_name": "exchange_delivered_order_items",
-              "params": {
-                "order_id": "#W7913362",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
+                "order_id": "N/A",
+                "reason": "N/A"
               }
             }
           ]
         }
       ],
       "communicate_info": [
-        "#W1547606",
-        "$2729.32",
-        "Action Camera"
+        "$431.38",
+        "#W7913362"
       ]
     }
   },
@@ -4294,10 +4143,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
-        "Agent collected complete and accurate return/exchange information",
-        "Agent processed return/exchange with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed cancellation request details",
+        "Agent processed cancellation with proper confirmation"
       ],
       "action_sets": [
         {
@@ -4325,43 +4173,21 @@
           ]
         },
         {
-          "action_id": "process_return",
+          "action_id": "cancel_order",
           "allowed_tools": [
             {
-              "function_name": "return_delivered_order_items",
+              "function_name": "cancel_pending_order",
               "params": {
-                "order_id": "#W3035044",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
-        },
-        {
-          "action_id": "process_exchange",
-          "allowed_tools": [
-            {
-              "function_name": "exchange_delivered_order_items",
-              "params": {
-                "order_id": "#W3035044",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
+                "order_id": "N/A",
+                "reason": "N/A"
               }
             }
           ]
         }
       ],
       "communicate_info": [
-        "#W1547606",
-        "$2729.32",
-        "Action Camera"
+        "$3952.04",
+        "#W3035044"
       ]
     }
   },
@@ -4414,10 +4240,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
-        "Agent collected complete and accurate return/exchange information",
-        "Agent processed return/exchange with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed cancellation request details",
+        "Agent processed cancellation with proper confirmation"
       ],
       "action_sets": [
         {
@@ -4445,43 +4270,21 @@
           ]
         },
         {
-          "action_id": "process_return",
+          "action_id": "cancel_order",
           "allowed_tools": [
             {
-              "function_name": "return_delivered_order_items",
+              "function_name": "cancel_pending_order",
               "params": {
-                "order_id": "#W3733909",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
-        },
-        {
-          "action_id": "process_exchange",
-          "allowed_tools": [
-            {
-              "function_name": "exchange_delivered_order_items",
-              "params": {
-                "order_id": "#W3733909",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
+                "order_id": "N/A",
+                "reason": "N/A"
               }
             }
           ]
         }
       ],
       "communicate_info": [
-        "#W1547606",
-        "$2729.32",
-        "Action Camera"
+        "$2897.10",
+        "#W3733909"
       ]
     }
   },
@@ -4534,10 +4337,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before making address changes",
-        "Agent confirmed order status allows address modifications",
-        "Agent collected complete and accurate new address information",
-        "Agent processed address change with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed modification request details",
+        "Agent processed modification with proper confirmation"
       ],
       "action_sets": [
         {
@@ -4581,12 +4383,40 @@
               }
             }
           ]
+        },
+        {
+          "action_id": "update_address",
+          "allowed_tools": [
+            {
+              "function_name": "modify_pending_order_address",
+              "params": {
+                "order_id": "N/A",
+                "address1": "N/A",
+                "address2": "N/A",
+                "city": "N/A",
+                "state": "N/A",
+                "country": "N/A",
+                "zip": "N/A"
+              }
+            },
+            {
+              "function_name": "modify_user_address",
+              "params": {
+                "user_id": "N/A",
+                "address1": "N/A",
+                "address2": "N/A",
+                "city": "N/A",
+                "state": "N/A",
+                "country": "N/A",
+                "zip": "N/A"
+              }
+            }
+          ]
         }
       ],
       "communicate_info": [
-        "#W1547606",
-        "$2729.32",
-        "Action Camera"
+        "$258.32",
+        "#W3780282"
       ]
     }
   },
@@ -4640,9 +4470,8 @@
     "evaluation_criteria": {
       "nl_assertions": [
         "Agent verified customer identity before proceeding",
-        "Agent confirmed order status allows requested modifications",
-        "Agent collected complete and accurate information",
-        "Agent processed request with proper confirmation"
+        "Agent confirmed modification request details",
+        "Agent processed modification with proper confirmation"
       ],
       "action_sets": [
         {
@@ -4671,9 +4500,8 @@
         }
       ],
       "communicate_info": [
-        "#W3043531",
-        "$46.85",
-        "Smart Thermostat"
+        "$2591.65",
+        "#W3043531"
       ]
     }
   },
@@ -4726,10 +4554,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before making address changes",
-        "Agent confirmed order status allows address modifications",
-        "Agent collected complete and accurate new address information",
-        "Agent processed address change with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed modification request details",
+        "Agent processed modification with proper confirmation"
       ],
       "action_sets": [
         {
@@ -4773,12 +4600,40 @@
               }
             }
           ]
+        },
+        {
+          "action_id": "update_address",
+          "allowed_tools": [
+            {
+              "function_name": "modify_pending_order_address",
+              "params": {
+                "order_id": "N/A",
+                "address1": "N/A",
+                "address2": "N/A",
+                "city": "N/A",
+                "state": "N/A",
+                "country": "N/A",
+                "zip": "N/A"
+              }
+            },
+            {
+              "function_name": "modify_user_address",
+              "params": {
+                "user_id": "N/A",
+                "address1": "N/A",
+                "address2": "N/A",
+                "city": "N/A",
+                "state": "N/A",
+                "country": "N/A",
+                "zip": "N/A"
+              }
+            }
+          ]
         }
       ],
       "communicate_info": [
-        "#W1547606",
-        "$2729.32",
-        "Action Camera"
+        "$3232.90",
+        "#W1547606"
       ]
     }
   },
@@ -4831,10 +4686,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before making address changes",
-        "Agent confirmed order status allows address modifications",
-        "Agent collected complete and accurate new address information",
-        "Agent processed address change with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed modification request details",
+        "Agent processed modification with proper confirmation"
       ],
       "action_sets": [
         {
@@ -4878,12 +4732,40 @@
               }
             }
           ]
+        },
+        {
+          "action_id": "update_address",
+          "allowed_tools": [
+            {
+              "function_name": "modify_pending_order_address",
+              "params": {
+                "order_id": "N/A",
+                "address1": "N/A",
+                "address2": "N/A",
+                "city": "N/A",
+                "state": "N/A",
+                "country": "N/A",
+                "zip": "N/A"
+              }
+            },
+            {
+              "function_name": "modify_user_address",
+              "params": {
+                "user_id": "N/A",
+                "address1": "N/A",
+                "address2": "N/A",
+                "city": "N/A",
+                "state": "N/A",
+                "country": "N/A",
+                "zip": "N/A"
+              }
+            }
+          ]
         }
       ],
       "communicate_info": [
-        "#W2809253",
-        "$1057.24",
-        "Jigsaw Puzzle"
+        "$1931.99",
+        "#W2809253"
       ]
     }
   },
@@ -4936,10 +4818,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before making address changes",
-        "Agent confirmed order status allows address modifications",
-        "Agent collected complete and accurate new address information",
-        "Agent processed address change with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed modification request details",
+        "Agent processed modification with proper confirmation"
       ],
       "action_sets": [
         {
@@ -4983,12 +4864,40 @@
               }
             }
           ]
+        },
+        {
+          "action_id": "update_address",
+          "allowed_tools": [
+            {
+              "function_name": "modify_pending_order_address",
+              "params": {
+                "order_id": "N/A",
+                "address1": "N/A",
+                "address2": "N/A",
+                "city": "N/A",
+                "state": "N/A",
+                "country": "N/A",
+                "zip": "N/A"
+              }
+            },
+            {
+              "function_name": "modify_user_address",
+              "params": {
+                "user_id": "N/A",
+                "address1": "N/A",
+                "address2": "N/A",
+                "city": "N/A",
+                "state": "N/A",
+                "country": "N/A",
+                "zip": "N/A"
+              }
+            }
+          ]
         }
       ],
       "communicate_info": [
-        "#W2809253",
-        "$1057.24",
-        "Jigsaw Puzzle"
+        "$622.73",
+        "#W8557584"
       ]
     }
   },
@@ -5041,9 +4950,8 @@
     "evaluation_criteria": {
       "nl_assertions": [
         "Agent verified customer identity before proceeding",
-        "Agent confirmed order status allows requested modifications",
-        "Agent collected complete and accurate information",
-        "Agent processed request with proper confirmation"
+        "Agent confirmed modification request details",
+        "Agent processed modification with proper confirmation"
       ],
       "action_sets": [
         {
@@ -5072,9 +4980,8 @@
         }
       ],
       "communicate_info": [
-        "#W2809253",
-        "$1057.24",
-        "Jigsaw Puzzle"
+        "$645.77",
+        "#W7762997"
       ]
     }
   },
@@ -5127,8 +5034,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -5158,21 +5064,6 @@
           ]
         },
         {
-          "action_id": "process_return",
-          "allowed_tools": [
-            {
-              "function_name": "return_delivered_order_items",
-              "params": {
-                "order_id": "#W4386313",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
-        },
-        {
           "action_id": "process_exchange",
           "allowed_tools": [
             {
@@ -5192,9 +5083,8 @@
         }
       ],
       "communicate_info": [
-        "#W2809253",
-        "$1057.24",
-        "Jigsaw Puzzle"
+        "$519.07",
+        "#W4386313"
       ]
     }
   },
@@ -5247,8 +5137,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -5291,30 +5180,11 @@
               }
             }
           ]
-        },
-        {
-          "action_id": "process_exchange",
-          "allowed_tools": [
-            {
-              "function_name": "exchange_delivered_order_items",
-              "params": {
-                "order_id": "#W7913362",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
         }
       ],
       "communicate_info": [
-        "#W2809253",
-        "$1057.24",
-        "Jigsaw Puzzle"
+        "$431.38",
+        "#W7913362"
       ]
     }
   },
@@ -5367,8 +5237,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -5411,30 +5280,11 @@
               }
             }
           ]
-        },
-        {
-          "action_id": "process_exchange",
-          "allowed_tools": [
-            {
-              "function_name": "exchange_delivered_order_items",
-              "params": {
-                "order_id": "#W3035044",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
         }
       ],
       "communicate_info": [
-        "#W2809253",
-        "$1057.24",
-        "Jigsaw Puzzle"
+        "$3952.04",
+        "#W3035044"
       ]
     }
   },
@@ -5487,8 +5337,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -5531,30 +5380,11 @@
               }
             }
           ]
-        },
-        {
-          "action_id": "process_exchange",
-          "allowed_tools": [
-            {
-              "function_name": "exchange_delivered_order_items",
-              "params": {
-                "order_id": "#W3733909",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
         }
       ],
       "communicate_info": [
-        "#W2809253",
-        "$1057.24",
-        "Jigsaw Puzzle"
+        "$2897.10",
+        "#W3733909"
       ]
     }
   },
@@ -5607,8 +5437,7 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
+        "Agent verified customer identity before proceeding",
         "Agent collected complete and accurate return/exchange information",
         "Agent processed return/exchange with proper confirmation"
       ],
@@ -5672,9 +5501,8 @@
         }
       ],
       "communicate_info": [
-        "#W2809253",
-        "$1057.24",
-        "Jigsaw Puzzle"
+        "$258.32",
+        "#W3780282"
       ]
     }
   },
@@ -5726,10 +5554,9 @@
     },
     "evaluation_criteria": {
       "nl_assertions": [
-        "Agent verified customer identity before processing return/exchange",
-        "Agent confirmed order status allows return/exchange modifications",
-        "Agent collected complete and accurate return/exchange information",
-        "Agent processed return/exchange with proper confirmation"
+        "Agent verified customer identity before proceeding",
+        "Agent confirmed cancellation request details",
+        "Agent processed cancellation with proper confirmation"
       ],
       "action_sets": [
         {
@@ -5757,43 +5584,21 @@
           ]
         },
         {
-          "action_id": "process_return",
+          "action_id": "cancel_order",
           "allowed_tools": [
             {
-              "function_name": "return_delivered_order_items",
+              "function_name": "cancel_pending_order",
               "params": {
-                "order_id": "#W3927847",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "payment_method_id": "gift_card_0000000"
-              }
-            }
-          ]
-        },
-        {
-          "action_id": "process_exchange",
-          "allowed_tools": [
-            {
-              "function_name": "exchange_delivered_order_items",
-              "params": {
-                "order_id": "#W3927847",
-                "item_ids": [
-                  "1008292230"
-                ],
-                "new_item_ids": [
-                  "1008292231"
-                ],
-                "payment_method_id": "gift_card_0000000"
+                "order_id": "N/A",
+                "reason": "N/A"
               }
             }
           ]
         }
       ],
       "communicate_info": [
-        "#W3927847",
-        "$2709.83",
-        "Espresso Machine"
+        "$6949.12",
+        "#W3927847"
       ]
     }
   }
