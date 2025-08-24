@@ -159,6 +159,10 @@ class AgentMetrics(BaseModel):
     tcrr_total_calls: int = 0
     tcrr_redundant_calls: int = 0
     tcrr_by_task: dict = {}  # Task-level TCRR breakdown
+    tcrr_window_redundant: int = 0  # Window-based redundancy count
+    tcrr_batch_redundant: int = 0  # Batch redundancy count
+    tcrr_problematic_tools: dict = {}  # Most problematic tools
+    tcrr_problematic_tasks: list = []  # Most problematic tasks
 
     gsrt_median_ack: Optional[float] = None
     gsrt_median_tool: Optional[float] = None
@@ -393,16 +397,18 @@ def _compute_tool_calls(results: Results) -> list:
 
 def _compute_tcrr_metrics(
     results: Results, all_tool_calls: list
-) -> tuple[float, int, int, int, dict]:
+) -> tuple[float, int, int, int, dict, dict, int, int]:
     """Compute TCRR metrics with enhanced window-based detection."""
     try:
-        from tau2.metrics.tcrr import compute_tcrr
+        from tau2.metrics.tcrr import compute_tcrr, get_detailed_tcrr_breakdown
 
         tcrr_result, tcrr_by_task_results = compute_tcrr(results.simulations)
         tcrr = tcrr_result.redundancy_ratio
         tcrr_window_size = tcrr_result.window_size
         tcrr_total_calls = tcrr_result.total_calls
         tcrr_redundant_calls = tcrr_result.redundant_calls
+        tcrr_window_redundant = tcrr_result.window_redundant_calls
+        tcrr_batch_redundant = tcrr_result.batch_redundant_calls
 
         tcrr_by_task = {
             task_id: {
@@ -413,11 +419,16 @@ def _compute_tcrr_metrics(
             for task_id, result in tcrr_by_task_results.items()
         }
 
+        tcrr_details = get_detailed_tcrr_breakdown(tcrr_by_task_results)
+
     except Exception as e:
         logger.error(f"TCRR metrics computation failed: {e}")
-        return -1.0, -1, -1, -1, {}
+        return -1.0, -1, -1, -1, {}, {}, 0, 0
 
-    return tcrr, tcrr_window_size, tcrr_total_calls, tcrr_redundant_calls, tcrr_by_task
+    return tcrr, tcrr_window_size, tcrr_total_calls, tcrr_redundant_calls, tcrr_by_task, tcrr_details, tcrr_window_redundant, tcrr_batch_redundant
+
+
+
 
 
 def _compute_tue_metrics(
@@ -727,9 +738,11 @@ def compute_metrics(results: Results) -> AgentMetrics:
         tsr_by_task,
     ) = _compute_tsr_metrics(results)
     all_tool_calls = _compute_tool_calls(results)
-    tcrr, tcrr_window_size, tcrr_total_calls, tcrr_redundant_calls, tcrr_by_task = (
+    tcrr, tcrr_window_size, tcrr_total_calls, tcrr_redundant_calls, tcrr_by_task, tcrr_details, tcrr_window_redundant, tcrr_batch_redundant = (
         _compute_tcrr_metrics(results, all_tool_calls)
     )
+    
+    tcrr_problematic_tasks = tcrr_details.get('problematic_tasks', [])
     (
         tue,
         tue_tool_correctness,
@@ -789,6 +802,9 @@ def compute_metrics(results: Results) -> AgentMetrics:
         tcrr_total_calls=tcrr_total_calls,
         tcrr_redundant_calls=tcrr_redundant_calls,
         tcrr_by_task=tcrr_by_task,
+        tcrr_window_redundant=tcrr_window_redundant,
+        tcrr_batch_redundant=tcrr_batch_redundant,
+        tcrr_problematic_tasks=tcrr_problematic_tasks,
         tue_tool_correctness=tue_tool_correctness,
         tue_param_accuracy=tue_param_accuracy,
         tue_correct_calls=tue_correct_calls,
@@ -880,10 +896,19 @@ def display_metrics(metrics: AgentMetrics) -> None:
     if metrics.tue_by_task:
         print(f"    📋 Task-Level Breakdown: {len(metrics.tue_by_task)} tasks")
     print(f"  🔄 TCRR (Tool-Call Redundancy Ratio): {metrics.tcrr:.2%}")
-    print(
-        f"    📊 Redundant Calls: {metrics.tcrr_redundant_calls}/{metrics.tcrr_total_calls}"
-    )
+    print(f"    🪟 TCRR-W: {metrics.tcrr_window_redundant/metrics.tcrr_total_calls:.2%} (window-based)")
+    print(f"    📦 TCRR-B: {metrics.tcrr_batch_redundant/metrics.tcrr_total_calls:.2%} (batch redundancy)")
+    print(f"    📊 Redundant Calls: {metrics.tcrr_redundant_calls}/{metrics.tcrr_total_calls}")
     print(f"    🪟 Window Size: {metrics.tcrr_window_size} assistant turns")
+    print(f"    📊 Breakdown:")
+    print(f"      🪟 Window-based: {metrics.tcrr_window_redundant} calls ({metrics.tcrr_window_redundant/metrics.tcrr_total_calls*100:.1f}%)")
+    print(f"      📦 Batch redundancy: {metrics.tcrr_batch_redundant} calls ({metrics.tcrr_batch_redundant/metrics.tcrr_total_calls*100:.1f}%)")
+    
+    if hasattr(metrics, 'tcrr_problematic_tasks') and metrics.tcrr_problematic_tasks:
+        print(f"    ⚠️  Most Problematic Tasks:")
+        for task_info in metrics.tcrr_problematic_tasks[:3]:
+            print(f"      • {task_info['task_id']}: {task_info['redundancy_ratio']:.1%} redundancy")
+    
     if metrics.tcrr_by_task:
         print(f"    📋 Task-Level Breakdown: {len(metrics.tcrr_by_task)} tasks")
     print(f"  🛠️  Total Tool Calls: {metrics.num_tool_calls}")

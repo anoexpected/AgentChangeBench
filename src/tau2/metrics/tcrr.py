@@ -20,11 +20,29 @@ class ToolCallInfo:
 
 @dataclass
 class TCRRResult:
+    """
+    Result of TCRR (Tool-Call Redundancy Ratio) computation.
+    
+    TCRR Formula:
+    TCRR = (Window_Redundant_Calls + Batch_Redundant_Calls) / Total_Calls
+    
+    Where:
+    - Window_Redundant_Calls: Number of calls that are identical to calls made 
+      in the previous {window_size} assistant turns
+    - Batch_Redundant_Calls: Number of identical calls within the same turn 
+      that exceed the batch_threshold (only excess calls are counted)
+    - Total_Calls: Total number of tool calls across all simulations
+    
+    TCRR-W (Window-based): Window_Redundant_Calls / Total_Calls
+    TCRR-B (Batch): Batch_Redundant_Calls / Total_Calls
+    """
     total_calls: int
     redundant_calls: int
     redundancy_ratio: float
     redundant_by_turn: Dict[int, int]
     window_size: int
+    window_redundant_calls: int = 0
+    batch_redundant_calls: int = 0
 
 
 def normalized_params(params: dict) -> tuple:
@@ -35,7 +53,15 @@ def normalized_params(params: dict) -> tuple:
             normalized_items.append((k, normalized_params(v)))
         elif isinstance(v, list):
             try:
-                sorted_v = tuple(sorted(v))
+                normalized_list = []
+                for item in v:
+                    if isinstance(item, dict):
+                        normalized_list.append(normalized_params(item))
+                    elif isinstance(item, list):
+                        normalized_list.append(tuple(str(subitem) for subitem in item))
+                    else:
+                        normalized_list.append(item)
+                sorted_v = tuple(sorted(normalized_list))
             except TypeError:
                 sorted_v = tuple(str(item) for item in v)
             normalized_items.append((k, sorted_v))
@@ -45,7 +71,7 @@ def normalized_params(params: dict) -> tuple:
 
 
 def extract_tool_calls_with_turns(messages: List[Message]) -> List[ToolCallInfo]:
-    """Extract tool calls with turn context information."""
+    """Extract tool calls with turn context information from all message types."""
     tool_calls = []
 
     tool_results = {}
@@ -62,39 +88,39 @@ def extract_tool_calls_with_turns(messages: List[Message]) -> List[ToolCallInfo]
     for msg in messages:
         if isinstance(msg, AssistantMessage):
             assistant_turn_count += 1
-            if hasattr(msg, "tool_calls") and msg.tool_calls:
-                for tool_call in msg.tool_calls:
-                    correct = True
-                    if hasattr(tool_call, "id") and tool_call.id in tool_results:
-                        correct = tool_results[tool_call.id]["success"]
-                    params_valid = True
-                    if hasattr(tool_call, "id") and tool_call.id in tool_results:
-                        result = tool_results[tool_call.id]
-                        if result["error"] and result.get("content"):
-                            error_content = str(result["content"]).lower()
-                            if any(
-                                keyword in error_content
-                                for keyword in [
-                                    "invalid parameter",
-                                    "missing parameter",
-                                    "parameter error",
-                                    "bad parameter",
-                                    "invalid argument",
-                                    "missing argument",
-                                ]
-                            ):
-                                params_valid = False
+        if hasattr(msg, "tool_calls") and msg.tool_calls:
+            for tool_call in msg.tool_calls:
+                correct = True
+                if hasattr(tool_call, "id") and tool_call.id in tool_results:
+                    correct = tool_results[tool_call.id]["success"]
+                params_valid = True
+                if hasattr(tool_call, "id") and tool_call.id in tool_results:
+                    result = tool_results[tool_call.id]
+                    if result["error"] and result.get("content"):
+                        error_content = str(result["content"]).lower()
+                        if any(
+                            keyword in error_content
+                            for keyword in [
+                                "invalid parameter",
+                                "missing parameter",
+                                "parameter error",
+                                "bad parameter",
+                                "invalid argument",
+                                "missing argument",
+                            ]
+                        ):
+                            params_valid = False
 
-                    tool_call_info = ToolCallInfo(
-                        name=tool_call.name,
-                        params=tool_call.arguments,
-                        turn_idx=msg.turn_idx or 0,
-                        assistant_turn_idx=assistant_turn_count,
-                        call_id=getattr(tool_call, "id", ""),
-                        correct=correct,
-                        params_valid=params_valid,
-                    )
-                    tool_calls.append(tool_call_info)
+                tool_call_info = ToolCallInfo(
+                    name=tool_call.name,
+                    params=tool_call.arguments,
+                    turn_idx=msg.turn_idx or 0,
+                    assistant_turn_idx=assistant_turn_count,
+                    call_id=getattr(tool_call, "id", ""),
+                    correct=correct,
+                    params_valid=params_valid,
+                )
+                tool_calls.append(tool_call_info)
 
     return tool_calls
 
@@ -104,11 +130,12 @@ def compute_tcrr_windowed(
 ) -> TCRRResult:
     """
     Compute TCRR using window-based approach with batch redundancy detection.
-
+    
     Args:
         tool_calls: List of tool calls with turn information
         window_size: Number of previous assistant turns to consider for redundancy
-        batch_threshold: Maximum calls to same function in one turn before flagging as redundant
+        batch_threshold: Maximum identical calls to same function+params in one turn 
+                        before flagging excess calls as redundant
 
     Returns:
         TCRRResult with redundancy statistics
@@ -123,7 +150,8 @@ def compute_tcrr_windowed(
         )
 
     total_calls = len(tool_calls)
-    redundant_calls = 0
+    window_redundant_calls = 0
+    batch_redundant_calls = 0
     redundant_by_turn = {}
 
     calls_by_turn: Dict[int, List[ToolCallInfo]] = {}
@@ -163,39 +191,44 @@ def compute_tcrr_windowed(
                 identity = (call.name, params_norm)
 
                 if identity in previous_identities:
-                    redundant_calls += 1
+                    window_redundant_calls += 1
                     redundant_by_turn[current_turn] += 1
 
             except Exception as e:
                 logger.warning(f"Error normalizing params for TCRR: {e}")
                 identity = (call.name, str(call.params))
                 if identity in previous_identities:
-                    redundant_calls += 1
+                    window_redundant_calls += 1
                     redundant_by_turn[current_turn] += 1
 
-        # Check for intra-turn batch redundancy
-        function_counts = {}
+        call_identities = {}
         for call in current_calls:
-            func_name = call.name
-            if func_name not in function_counts:
-                function_counts[func_name] = 0
-            function_counts[func_name] += 1
+            try:
+                identity = (call.name, normalized_params(call.params))
+            except Exception:
+                identity = (call.name, str(call.params))
+            
+            if identity not in call_identities:
+                call_identities[identity] = 0
+            call_identities[identity] += 1
 
-        # Flag excess calls beyond reasonable threshold
-        for func_name, count in function_counts.items():
+        for identity, count in call_identities.items():
             if count > batch_threshold:
                 excess_calls = count - batch_threshold
-                redundant_calls += excess_calls
+                batch_redundant_calls += excess_calls
                 redundant_by_turn[current_turn] += excess_calls
 
-    redundancy_ratio = redundant_calls / total_calls if total_calls > 0 else 0.0
+    total_redundant_calls = window_redundant_calls + batch_redundant_calls
+    redundancy_ratio = total_redundant_calls / total_calls if total_calls > 0 else 0.0
 
     return TCRRResult(
         total_calls=total_calls,
-        redundant_calls=redundant_calls,
+        redundant_calls=total_redundant_calls,
         redundancy_ratio=redundancy_ratio,
         redundant_by_turn=redundant_by_turn,
         window_size=window_size,
+        window_redundant_calls=window_redundant_calls,
+        batch_redundant_calls=batch_redundant_calls,
     )
 
 
@@ -204,7 +237,7 @@ def compute_tcrr(
 ) -> Tuple[TCRRResult, Dict[str, TCRRResult]]:
     """
     Compute TCRR for each task separately and return both aggregated and per-task results.
-
+    
     Args:
         simulations: List of simulation runs
 
@@ -241,3 +274,24 @@ def compute_tcrr(
     )
 
     return aggregated_result, results_by_task
+
+
+def get_detailed_tcrr_breakdown(results_by_task: Dict[str, TCRRResult]) -> dict:
+    """
+    Get detailed TCRR breakdown for display purposes.
+    """
+    problematic_tasks = []
+    for task_id, task_result in results_by_task.items():
+        if task_result.redundancy_ratio > 0.3:
+            problematic_tasks.append({
+                'task_id': task_id,
+                'redundancy_ratio': task_result.redundancy_ratio,
+                'total_calls': task_result.total_calls,
+                'redundant_calls': task_result.redundant_calls
+            })
+    
+    problematic_tasks.sort(key=lambda x: x['redundancy_ratio'], reverse=True)
+    
+    return {
+        'problematic_tasks': problematic_tasks[:5],
+    }

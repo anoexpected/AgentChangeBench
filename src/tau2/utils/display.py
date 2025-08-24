@@ -651,9 +651,11 @@ class ConsoleDisplay:
                 f"\n  🎯 Parameter Accuracy: {metrics.tue_param_accuracy:.2%}"
             )
 
-        # TCRR with redundancy breakdown
         content.append(f"\n🔄 TCRR (Tool-Call Redundancy Ratio): ", style="bold white")
         content.append(f"{metrics.tcrr:.2%}")
+        if hasattr(metrics, "tcrr_window_redundant") and hasattr(metrics, "tcrr_batch_redundant"):
+            content.append(f"\n  🪟 TCRR-W: {metrics.tcrr_window_redundant/metrics.tcrr_total_calls:.2%} (window-based)")
+            content.append(f"\n  📦 TCRR-B: {metrics.tcrr_batch_redundant/metrics.tcrr_total_calls:.2%} (batch redundancy)")
         if hasattr(metrics, "tcrr_redundant_calls") and hasattr(
             metrics, "tcrr_total_calls"
         ):
@@ -662,6 +664,10 @@ class ConsoleDisplay:
             )
         if hasattr(metrics, "tcrr_window_size"):
             content.append(f"\n  🪟 Window Size: {metrics.tcrr_window_size} turns")
+        if hasattr(metrics, "tcrr_window_redundant") and hasattr(metrics, "tcrr_batch_redundant"):
+            content.append(f"\n  📊 Breakdown:")
+            content.append(f"\n    🪟 Window-based: {metrics.tcrr_window_redundant} calls ({metrics.tcrr_window_redundant/metrics.tcrr_total_calls*100:.1f}%)")
+            content.append(f"\n    📦 Batch redundancy: {metrics.tcrr_batch_redundant} calls ({metrics.tcrr_batch_redundant/metrics.tcrr_total_calls*100:.1f}%)")
 
         content.append(f"\n🛠️  Total Tool Calls: ", style="bold white")
         content.append(f"{metrics.num_tool_calls}")
