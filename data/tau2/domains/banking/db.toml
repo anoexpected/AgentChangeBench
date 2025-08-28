@@ -30,7 +30,7 @@ card_ids = ["card_101"]
 statement_ids = ["stmt_101"]
 payment_request_ids = []
 dispute_ids = []
-payee_ids = []
+payee_ids = ["payee_101"]
 
   [customers.address]
   street = "456 Oak Avenue"
@@ -70,7 +70,7 @@ card_ids = ["card_303"]
 statement_ids = []
 payment_request_ids = []
 dispute_ids = []
-payee_ids = []
+payee_ids = ["payee_303"]
 
   [customers.address]
   street = "321 Maple Drive"
@@ -90,7 +90,7 @@ card_ids = ["card_401"]
 statement_ids = []
 payment_request_ids = []
 dispute_ids = []
-payee_ids = []
+payee_ids = ["payee_401"]
 
   [customers.address]
   street = "654 Cedar Lane"
@@ -110,7 +110,7 @@ card_ids = ["card_505"]
 statement_ids = []
 payment_request_ids = []
 dispute_ids = []
-payee_ids = []
+payee_ids = ["payee_505"]
 
   [customers.address]
   street = "987 Birch Court"
@@ -279,6 +279,34 @@ reference = "UNAUTHORIZED_TX_303"
 payee_id = "payee_001"
 customer_id = "cust_001"
 name = "Electric Co."
+deliver_type = "electronic"
+verified = true
+
+[[payees]]
+payee_id = "payee_101"
+customer_id = "cust_101"
+name = "Water Utility"
+deliver_type = "electronic"
+verified = true
+
+[[payees]]
+payee_id = "payee_303"
+customer_id = "cust_303"
+name = "Internet Provider"
+deliver_type = "electronic"
+verified = true
+
+[[payees]]
+payee_id = "payee_401"
+customer_id = "cust_401"
+name = "Mobile Carrier"
+deliver_type = "electronic"
+verified = true
+
+[[payees]]
+payee_id = "payee_505"
+customer_id = "cust_505"
+name = "Gas Company"
 deliver_type = "electronic"
 verified = true
 

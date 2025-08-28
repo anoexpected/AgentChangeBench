@@ -56,9 +56,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -75,8 +72,21 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "secure_account",
+          "allowed_tools": [
+            {
+              "function_name": "lock_card",
+              "params": {
+                "card_id": "card_001"
+              }
+            }
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -85,21 +95,15 @@
           }
         },
         {
-          "action_id": "file_dispute",
+          "action_id": "escalate_dispute",
           "allowed_tools": [
             {
-              "function_name": "file_dispute",
+              "function_name": "park_task",
               "params": {
-                "account_id": "acc_001",
-                "tx_id": "tx_101",
-                "reason_code": "unauthorized"
+                "current_task_id": "open_dispute",
+                "resume_hint": "Open dispute workflow for tx_101 (unauthorized)"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id",
-            "tx_id",
-            "reason_code"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -174,9 +178,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -205,9 +206,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "request_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -223,9 +221,6 @@
                 "account_id": "acc_001"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -299,9 +294,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -318,9 +310,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -336,32 +325,6 @@
                 "card_id": "card_001"
               }
             }
-          ],
-          "required_parameters": [
-            "card_id"
-          ],
-          "max_score": 1.0,
-          "scoring_rules": {
-            "parameter_accuracy": 1.0,
-            "tool_usage": 1.0
-          }
-        },
-        {
-          "action_id": "file_fraud_dispute",
-          "allowed_tools": [
-            {
-              "function_name": "file_dispute",
-              "params": {
-                "account_id": "acc_001",
-                "tx_id": "tx_001",
-                "reason_code": "fraudulent"
-              }
-            }
-          ],
-          "required_parameters": [
-            "account_id",
-            "tx_id",
-            "reason_code"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -437,9 +400,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -456,9 +416,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -474,32 +431,6 @@
                 "card_id": "card_001"
               }
             }
-          ],
-          "required_parameters": [
-            "card_id"
-          ],
-          "max_score": 1.0,
-          "scoring_rules": {
-            "parameter_accuracy": 1.0,
-            "tool_usage": 1.0
-          }
-        },
-        {
-          "action_id": "file_dispute",
-          "allowed_tools": [
-            {
-              "function_name": "file_dispute",
-              "params": {
-                "account_id": "acc_001",
-                "tx_id": "tx_001",
-                "reason_code": "suspicious"
-              }
-            }
-          ],
-          "required_parameters": [
-            "account_id",
-            "tx_id",
-            "reason_code"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -572,9 +503,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -597,9 +525,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -615,9 +540,6 @@
                 "account_id": "acc_001"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -689,9 +611,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -714,9 +633,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -732,9 +648,6 @@
                 "account_id": "acc_001"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -807,9 +720,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -831,32 +741,6 @@
                 "account_id": "acc_001"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
-          ],
-          "max_score": 1.0,
-          "scoring_rules": {
-            "parameter_accuracy": 1.0,
-            "tool_usage": 1.0
-          }
-        },
-        {
-          "action_id": "initiate_dispute",
-          "allowed_tools": [
-            {
-              "function_name": "file_dispute",
-              "params": {
-                "account_id": "acc_001",
-                "tx_id": "tx_001",
-                "reason_code": "unauthorized"
-              }
-            }
-          ],
-          "required_parameters": [
-            "account_id",
-            "tx_id",
-            "reason_code"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -929,34 +813,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
-          "max_score": 1.0,
-          "scoring_rules": {
-            "parameter_accuracy": 1.0,
-            "tool_usage": 1.0
-          }
-        },
-        {
-          "action_id": "process_payment",
-          "allowed_tools": [
-            {
-              "function_name": "customer_detailsrequest",
-              "params": {
-                "customer_id": "cust_101",
-                "from_account_id": "acc_001",
-                "to_payee_id": "payee_001",
-                "amount": 2500.0
-              }
-            }
-          ],
-          "required_parameters": [
-            "customer_id",
-            "from_account_id",
-            "to_payee_id",
-            "amount"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -978,32 +834,6 @@
                 "card_id": "card_001"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
-          ],
-          "max_score": 1.0,
-          "scoring_rules": {
-            "parameter_accuracy": 1.0,
-            "tool_usage": 1.0
-          }
-        },
-        {
-          "action_id": "handle_fraud",
-          "allowed_tools": [
-            {
-              "function_name": "file_dispute",
-              "params": {
-                "account_id": "acc_001",
-                "tx_id": "tx_101",
-                "reason_code": "fraudulent"
-              }
-            }
-          ],
-          "required_parameters": [
-            "account_id",
-            "tx_id",
-            "reason_code"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -1079,9 +909,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -1097,9 +924,6 @@
                 "card_id": "card_001"
               }
             }
-          ],
-          "required_parameters": [
-            "card_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -1122,9 +946,6 @@
                 "customer_id": "cust_202"
               }
             }
-          ],
-          "required_parameters": [
-            "card_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -1198,9 +1019,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -1216,32 +1034,6 @@
                 "card_id": "card_303"
               }
             }
-          ],
-          "required_parameters": [
-            "card_id"
-          ],
-          "max_score": 1.0,
-          "scoring_rules": {
-            "parameter_accuracy": 1.0,
-            "tool_usage": 1.0
-          }
-        },
-        {
-          "action_id": "file_unauthorized_dispute",
-          "allowed_tools": [
-            {
-              "function_name": "file_dispute",
-              "params": {
-                "account_id": "acc_303",
-                "tx_id": "tx_303",
-                "reason_code": "unauthorized"
-              }
-            }
-          ],
-          "required_parameters": [
-            "account_id",
-            "tx_id",
-            "reason_code"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -1316,9 +1108,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 20,
           "scoring_rules": {
             "base_score": 10
@@ -1334,34 +1123,9 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 20,
           "scoring_rules": {
             "base_score": 10
-          }
-        },
-        {
-          "action_id": "file_dispute",
-          "allowed_tools": [
-            {
-              "function_name": "file_dispute",
-              "params": {
-                "account_id": "acc_001",
-                "tx_id": "tx_101",
-                "reason_code": "unauthorized"
-              }
-            }
-          ],
-          "required_parameters": [
-            "account_id",
-            "tx_id",
-            "reason_code"
-          ],
-          "max_score": 40,
-          "scoring_rules": {
-            "base_score": 20
           }
         },
         {
@@ -1373,9 +1137,6 @@
                 "account_id": "acc_001"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 20,
           "scoring_rules": {
@@ -1451,9 +1212,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 20,
           "scoring_rules": {
             "base_score": 10
@@ -1469,9 +1227,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 20,
           "scoring_rules": {
             "base_score": 10
@@ -1486,31 +1241,6 @@
                 "card_id": "card_001"
               }
             }
-          ],
-          "required_parameters": [
-            "card_id"
-          ],
-          "max_score": 30,
-          "scoring_rules": {
-            "base_score": 15
-          }
-        },
-        {
-          "action_id": "file_dispute",
-          "allowed_tools": [
-            {
-              "function_name": "file_dispute",
-              "params": {
-                "account_id": "acc_001",
-                "tx_id": "tx_102",
-                "reason_code": "unauthorized"
-              }
-            }
-          ],
-          "required_parameters": [
-            "account_id",
-            "tx_id",
-            "reason_code"
           ],
           "max_score": 30,
           "scoring_rules": {
@@ -1586,9 +1316,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 20,
           "scoring_rules": {
             "base_score": 10
@@ -1603,9 +1330,6 @@
                 "account_id": "acc_001"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 30,
           "scoring_rules": {
@@ -1622,9 +1346,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 0.2,
           "scoring_rules": {
             "parameter_accuracy": 0.8,
@@ -1640,9 +1361,6 @@
                 "account_id": "acc_001"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 0.5,
           "scoring_rules": {
@@ -1701,6 +1419,28 @@
     "evaluation_criteria": {
       "action_sets": [
         {
+          "action_id": "identify_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234567"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 0.2,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 0.0
+          }
+        },
+        {
           "action_id": "trans_review",
           "allowed_tools": [
             {
@@ -1710,9 +1450,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 0.3,
           "scoring_rules": {
             "parameter_accuracy": 0.8,
@@ -1720,45 +1457,20 @@
           }
         },
         {
-          "action_id": "dispute_suspicious",
+          "action_id": "escalate_case",
           "allowed_tools": [
             {
-              "function_name": "file_dispute",
+              "function_name": "park_task",
               "params": {
-                "account_id": "acc_001",
-                "tx_id": "tx_001",
-                "reason_code": "unauthorized"
+                "current_task_id": "dispute_tx_after_review",
+                "resume_hint": "Open dispute workflow for unfamiliar charge identified during review"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id",
-            "tx_id",
-            "reason_code"
           ],
           "max_score": 0.5,
           "scoring_rules": {
-            "parameter_accuracy": 0.7,
-            "tool_usage": 0.3
-          }
-        },
-        {
-          "action_id": "dispute_status",
-          "allowed_tools": [
-            {
-              "function_name": "get_dispute",
-              "params": {
-                "dispute_id": "DISP-2025-08-23-003"
-              }
-            }
-          ],
-          "required_parameters": [
-            "dispute_id"
-          ],
-          "max_score": 0.2,
-          "scoring_rules": {
-            "parameter_accuracy": 0.9,
-            "tool_usage": 0.1
+            "parameter_accuracy": 1.0,
+            "tool_usage": 0.0
           }
         }
       ],
@@ -1766,12 +1478,10 @@
         "The assistant should clearly explain each transaction to Maria in a way that helps her understand her spending",
         "The assistant should help Maria identify potentially unauthorized transactions and explain why they might be suspicious",
         "The assistant should clearly explain the dispute process and what Maria can expect",
-        "The assistant should provide Maria with a dispute reference number and next steps",
         "Agent did not transfer the customer to a human agent when the goal changed"
       ],
       "communicate_info": [
-        "$89.99",
-        "DISP-2025-08-23-003"
+        "$89.99"
       ]
     }
   },
@@ -1821,9 +1531,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 0.2,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -1839,9 +1546,6 @@
                 "account_id": "acc_001"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 0.4,
           "scoring_rules": {
@@ -1909,9 +1613,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 0.4,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -1927,9 +1628,6 @@
                 "customer_id": "cust_303"
               }
             }
-          ],
-          "required_parameters": [
-            "customer_id"
           ],
           "max_score": 0.6,
           "scoring_rules": {
@@ -1997,9 +1695,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 0.3,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -2016,9 +1711,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 0.3,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -2034,9 +1726,6 @@
                 "account_id": "acc_001"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 0.4,
           "scoring_rules": {
@@ -2108,9 +1797,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 0.2,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -2126,9 +1812,6 @@
                 "customer_id": "cust_505"
               }
             }
-          ],
-          "required_parameters": [
-            "customer_id"
           ],
           "max_score": 0.2,
           "scoring_rules": {
@@ -2146,9 +1829,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 0.3,
           "scoring_rules": {
             "parameter_accuracy": 0.8,
@@ -2163,21 +1843,7 @@
               "params": {
                 "card_id": "card_001"
               }
-            },
-            {
-              "function_name": "file_dispute",
-              "params": {
-                "account_id": "acc_001",
-                "tx_id": "tx_001",
-                "reason_code": "unauthorized"
-              }
             }
-          ],
-          "required_parameters": [
-            "account_id",
-            "tx_id",
-            "reason_code",
-            "card_id"
           ],
           "max_score": 0.3,
           "scoring_rules": {
@@ -2246,9 +1912,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 0.4,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -2265,9 +1928,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 0.6,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -2281,8 +1941,7 @@
         "The assistant should explain the purpose of each authentication step simply",
         "The assistant should be patient and willing to repeat instructions if needed"
       ],
-      "communicate_info": [
-      ]
+      "communicate_info": []
     }
   },
   {
@@ -2333,9 +1992,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 0.3,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -2352,9 +2008,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 0.3,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -2370,9 +2023,6 @@
                 "account_id": "acc_001"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 0.4,
           "scoring_rules": {
@@ -2450,9 +2100,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -2469,9 +2116,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -2487,9 +2131,6 @@
                 "card_id": "card_202"
               }
             }
-          ],
-          "required_parameters": [
-            "card_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -2564,9 +2205,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -2640,9 +2278,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -2664,9 +2299,6 @@
                 "customer_id": "cust_401"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -2743,9 +2375,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -2762,9 +2391,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -2780,9 +2406,6 @@
                 "card_id": "card_505"
               }
             }
-          ],
-          "required_parameters": [
-            "card_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -2856,9 +2479,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -2931,9 +2551,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -2955,9 +2572,6 @@
                 "account_id": "acc_101"
               }
             }
-          ],
-          "required_parameters": [
-            "customer_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -3033,9 +2647,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -3052,9 +2663,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -3070,9 +2678,6 @@
                 "card_id": "card_202"
               }
             }
-          ],
-          "required_parameters": [
-            "card_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -3146,9 +2751,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -3221,9 +2823,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -3245,9 +2844,6 @@
                 "customer_id": "cust_401"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -3323,9 +2919,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "phone_number"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -3342,9 +2935,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -3360,9 +2950,6 @@
                 "card_id": "card_505"
               }
             }
-          ],
-          "required_parameters": [
-            "card_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -3433,9 +3020,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -3451,9 +3035,6 @@
                 "account_id": "acc_001"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -3524,9 +3105,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -3543,9 +3121,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -3561,9 +3136,6 @@
                 "account_id": "acc_101"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -3635,9 +3207,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -3653,9 +3222,6 @@
                 "account_id": "acc_202"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -3673,9 +3239,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -3691,9 +3254,6 @@
                 "card_id": "card_202"
               }
             }
-          ],
-          "required_parameters": [
-            "card_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -3764,9 +3324,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -3782,9 +3339,6 @@
                 "account_id": "acc_303"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -3855,9 +3409,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -3874,9 +3425,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -3892,9 +3440,6 @@
                 "account_id": "acc_401"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -3967,9 +3512,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -3985,9 +3527,6 @@
                 "account_id": "acc_505"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -4005,9 +3544,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -4023,9 +3559,6 @@
                 "card_id": "card_505"
               }
             }
-          ],
-          "required_parameters": [
-            "card_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -4096,9 +3629,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -4114,9 +3644,6 @@
                 "account_id": "acc_001"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -4187,9 +3714,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -4206,9 +3730,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -4224,9 +3745,6 @@
                 "account_id": "acc_101"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -4298,9 +3816,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -4316,9 +3831,6 @@
                 "account_id": "acc_202"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -4336,9 +3848,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "account_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -4354,9 +3863,6 @@
                 "card_id": "card_202"
               }
             }
-          ],
-          "required_parameters": [
-            "card_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -4427,9 +3933,6 @@
               }
             }
           ],
-          "required_parameters": [
-            "customer_id"
-          ],
           "max_score": 1.0,
           "scoring_rules": {
             "parameter_accuracy": 1.0,
@@ -4445,9 +3948,6 @@
                 "account_id": "acc_303"
               }
             }
-          ],
-          "required_parameters": [
-            "account_id"
           ],
           "max_score": 1.0,
           "scoring_rules": {
@@ -4482,12 +3982,21 @@
         "unknown_info": "Specifics about account status and balances",
         "task_instructions": "Check account balances, then request recent statements."
       },
-      "goal_shifts": { "required_shifts": 1, "goals": ["account_info", "statements"] }
+      "goal_shifts": {
+        "required_shifts": 1,
+        "goals": [
+          "account_info",
+          "statements"
+        ]
+      }
     },
     "initial_state": {
       "initialization_data": {
         "agent_data": null,
-        "user_data": { "phone_number": "+15551234590", "customer_id": "cust_401" }
+        "user_data": {
+          "phone_number": "+15551234590",
+          "customer_id": "cust_401"
+        }
       },
       "message_history": []
     },
@@ -4496,20 +4005,40 @@
         {
           "action_id": "customer_details",
           "allowed_tools": [
-            { "function_name": "get_customer_by_id", "params": { "customer_id": "cust_401" } },
-            { "function_name": "get_customer_by_phone", "params": { "phone_number": "+15551234590" } }
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            },
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234590"
+              }
+            }
           ]
         },
         {
           "action_id": "account_details",
           "allowed_tools": [
-            { "function_name": "get_account", "params": { "account_id": "acc_401" } }
+            {
+              "function_name": "get_account",
+              "params": {
+                "account_id": "acc_401"
+              }
+            }
           ]
         },
         {
           "action_id": "statements_view",
           "allowed_tools": [
-            { "function_name": "get_statements", "params": { "account_id": "acc_401" } }
+            {
+              "function_name": "get_statements",
+              "params": {
+                "account_id": "acc_401"
+              }
+            }
           ]
         }
       ],
@@ -4519,7 +4048,7 @@
       ],
       "communicate_info": [
         "$5,420.75",
-        "••••2345"
+        "\u2022\u2022\u2022\u20222345"
       ]
     }
   },
@@ -4539,12 +4068,22 @@
         "unknown_info": "Specifics about account status and balances",
         "task_instructions": "Check account info, then review transactions, then file dispute for suspicious charge."
       },
-      "goal_shifts": { "required_shifts": 2, "goals": ["account_info", "transactions", "dispute"] }
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "account_info",
+          "transactions",
+          "dispute"
+        ]
+      }
     },
     "initial_state": {
       "initialization_data": {
         "agent_data": null,
-        "user_data": { "phone_number": "+15559876543", "customer_id": "cust_505" }
+        "user_data": {
+          "phone_number": "+15559876543",
+          "customer_id": "cust_505"
+        }
       },
       "message_history": []
     },
@@ -4553,26 +4092,51 @@
         {
           "action_id": "customer_details",
           "allowed_tools": [
-            { "function_name": "get_customer_by_id", "params": { "customer_id": "cust_505" } },
-            { "function_name": "get_customer_by_phone", "params": { "phone_number": "+15559876543" } }
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            },
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15559876543"
+              }
+            }
           ]
         },
         {
           "action_id": "account_details",
           "allowed_tools": [
-            { "function_name": "get_account", "params": { "account_id": "acc_505" } }
+            {
+              "function_name": "get_account",
+              "params": {
+                "account_id": "acc_505"
+              }
+            }
           ]
         },
         {
           "action_id": "trans_check",
           "allowed_tools": [
-            { "function_name": "get_transactions", "params": { "account_id": "acc_505" } }
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_505"
+              }
+            }
           ]
         },
         {
           "action_id": "fraud_lock_only",
           "allowed_tools": [
-            { "function_name": "lock_card", "params": { "card_id": "card_505" } }
+            {
+              "function_name": "lock_card",
+              "params": {
+                "card_id": "card_505"
+              }
+            }
           ]
         }
       ],
@@ -4582,7 +4146,7 @@
       ],
       "communicate_info": [
         "$15,750.40",
-        "••••9876"
+        "\u2022\u2022\u2022\u20229876"
       ]
     }
   },
@@ -4602,12 +4166,20 @@
         "unknown_info": "Specifics about account status and balances",
         "task_instructions": "Check your account balances and status."
       },
-      "goal_shifts": { "required_shifts": 0, "goals": ["account_info"] }
+      "goal_shifts": {
+        "required_shifts": 0,
+        "goals": [
+          "account_info"
+        ]
+      }
     },
     "initial_state": {
       "initialization_data": {
         "agent_data": null,
-        "user_data": { "phone_number": "555-123-7890", "customer_id": "cust_001" }
+        "user_data": {
+          "phone_number": "555-123-7890",
+          "customer_id": "cust_001"
+        }
       },
       "message_history": []
     },
@@ -4616,14 +4188,29 @@
         {
           "action_id": "customer_details",
           "allowed_tools": [
-            { "function_name": "get_customer_by_id", "params": { "customer_id": "cust_001" } },
-            { "function_name": "get_customer_by_phone", "params": { "phone_number": "555-123-7890" } }
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            },
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "555-123-7890"
+              }
+            }
           ]
         },
         {
           "action_id": "account_balance",
           "allowed_tools": [
-            { "function_name": "get_account", "params": { "account_id": "acc_001" } }
+            {
+              "function_name": "get_account",
+              "params": {
+                "account_id": "acc_001"
+              }
+            }
           ]
         }
       ],
@@ -4632,7 +4219,7 @@
       ],
       "communicate_info": [
         "$1,423.75",
-        "••••6789"
+        "\u2022\u2022\u2022\u20226789"
       ]
     }
   },
@@ -4652,12 +4239,21 @@
         "unknown_info": "Specifics about account status and balances",
         "task_instructions": "Check account balances, then request recent statements."
       },
-      "goal_shifts": { "required_shifts": 1, "goals": ["account_info", "statements"] }
+      "goal_shifts": {
+        "required_shifts": 1,
+        "goals": [
+          "account_info",
+          "statements"
+        ]
+      }
     },
     "initial_state": {
       "initialization_data": {
         "agent_data": null,
-        "user_data": { "phone_number": "+15551234567", "customer_id": "cust_101" }
+        "user_data": {
+          "phone_number": "+15551234567",
+          "customer_id": "cust_101"
+        }
       },
       "message_history": []
     },
@@ -4666,20 +4262,40 @@
         {
           "action_id": "customer_details",
           "allowed_tools": [
-            { "function_name": "get_customer_by_id", "params": { "customer_id": "cust_101" } },
-            { "function_name": "get_customer_by_phone", "params": { "phone_number": "+15551234567" } }
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            },
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234567"
+              }
+            }
           ]
         },
         {
           "action_id": "account_details",
           "allowed_tools": [
-            { "function_name": "get_account", "params": { "account_id": "acc_101" } }
+            {
+              "function_name": "get_account",
+              "params": {
+                "account_id": "acc_101"
+              }
+            }
           ]
         },
         {
           "action_id": "statements_view",
           "allowed_tools": [
-            { "function_name": "get_statements", "params": { "account_id": "acc_101" } }
+            {
+              "function_name": "get_statements",
+              "params": {
+                "account_id": "acc_101"
+              }
+            }
           ]
         }
       ],
@@ -4708,12 +4324,22 @@
         "unknown_info": "Specifics about account status and balances",
         "task_instructions": "Check account info, then review transactions, then file dispute for suspicious charge."
       },
-      "goal_shifts": { "required_shifts": 2, "goals": ["account_info", "transactions", "dispute"] }
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "account_info",
+          "transactions",
+          "dispute"
+        ]
+      }
     },
     "initial_state": {
       "initialization_data": {
         "agent_data": null,
-        "user_data": { "phone_number": "+15558675309", "customer_id": "cust_202" }
+        "user_data": {
+          "phone_number": "+15558675309",
+          "customer_id": "cust_202"
+        }
       },
       "message_history": []
     },
@@ -4722,26 +4348,51 @@
         {
           "action_id": "customer_details",
           "allowed_tools": [
-            { "function_name": "get_customer_by_id", "params": { "customer_id": "cust_202" } },
-            { "function_name": "get_customer_by_phone", "params": { "phone_number": "+15558675309" } }
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            },
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15558675309"
+              }
+            }
           ]
         },
         {
           "action_id": "account_details",
           "allowed_tools": [
-            { "function_name": "get_account", "params": { "account_id": "acc_202" } }
+            {
+              "function_name": "get_account",
+              "params": {
+                "account_id": "acc_202"
+              }
+            }
           ]
         },
         {
           "action_id": "trans_review",
           "allowed_tools": [
-            { "function_name": "get_transactions", "params": { "account_id": "acc_202" } }
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_202"
+              }
+            }
           ]
         },
         {
           "action_id": "fraud_lock_only",
           "allowed_tools": [
-            { "function_name": "lock_card", "params": { "card_id": "card_202" } }
+            {
+              "function_name": "lock_card",
+              "params": {
+                "card_id": "card_202"
+              }
+            }
           ]
         }
       ],
@@ -4751,7 +4402,7 @@
       ],
       "communicate_info": [
         "$3,250.50",
-        "••••4567"
+        "\u2022\u2022\u2022\u20224567"
       ]
     }
   },
@@ -4771,12 +4422,21 @@
         "unknown_info": "Specifics about payment processing",
         "task_instructions": "Create a bill payment request from your account."
       },
-      "goal_shifts": { "required_shifts": 0, "goals": ["payments"] }
+      "goal_shifts": {
+        "required_shifts": 0,
+        "goals": [
+          "payments"
+        ]
+      }
     },
     "initial_state": {
       "initialization_data": {
         "agent_data": null,
-        "user_data": { "phone_number": "+15551230987", "customer_id": "cust_303", "primary_account_id": "acc_303" }
+        "user_data": {
+          "phone_number": "+15551230987",
+          "customer_id": "cust_303",
+          "primary_account_id": "acc_303"
+        }
       },
       "message_history": []
     },
@@ -4785,7 +4445,15 @@
         {
           "action_id": "payment_create",
           "allowed_tools": [
-            { "function_name": "customer_detailsrequest", "params": { "customer_id": "cust_303", "from_account_id": "acc_303", "to_payee_id": "payee_001", "amount": 150.0 } }
+            {
+              "function_name": "create_payment_request",
+              "params": {
+                "customer_id": "cust_303",
+                "from_account_id": "acc_303",
+                "to_payee_id": "payee_303",
+                "amount": 150.0
+              }
+            }
           ]
         }
       ],
@@ -4813,12 +4481,22 @@
         "unknown_info": "Specifics about payment processing",
         "task_instructions": "Create a bill payment request, then verify account balance."
       },
-      "goal_shifts": { "required_shifts": 1, "goals": ["payments", "account_info"] }
+      "goal_shifts": {
+        "required_shifts": 1,
+        "goals": [
+          "payments",
+          "account_info"
+        ]
+      }
     },
     "initial_state": {
       "initialization_data": {
         "agent_data": null,
-        "user_data": { "phone_number": "+15551234590", "customer_id": "cust_401", "primary_account_id": "acc_401" }
+        "user_data": {
+          "phone_number": "+15551234590",
+          "customer_id": "cust_401",
+          "primary_account_id": "acc_401"
+        }
       },
       "message_history": []
     },
@@ -4827,13 +4505,26 @@
         {
           "action_id": "payment_create",
           "allowed_tools": [
-            { "function_name": "customer_detailsrequest", "params": { "customer_id": "cust_401", "from_account_id": "acc_401", "to_payee_id": "payee_001", "amount": 200.0 } }
+            {
+              "function_name": "create_payment_request",
+              "params": {
+                "customer_id": "cust_401",
+                "from_account_id": "acc_401",
+                "to_payee_id": "payee_401",
+                "amount": 200.0
+              }
+            }
           ]
         },
         {
           "action_id": "account_verify",
           "allowed_tools": [
-            { "function_name": "get_account", "params": { "account_id": "acc_401" } }
+            {
+              "function_name": "get_account",
+              "params": {
+                "account_id": "acc_401"
+              }
+            }
           ]
         }
       ],
@@ -4863,12 +4554,24 @@
         "unknown_info": "Specifics about payment processing",
         "task_instructions": "Create a bill payment request, then lock your card for safety."
       },
-      "goal_shifts": { "required_shifts": 2, "goals": ["payments", "fraud_response", "cards"] }
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "payments",
+          "fraud_response",
+          "cards"
+        ]
+      }
     },
     "initial_state": {
       "initialization_data": {
         "agent_data": null,
-        "user_data": { "phone_number": "+15559876543", "customer_id": "cust_505", "primary_account_id": "acc_505", "primary_card_id": "card_505" }
+        "user_data": {
+          "phone_number": "+15559876543",
+          "customer_id": "cust_505",
+          "primary_account_id": "acc_505",
+          "primary_card_id": "card_505"
+        }
       },
       "message_history": []
     },
@@ -4877,13 +4580,26 @@
         {
           "action_id": "payment_create",
           "allowed_tools": [
-            { "function_name": "customer_detailsrequest", "params": { "customer_id": "cust_505", "from_account_id": "acc_505", "to_payee_id": "payee_001", "amount": 300.0 } }
+            {
+              "function_name": "create_payment_request",
+              "params": {
+                "customer_id": "cust_505",
+                "from_account_id": "acc_505",
+                "to_payee_id": "payee_505",
+                "amount": 300.0
+              }
+            }
           ]
         },
         {
           "action_id": "fraud_secure",
           "allowed_tools": [
-            { "function_name": "lock_card", "params": { "card_id": "card_505" } }
+            {
+              "function_name": "lock_card",
+              "params": {
+                "card_id": "card_505"
+              }
+            }
           ]
         }
       ],
@@ -4893,7 +4609,7 @@
       ],
       "communicate_info": [
         "$300.00",
-        "••••9876"
+        "\u2022\u2022\u2022\u20229876"
       ]
     }
   },
@@ -4913,33 +4629,46 @@
         "unknown_info": "Specifics about payment processing",
         "task_instructions": "Authorize and settle an existing payment request."
       },
-      "goal_shifts": { "required_shifts": 0, "goals": ["payments"] }
+      "goal_shifts": {
+        "required_shifts": 0,
+        "goals": [
+          "payments"
+        ]
+      }
     },
     "initial_state": {
       "initialization_data": {
         "agent_data": null,
-        "user_data": { "phone_number": "555-123-7890", "customer_id": "cust_001", "payment_request_id": "req_001" }
+        "user_data": {
+          "phone_number": "555-123-7890",
+          "customer_id": "cust_001",
+          "payment_request_id": "req_001"
+        }
       },
       "message_history": []
     },
     "evaluation_criteria": {
       "action_sets": [
         {
-          "action_id": "payment_auth",
+          "action_id": "payment_status",
           "allowed_tools": [
-            { "function_name": "authorize_payment_request", "params": { "request_id": "req_001" } }
-          ]
-        },
-        {
-          "action_id": "payment_make",
-          "allowed_tools": [
-            { "function_name": "make_payment", "params": { "request_id": "req_001" } }
+            {
+              "function_name": "check_payment_request",
+              "params": {
+                "request_id": "req_001"
+              }
+            }
           ]
         },
         {
           "action_id": "payment_check",
           "allowed_tools": [
-            { "function_name": "check_payment_request", "params": { "request_id": "req_001" } }
+            {
+              "function_name": "check_payment_request",
+              "params": {
+                "request_id": "req_001"
+              }
+            }
           ]
         }
       ],
@@ -4968,12 +4697,22 @@
         "unknown_info": "Specifics about payment processing",
         "task_instructions": "Create a payment request and then verify your account."
       },
-      "goal_shifts": { "required_shifts": 1, "goals": ["payments", "account_info"] }
+      "goal_shifts": {
+        "required_shifts": 1,
+        "goals": [
+          "payments",
+          "account_info"
+        ]
+      }
     },
     "initial_state": {
       "initialization_data": {
         "agent_data": null,
-        "user_data": { "phone_number": "+15551234567", "customer_id": "cust_101", "primary_account_id": "acc_101" }
+        "user_data": {
+          "phone_number": "+15551234567",
+          "customer_id": "cust_101",
+          "primary_account_id": "acc_101"
+        }
       },
       "message_history": []
     },
@@ -4982,13 +4721,26 @@
         {
           "action_id": "customer_details",
           "allowed_tools": [
-            { "function_name": "customer_detailsrequest", "params": { "customer_id": "cust_101", "from_account_id": "acc_101", "to_payee_id": "payee_001", "amount": 120.0 } }
+            {
+              "function_name": "create_payment_request",
+              "params": {
+                "customer_id": "cust_101",
+                "from_account_id": "acc_101",
+                "to_payee_id": "payee_101",
+                "amount": 120.0
+              }
+            }
           ]
         },
         {
           "action_id": "account_verify",
           "allowed_tools": [
-            { "function_name": "get_account", "params": { "account_id": "acc_101" } }
+            {
+              "function_name": "get_account",
+              "params": {
+                "account_id": "acc_101"
+              }
+            }
           ]
         }
       ],

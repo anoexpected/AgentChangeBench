@@ -126,41 +126,56 @@ class RetailUserSimulator(BaseUser):
         """
         # Generate response using LLM
         try:
-            response = generate(
+            # Update state with incoming message first
+            if isinstance(message, MultiToolMessage):
+                state.messages.extend(message.tool_messages)
+            else:
+                state.messages.append(message)
+
+            # Flip roles so the LLM responds as assistant to the user's perspective
+            messages_for_llm = state.system_messages + state.flip_roles()
+
+            assistant_message = generate(
                 model=self.llm,
-                messages=state.system_messages + state.messages + [message],
+                messages=messages_for_llm,
                 tools=self.tools,
                 **(self.llm_args or {}),
             )
 
-            # Handle different response types
-            if isinstance(response, str):
-                # Simple text response
-                user_message = UserMessage(role="user", content=response)
+            # Ensure non-empty content when there are no tool calls
+            try:
+                has_tool_calls = bool(getattr(assistant_message, "tool_calls", None))
+                content_value = getattr(assistant_message, "content", None)
+                if (not has_tool_calls) and (content_value is None or (isinstance(content_value, str) and content_value.strip() == "")):
+                    assistant_message.content = "(no content)"
+            except Exception:
+                pass
 
-            elif hasattr(response, "tool_calls") and response.tool_calls:
-                # Response with tool calls
-                tool_calls = [
-                    ToolCall(
-                        name=tc.function.name, arguments=tc.function.arguments, id=tc.id
-                    )
-                    for tc in response.tool_calls
-                ]
-                user_message = MultiToolMessage(
-                    content=response.content or "", tool_calls=tool_calls
-                )
-
-            else:
-                # Standard message response
-                user_message = UserMessage(role="user", content=response.content or "")
-
-            # Create updated state
-            updated_state = UserState(
-                system_messages=state.system_messages,
-                messages=state.messages + [message, user_message],
+            # Build user message from assistant reply
+            user_message = UserMessage(
+                role="user",
+                content=assistant_message.content,
+                cost=assistant_message.cost,
+                usage=assistant_message.usage,
+                raw_data=assistant_message.raw_data,
             )
 
-            return user_message, updated_state
+            # Flip any tool calls so they are attributed to the user
+            if getattr(assistant_message, "tool_calls", None):
+                user_message.tool_calls = []
+                for tool_call in assistant_message.tool_calls:
+                    user_message.tool_calls.append(
+                        ToolCall(
+                            id=tool_call.id,
+                            name=tool_call.name,
+                            arguments=tool_call.arguments,
+                            requestor="user",
+                        )
+                    )
+
+            # Update and return state
+            state.messages.append(user_message)
+            return user_message, state
 
         except Exception as e:
             logger.error(f"Error generating user response: {e}")
