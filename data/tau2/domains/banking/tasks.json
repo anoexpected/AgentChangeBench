@@ -79,14 +79,29 @@
           }
         },
         {
-          "action_id": "file_dispute",
+          "action_id": "secure_account",
           "allowed_tools": [
             {
-              "function_name": "file_dispute",
+              "function_name": "lock_card",
               "params": {
-                "account_id": "acc_001",
-                "tx_id": "tx_101",
-                "reason_code": "unauthorized"
+                "card_id": "card_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "escalate_dispute",
+          "allowed_tools": [
+            {
+              "function_name": "park_task",
+              "params": {
+                "current_task_id": "open_dispute",
+                "resume_hint": "Open dispute workflow for tx_101 (unauthorized)"
               }
             }
           ],
@@ -4431,11 +4446,11 @@
           "action_id": "payment_create",
           "allowed_tools": [
             {
-              "function_name": "customer_detailsrequest",
+              "function_name": "create_payment_request",
               "params": {
                 "customer_id": "cust_303",
                 "from_account_id": "acc_303",
-                "to_payee_id": "payee_001",
+                "to_payee_id": "payee_303",
                 "amount": 150.0
               }
             }
@@ -4491,11 +4506,11 @@
           "action_id": "payment_create",
           "allowed_tools": [
             {
-              "function_name": "customer_detailsrequest",
+              "function_name": "create_payment_request",
               "params": {
                 "customer_id": "cust_401",
                 "from_account_id": "acc_401",
-                "to_payee_id": "payee_001",
+                "to_payee_id": "payee_401",
                 "amount": 200.0
               }
             }
@@ -4566,11 +4581,11 @@
           "action_id": "payment_create",
           "allowed_tools": [
             {
-              "function_name": "customer_detailsrequest",
+              "function_name": "create_payment_request",
               "params": {
                 "customer_id": "cust_505",
                 "from_account_id": "acc_505",
-                "to_payee_id": "payee_001",
+                "to_payee_id": "payee_505",
                 "amount": 300.0
               }
             }
@@ -4635,21 +4650,10 @@
     "evaluation_criteria": {
       "action_sets": [
         {
-          "action_id": "payment_auth",
+          "action_id": "payment_status",
           "allowed_tools": [
             {
-              "function_name": "authorize_payment_request",
-              "params": {
-                "request_id": "req_001"
-              }
-            }
-          ]
-        },
-        {
-          "action_id": "payment_make",
-          "allowed_tools": [
-            {
-              "function_name": "make_payment",
+              "function_name": "check_payment_request",
               "params": {
                 "request_id": "req_001"
               }
@@ -4718,11 +4722,11 @@
           "action_id": "customer_details",
           "allowed_tools": [
             {
-              "function_name": "customer_detailsrequest",
+              "function_name": "create_payment_request",
               "params": {
                 "customer_id": "cust_101",
                 "from_account_id": "acc_101",
-                "to_payee_id": "payee_001",
+                "to_payee_id": "payee_101",
                 "amount": 120.0
               }
             }
