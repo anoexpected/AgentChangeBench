@@ -284,16 +284,4 @@ sequenceDiagram
     Note over O: Return simulation run
 ```
 
-## Citation
 
-```bibtex
-@misc{barres2025tau2,
-      title={$\tau^2$-Bench: Evaluating Conversational Agents in a Dual-Control Environment}, 
-      author={Victor Barres and Honghua Dong and Soham Ray and Xujie Si and Karthik Narasimhan},
-      year={2025},
-      eprint={2506.07982},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2506.07982}, 
-}
-```
