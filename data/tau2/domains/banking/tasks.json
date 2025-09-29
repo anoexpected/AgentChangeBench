@@ -4753,5 +4753,5455 @@
         "$120.00"
       ]
     }
+  },
+  {
+    "id": "51_systematic",
+    "description": {
+      "purpose": "Balanced test case 51 for customer Alex Morgan",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Alex Morgan with persona EASY_2."
+    },
+    "user_scenario": {
+      "persona": "EASY_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Alex Morgan with account acc_001 and card card_001",
+        "known_info": "You are Alex Morgan with phone number 555-123-7890, date of birth 1980-04-15, and email alex.morgan@email.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "cards",
+          "dispute"
+        ]
+      }
+    },
+    "ticket": "Customer Alex Morgan requests multi-step banking assistance covering authentication, cards, dispute.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "555-123-7890",
+          "customer_id": "cust_001",
+          "primary_account_id": "acc_001",
+          "primary_card_id": "card_001"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "555-123-7890"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_001",
+        "card_001"
+      ]
+    }
+  },
+  {
+    "id": "52_systematic",
+    "description": {
+      "purpose": "Balanced test case 52 for customer Maria Santos",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Maria Santos with persona MEDIUM_2."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Maria Santos with account acc_101 and card card_101",
+        "known_info": "You are Maria Santos with phone number +15551234567, date of birth 1986-02-11, and email user.001@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "payments",
+          "transactions"
+        ]
+      }
+    },
+    "ticket": "Customer Maria Santos requests multi-step banking assistance covering authentication, payments, transactions.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551234567",
+          "customer_id": "cust_101",
+          "primary_account_id": "acc_101",
+          "primary_card_id": "card_101"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234567"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_101",
+        "card_101"
+      ]
+    }
+  },
+  {
+    "id": "53_systematic",
+    "description": {
+      "purpose": "Balanced test case 53 for customer Jordan Smith",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Jordan Smith with persona MEDIUM_1."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Jordan Smith with account acc_202 and card card_202",
+        "known_info": "You are Jordan Smith with phone number +15558675309, date of birth 1994-09-02, and email user.002@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "account_info",
+          "dispute",
+          "fraud_response"
+        ]
+      }
+    },
+    "ticket": "Customer Jordan Smith requests multi-step banking assistance covering account_info, dispute, fraud_response.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15558675309",
+          "customer_id": "cust_202",
+          "primary_account_id": "acc_202",
+          "primary_card_id": "card_202"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15558675309"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_202",
+        "card_202"
+      ]
+    }
+  },
+  {
+    "id": "54_systematic",
+    "description": {
+      "purpose": "Balanced test case 54 for customer Taylor Johnson",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Taylor Johnson with persona EASY_2."
+    },
+    "user_scenario": {
+      "persona": "EASY_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Taylor Johnson with account acc_303 and card card_303",
+        "known_info": "You are Taylor Johnson with phone number +15551230987, date of birth 1991-05-06, and email user.003@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "cards"
+        ]
+      }
+    },
+    "ticket": "Customer Taylor Johnson requests multi-step banking assistance covering authentication, fraud_response, cards.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551230987",
+          "customer_id": "cust_303",
+          "primary_account_id": "acc_303",
+          "primary_card_id": "card_303"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551230987"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_303",
+        "card_303"
+      ]
+    }
+  },
+  {
+    "id": "55_systematic",
+    "description": {
+      "purpose": "Balanced test case 55 for customer Casey Williams",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Casey Williams with persona HARD_1."
+    },
+    "user_scenario": {
+      "persona": "HARD_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Casey Williams with account acc_401 and card card_401",
+        "known_info": "You are Casey Williams with phone number +15551234590, date of birth 1982-03-09, and email user.004@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "statements",
+          "dispute"
+        ]
+      }
+    },
+    "ticket": "Customer Casey Williams requests multi-step banking assistance covering authentication, statements, dispute.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551234590",
+          "customer_id": "cust_401",
+          "primary_account_id": "acc_401",
+          "primary_card_id": "card_401"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234590"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_401",
+        "card_401"
+      ]
+    }
+  },
+  {
+    "id": "56_systematic",
+    "description": {
+      "purpose": "Balanced test case 56 for customer Riley Brown",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Riley Brown with persona MEDIUM_1."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Riley Brown with account acc_505 and card card_505",
+        "known_info": "You are Riley Brown with phone number +15559876543, date of birth 1989-10-21, and email user.005@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "cards",
+          "dispute"
+        ]
+      }
+    },
+    "ticket": "Customer Riley Brown requests multi-step banking assistance covering authentication, cards, dispute.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15559876543",
+          "customer_id": "cust_505",
+          "primary_account_id": "acc_505",
+          "primary_card_id": "card_505"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15559876543"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_505",
+        "card_505"
+      ]
+    }
+  },
+  {
+    "id": "57_systematic",
+    "description": {
+      "purpose": "Balanced test case 57 for customer Alex Morgan",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Alex Morgan with persona MEDIUM_1."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Alex Morgan with account acc_001 and card card_001",
+        "known_info": "You are Alex Morgan with phone number 555-123-7890, date of birth 1980-04-15, and email alex.morgan@email.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "cards",
+          "dispute"
+        ]
+      }
+    },
+    "ticket": "Customer Alex Morgan requests multi-step banking assistance covering authentication, cards, dispute.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "555-123-7890",
+          "customer_id": "cust_001",
+          "primary_account_id": "acc_001",
+          "primary_card_id": "card_001"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "555-123-7890"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_001",
+        "card_001"
+      ]
+    }
+  },
+  {
+    "id": "58_systematic",
+    "description": {
+      "purpose": "Balanced test case 58 for customer Maria Santos",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Maria Santos with persona MEDIUM_1."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Maria Santos with account acc_101 and card card_101",
+        "known_info": "You are Maria Santos with phone number +15551234567, date of birth 1986-02-11, and email user.001@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "statements",
+          "dispute"
+        ]
+      }
+    },
+    "ticket": "Customer Maria Santos requests multi-step banking assistance covering authentication, statements, dispute.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551234567",
+          "customer_id": "cust_101",
+          "primary_account_id": "acc_101",
+          "primary_card_id": "card_101"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234567"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_101",
+        "card_101"
+      ]
+    }
+  },
+  {
+    "id": "59_systematic",
+    "description": {
+      "purpose": "Balanced test case 59 for customer Jordan Smith",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Jordan Smith with persona EASY_1."
+    },
+    "user_scenario": {
+      "persona": "EASY_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Jordan Smith with account acc_202 and card card_202",
+        "known_info": "You are Jordan Smith with phone number +15558675309, date of birth 1994-09-02, and email user.002@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "account_info"
+        ]
+      }
+    },
+    "ticket": "Customer Jordan Smith requests multi-step banking assistance covering authentication, fraud_response, account_info.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15558675309",
+          "customer_id": "cust_202",
+          "primary_account_id": "acc_202",
+          "primary_card_id": "card_202"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15558675309"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_202",
+        "card_202"
+      ]
+    }
+  },
+  {
+    "id": "60_systematic",
+    "description": {
+      "purpose": "Balanced test case 60 for customer Taylor Johnson",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Taylor Johnson with persona EASY_2."
+    },
+    "user_scenario": {
+      "persona": "EASY_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Taylor Johnson with account acc_303 and card card_303",
+        "known_info": "You are Taylor Johnson with phone number +15551230987, date of birth 1991-05-06, and email user.003@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "payments",
+          "transactions"
+        ]
+      }
+    },
+    "ticket": "Customer Taylor Johnson requests multi-step banking assistance covering authentication, payments, transactions.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551230987",
+          "customer_id": "cust_303",
+          "primary_account_id": "acc_303",
+          "primary_card_id": "card_303"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551230987"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_303",
+        "card_303"
+      ]
+    }
+  },
+  {
+    "id": "61_systematic",
+    "description": {
+      "purpose": "Balanced test case 61 for customer Casey Williams",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Casey Williams with persona MEDIUM_1."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Casey Williams with account acc_401 and card card_401",
+        "known_info": "You are Casey Williams with phone number +15551234590, date of birth 1982-03-09, and email user.004@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "cards"
+        ]
+      }
+    },
+    "ticket": "Customer Casey Williams requests multi-step banking assistance covering authentication, fraud_response, cards.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551234590",
+          "customer_id": "cust_401",
+          "primary_account_id": "acc_401",
+          "primary_card_id": "card_401"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234590"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_401",
+        "card_401"
+      ]
+    }
+  },
+  {
+    "id": "62_systematic",
+    "description": {
+      "purpose": "Balanced test case 62 for customer Riley Brown",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Riley Brown with persona MEDIUM_2."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Riley Brown with account acc_505 and card card_505",
+        "known_info": "You are Riley Brown with phone number +15559876543, date of birth 1989-10-21, and email user.005@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "account_info",
+          "dispute",
+          "fraud_response"
+        ]
+      }
+    },
+    "ticket": "Customer Riley Brown requests multi-step banking assistance covering account_info, dispute, fraud_response.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15559876543",
+          "customer_id": "cust_505",
+          "primary_account_id": "acc_505",
+          "primary_card_id": "card_505"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15559876543"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_505",
+        "card_505"
+      ]
+    }
+  },
+  {
+    "id": "63_systematic",
+    "description": {
+      "purpose": "Balanced test case 63 for customer Alex Morgan",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Alex Morgan with persona EASY_2."
+    },
+    "user_scenario": {
+      "persona": "EASY_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Alex Morgan with account acc_001 and card card_001",
+        "known_info": "You are Alex Morgan with phone number 555-123-7890, date of birth 1980-04-15, and email alex.morgan@email.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "payments",
+          "transactions"
+        ]
+      }
+    },
+    "ticket": "Customer Alex Morgan requests multi-step banking assistance covering authentication, payments, transactions.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "555-123-7890",
+          "customer_id": "cust_001",
+          "primary_account_id": "acc_001",
+          "primary_card_id": "card_001"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "555-123-7890"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_001",
+        "card_001"
+      ]
+    }
+  },
+  {
+    "id": "64_systematic",
+    "description": {
+      "purpose": "Balanced test case 64 for customer Maria Santos",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Maria Santos with persona EASY_1."
+    },
+    "user_scenario": {
+      "persona": "EASY_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Maria Santos with account acc_101 and card card_101",
+        "known_info": "You are Maria Santos with phone number +15551234567, date of birth 1986-02-11, and email user.001@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "cards"
+        ]
+      }
+    },
+    "ticket": "Customer Maria Santos requests multi-step banking assistance covering authentication, fraud_response, cards.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551234567",
+          "customer_id": "cust_101",
+          "primary_account_id": "acc_101",
+          "primary_card_id": "card_101"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234567"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_101",
+        "card_101"
+      ]
+    }
+  },
+  {
+    "id": "65_systematic",
+    "description": {
+      "purpose": "Balanced test case 65 for customer Jordan Smith",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Jordan Smith with persona EASY_2."
+    },
+    "user_scenario": {
+      "persona": "EASY_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Jordan Smith with account acc_202 and card card_202",
+        "known_info": "You are Jordan Smith with phone number +15558675309, date of birth 1994-09-02, and email user.002@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "payments",
+          "transactions"
+        ]
+      }
+    },
+    "ticket": "Customer Jordan Smith requests multi-step banking assistance covering authentication, payments, transactions.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15558675309",
+          "customer_id": "cust_202",
+          "primary_account_id": "acc_202",
+          "primary_card_id": "card_202"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15558675309"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_202",
+        "card_202"
+      ]
+    }
+  },
+  {
+    "id": "66_systematic",
+    "description": {
+      "purpose": "Balanced test case 66 for customer Taylor Johnson",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Taylor Johnson with persona MEDIUM_2."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Taylor Johnson with account acc_303 and card card_303",
+        "known_info": "You are Taylor Johnson with phone number +15551230987, date of birth 1991-05-06, and email user.003@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "payments",
+          "transactions"
+        ]
+      }
+    },
+    "ticket": "Customer Taylor Johnson requests multi-step banking assistance covering authentication, payments, transactions.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551230987",
+          "customer_id": "cust_303",
+          "primary_account_id": "acc_303",
+          "primary_card_id": "card_303"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551230987"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_303",
+        "card_303"
+      ]
+    }
+  },
+  {
+    "id": "67_systematic",
+    "description": {
+      "purpose": "Balanced test case 67 for customer Casey Williams",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Casey Williams with persona MEDIUM_1."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Casey Williams with account acc_401 and card card_401",
+        "known_info": "You are Casey Williams with phone number +15551234590, date of birth 1982-03-09, and email user.004@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "cards"
+        ]
+      }
+    },
+    "ticket": "Customer Casey Williams requests multi-step banking assistance covering authentication, fraud_response, cards.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551234590",
+          "customer_id": "cust_401",
+          "primary_account_id": "acc_401",
+          "primary_card_id": "card_401"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234590"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_401",
+        "card_401"
+      ]
+    }
+  },
+  {
+    "id": "68_systematic",
+    "description": {
+      "purpose": "Balanced test case 68 for customer Riley Brown",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Riley Brown with persona MEDIUM_1."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Riley Brown with account acc_505 and card card_505",
+        "known_info": "You are Riley Brown with phone number +15559876543, date of birth 1989-10-21, and email user.005@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "account_info"
+        ]
+      }
+    },
+    "ticket": "Customer Riley Brown requests multi-step banking assistance covering authentication, fraud_response, account_info.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15559876543",
+          "customer_id": "cust_505",
+          "primary_account_id": "acc_505",
+          "primary_card_id": "card_505"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15559876543"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_505",
+        "card_505"
+      ]
+    }
+  },
+  {
+    "id": "69_systematic",
+    "description": {
+      "purpose": "Balanced test case 69 for customer Alex Morgan",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Alex Morgan with persona MEDIUM_1."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Alex Morgan with account acc_001 and card card_001",
+        "known_info": "You are Alex Morgan with phone number 555-123-7890, date of birth 1980-04-15, and email alex.morgan@email.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "cards",
+          "dispute"
+        ]
+      }
+    },
+    "ticket": "Customer Alex Morgan requests multi-step banking assistance covering authentication, cards, dispute.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "555-123-7890",
+          "customer_id": "cust_001",
+          "primary_account_id": "acc_001",
+          "primary_card_id": "card_001"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "555-123-7890"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_001",
+        "card_001"
+      ]
+    }
+  },
+  {
+    "id": "70_systematic",
+    "description": {
+      "purpose": "Balanced test case 70 for customer Maria Santos",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Maria Santos with persona MEDIUM_1."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Maria Santos with account acc_101 and card card_101",
+        "known_info": "You are Maria Santos with phone number +15551234567, date of birth 1986-02-11, and email user.001@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "cards"
+        ]
+      }
+    },
+    "ticket": "Customer Maria Santos requests multi-step banking assistance covering authentication, fraud_response, cards.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551234567",
+          "customer_id": "cust_101",
+          "primary_account_id": "acc_101",
+          "primary_card_id": "card_101"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234567"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_101",
+        "card_101"
+      ]
+    }
+  },
+  {
+    "id": "71_systematic",
+    "description": {
+      "purpose": "Balanced test case 71 for customer Jordan Smith",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Jordan Smith with persona MEDIUM_2."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Jordan Smith with account acc_202 and card card_202",
+        "known_info": "You are Jordan Smith with phone number +15558675309, date of birth 1994-09-02, and email user.002@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "account_info"
+        ]
+      }
+    },
+    "ticket": "Customer Jordan Smith requests multi-step banking assistance covering authentication, fraud_response, account_info.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15558675309",
+          "customer_id": "cust_202",
+          "primary_account_id": "acc_202",
+          "primary_card_id": "card_202"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15558675309"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_202",
+        "card_202"
+      ]
+    }
+  },
+  {
+    "id": "72_systematic",
+    "description": {
+      "purpose": "Balanced test case 72 for customer Taylor Johnson",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Taylor Johnson with persona MEDIUM_1."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Taylor Johnson with account acc_303 and card card_303",
+        "known_info": "You are Taylor Johnson with phone number +15551230987, date of birth 1991-05-06, and email user.003@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "cards"
+        ]
+      }
+    },
+    "ticket": "Customer Taylor Johnson requests multi-step banking assistance covering authentication, fraud_response, cards.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551230987",
+          "customer_id": "cust_303",
+          "primary_account_id": "acc_303",
+          "primary_card_id": "card_303"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551230987"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_303",
+        "card_303"
+      ]
+    }
+  },
+  {
+    "id": "73_systematic",
+    "description": {
+      "purpose": "Balanced test case 73 for customer Casey Williams",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Casey Williams with persona EASY_1."
+    },
+    "user_scenario": {
+      "persona": "EASY_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Casey Williams with account acc_401 and card card_401",
+        "known_info": "You are Casey Williams with phone number +15551234590, date of birth 1982-03-09, and email user.004@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "statements",
+          "dispute"
+        ]
+      }
+    },
+    "ticket": "Customer Casey Williams requests multi-step banking assistance covering authentication, statements, dispute.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551234590",
+          "customer_id": "cust_401",
+          "primary_account_id": "acc_401",
+          "primary_card_id": "card_401"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234590"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_401",
+        "card_401"
+      ]
+    }
+  },
+  {
+    "id": "74_systematic",
+    "description": {
+      "purpose": "Balanced test case 74 for customer Riley Brown",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Riley Brown with persona MEDIUM_1."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Riley Brown with account acc_505 and card card_505",
+        "known_info": "You are Riley Brown with phone number +15559876543, date of birth 1989-10-21, and email user.005@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "statements",
+          "dispute"
+        ]
+      }
+    },
+    "ticket": "Customer Riley Brown requests multi-step banking assistance covering authentication, statements, dispute.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15559876543",
+          "customer_id": "cust_505",
+          "primary_account_id": "acc_505",
+          "primary_card_id": "card_505"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15559876543"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_505",
+        "card_505"
+      ]
+    }
+  },
+  {
+    "id": "75_systematic",
+    "description": {
+      "purpose": "Balanced test case 75 for customer Alex Morgan",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Alex Morgan with persona HARD_1."
+    },
+    "user_scenario": {
+      "persona": "HARD_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Alex Morgan with account acc_001 and card card_001",
+        "known_info": "You are Alex Morgan with phone number 555-123-7890, date of birth 1980-04-15, and email alex.morgan@email.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "statements",
+          "dispute"
+        ]
+      }
+    },
+    "ticket": "Customer Alex Morgan requests multi-step banking assistance covering authentication, statements, dispute.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "555-123-7890",
+          "customer_id": "cust_001",
+          "primary_account_id": "acc_001",
+          "primary_card_id": "card_001"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "555-123-7890"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_001",
+        "card_001"
+      ]
+    }
+  },
+  {
+    "id": "76_systematic",
+    "description": {
+      "purpose": "Balanced test case 76 for customer Alex Morgan",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Alex Morgan with persona MEDIUM_1."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Alex Morgan with account acc_001 and card card_001",
+        "known_info": "You are Alex Morgan with phone number 555-123-7890, date of birth 1980-04-15, and email alex.morgan@email.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "payments",
+          "transactions"
+        ]
+      }
+    },
+    "ticket": "Customer Alex Morgan requests multi-step banking assistance covering authentication, payments, transactions.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "555-123-7890",
+          "customer_id": "cust_001",
+          "primary_account_id": "acc_001",
+          "primary_card_id": "card_001"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "555-123-7890"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_001",
+        "card_001"
+      ]
+    }
+  },
+  {
+    "id": "77_systematic",
+    "description": {
+      "purpose": "Balanced test case 77 for customer Maria Santos",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Maria Santos with persona HARD_1."
+    },
+    "user_scenario": {
+      "persona": "HARD_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Maria Santos with account acc_101 and card card_101",
+        "known_info": "You are Maria Santos with phone number +15551234567, date of birth 1986-02-11, and email user.001@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "account_info",
+          "transactions"
+        ]
+      }
+    },
+    "ticket": "Customer Maria Santos requests multi-step banking assistance covering authentication, account_info, transactions.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551234567",
+          "customer_id": "cust_101",
+          "primary_account_id": "acc_101",
+          "primary_card_id": "card_101"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234567"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_101",
+        "card_101"
+      ]
+    }
+  },
+  {
+    "id": "78_systematic",
+    "description": {
+      "purpose": "Balanced test case 78 for customer Jordan Smith",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Jordan Smith with persona MEDIUM_1."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Jordan Smith with account acc_202 and card card_202",
+        "known_info": "You are Jordan Smith with phone number +15558675309, date of birth 1994-09-02, and email user.002@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "payments",
+          "transactions"
+        ]
+      }
+    },
+    "ticket": "Customer Jordan Smith requests multi-step banking assistance covering authentication, payments, transactions.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15558675309",
+          "customer_id": "cust_202",
+          "primary_account_id": "acc_202",
+          "primary_card_id": "card_202"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15558675309"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_202",
+        "card_202"
+      ]
+    }
+  },
+  {
+    "id": "79_systematic",
+    "description": {
+      "purpose": "Balanced test case 79 for customer Taylor Johnson",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Taylor Johnson with persona MEDIUM_2."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Taylor Johnson with account acc_303 and card card_303",
+        "known_info": "You are Taylor Johnson with phone number +15551230987, date of birth 1991-05-06, and email user.003@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "account_info",
+          "dispute",
+          "fraud_response"
+        ]
+      }
+    },
+    "ticket": "Customer Taylor Johnson requests multi-step banking assistance covering account_info, dispute, fraud_response.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551230987",
+          "customer_id": "cust_303",
+          "primary_account_id": "acc_303",
+          "primary_card_id": "card_303"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551230987"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_303",
+        "card_303"
+      ]
+    }
+  },
+  {
+    "id": "80_systematic",
+    "description": {
+      "purpose": "Balanced test case 80 for customer Casey Williams",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Casey Williams with persona HARD_1."
+    },
+    "user_scenario": {
+      "persona": "HARD_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Casey Williams with account acc_401 and card card_401",
+        "known_info": "You are Casey Williams with phone number +15551234590, date of birth 1982-03-09, and email user.004@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "account_info"
+        ]
+      }
+    },
+    "ticket": "Customer Casey Williams requests multi-step banking assistance covering authentication, fraud_response, account_info.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551234590",
+          "customer_id": "cust_401",
+          "primary_account_id": "acc_401",
+          "primary_card_id": "card_401"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234590"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_401",
+        "card_401"
+      ]
+    }
+  },
+  {
+    "id": "81_systematic",
+    "description": {
+      "purpose": "Balanced test case 81 for customer Riley Brown",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Riley Brown with persona HARD_1."
+    },
+    "user_scenario": {
+      "persona": "HARD_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Riley Brown with account acc_505 and card card_505",
+        "known_info": "You are Riley Brown with phone number +15559876543, date of birth 1989-10-21, and email user.005@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "cards",
+          "dispute"
+        ]
+      }
+    },
+    "ticket": "Customer Riley Brown requests multi-step banking assistance covering authentication, cards, dispute.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15559876543",
+          "customer_id": "cust_505",
+          "primary_account_id": "acc_505",
+          "primary_card_id": "card_505"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15559876543"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_505",
+        "card_505"
+      ]
+    }
+  },
+  {
+    "id": "82_systematic",
+    "description": {
+      "purpose": "Balanced test case 82 for customer Alex Morgan",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Alex Morgan with persona MEDIUM_1."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Alex Morgan with account acc_001 and card card_001",
+        "known_info": "You are Alex Morgan with phone number 555-123-7890, date of birth 1980-04-15, and email alex.morgan@email.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "statements",
+          "dispute"
+        ]
+      }
+    },
+    "ticket": "Customer Alex Morgan requests multi-step banking assistance covering authentication, statements, dispute.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "555-123-7890",
+          "customer_id": "cust_001",
+          "primary_account_id": "acc_001",
+          "primary_card_id": "card_001"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "555-123-7890"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_001",
+        "card_001"
+      ]
+    }
+  },
+  {
+    "id": "83_systematic",
+    "description": {
+      "purpose": "Balanced test case 83 for customer Maria Santos",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Maria Santos with persona HARD_1."
+    },
+    "user_scenario": {
+      "persona": "HARD_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Maria Santos with account acc_101 and card card_101",
+        "known_info": "You are Maria Santos with phone number +15551234567, date of birth 1986-02-11, and email user.001@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "payments",
+          "transactions"
+        ]
+      }
+    },
+    "ticket": "Customer Maria Santos requests multi-step banking assistance covering authentication, payments, transactions.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551234567",
+          "customer_id": "cust_101",
+          "primary_account_id": "acc_101",
+          "primary_card_id": "card_101"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234567"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_101",
+        "card_101"
+      ]
+    }
+  },
+  {
+    "id": "84_systematic",
+    "description": {
+      "purpose": "Balanced test case 84 for customer Jordan Smith",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Jordan Smith with persona MEDIUM_2."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Jordan Smith with account acc_202 and card card_202",
+        "known_info": "You are Jordan Smith with phone number +15558675309, date of birth 1994-09-02, and email user.002@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "cards"
+        ]
+      }
+    },
+    "ticket": "Customer Jordan Smith requests multi-step banking assistance covering authentication, fraud_response, cards.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15558675309",
+          "customer_id": "cust_202",
+          "primary_account_id": "acc_202",
+          "primary_card_id": "card_202"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15558675309"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_202",
+        "card_202"
+      ]
+    }
+  },
+  {
+    "id": "85_systematic",
+    "description": {
+      "purpose": "Balanced test case 85 for customer Taylor Johnson",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Taylor Johnson with persona EASY_1."
+    },
+    "user_scenario": {
+      "persona": "EASY_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Taylor Johnson with account acc_303 and card card_303",
+        "known_info": "You are Taylor Johnson with phone number +15551230987, date of birth 1991-05-06, and email user.003@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "payments",
+          "transactions"
+        ]
+      }
+    },
+    "ticket": "Customer Taylor Johnson requests multi-step banking assistance covering authentication, payments, transactions.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551230987",
+          "customer_id": "cust_303",
+          "primary_account_id": "acc_303",
+          "primary_card_id": "card_303"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551230987"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_303",
+        "card_303"
+      ]
+    }
+  },
+  {
+    "id": "86_systematic",
+    "description": {
+      "purpose": "Balanced test case 86 for customer Casey Williams",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Casey Williams with persona MEDIUM_1."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Casey Williams with account acc_401 and card card_401",
+        "known_info": "You are Casey Williams with phone number +15551234590, date of birth 1982-03-09, and email user.004@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "payments",
+          "statements"
+        ]
+      }
+    },
+    "ticket": "Customer Casey Williams requests multi-step banking assistance covering authentication, payments, statements.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551234590",
+          "customer_id": "cust_401",
+          "primary_account_id": "acc_401",
+          "primary_card_id": "card_401"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234590"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_401",
+        "card_401"
+      ]
+    }
+  },
+  {
+    "id": "87_systematic",
+    "description": {
+      "purpose": "Balanced test case 87 for customer Riley Brown",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Riley Brown with persona MEDIUM_2."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Riley Brown with account acc_505 and card card_505",
+        "known_info": "You are Riley Brown with phone number +15559876543, date of birth 1989-10-21, and email user.005@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "statements",
+          "dispute"
+        ]
+      }
+    },
+    "ticket": "Customer Riley Brown requests multi-step banking assistance covering authentication, statements, dispute.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15559876543",
+          "customer_id": "cust_505",
+          "primary_account_id": "acc_505",
+          "primary_card_id": "card_505"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15559876543"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_505",
+        "card_505"
+      ]
+    }
+  },
+  {
+    "id": "88_systematic",
+    "description": {
+      "purpose": "Balanced test case 88 for customer Alex Morgan",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Alex Morgan with persona HARD_1."
+    },
+    "user_scenario": {
+      "persona": "HARD_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Alex Morgan with account acc_001 and card card_001",
+        "known_info": "You are Alex Morgan with phone number 555-123-7890, date of birth 1980-04-15, and email alex.morgan@email.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "account_info",
+          "dispute",
+          "fraud_response"
+        ]
+      }
+    },
+    "ticket": "Customer Alex Morgan requests multi-step banking assistance covering account_info, dispute, fraud_response.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "555-123-7890",
+          "customer_id": "cust_001",
+          "primary_account_id": "acc_001",
+          "primary_card_id": "card_001"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "555-123-7890"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_001",
+        "card_001"
+      ]
+    }
+  },
+  {
+    "id": "89_systematic",
+    "description": {
+      "purpose": "Balanced test case 89 for customer Maria Santos",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Maria Santos with persona EASY_2."
+    },
+    "user_scenario": {
+      "persona": "EASY_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Maria Santos with account acc_101 and card card_101",
+        "known_info": "You are Maria Santos with phone number +15551234567, date of birth 1986-02-11, and email user.001@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "cards"
+        ]
+      }
+    },
+    "ticket": "Customer Maria Santos requests multi-step banking assistance covering authentication, fraud_response, cards.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551234567",
+          "customer_id": "cust_101",
+          "primary_account_id": "acc_101",
+          "primary_card_id": "card_101"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234567"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_101",
+        "card_101"
+      ]
+    }
+  },
+  {
+    "id": "90_systematic",
+    "description": {
+      "purpose": "Balanced test case 90 for customer Jordan Smith",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Jordan Smith with persona HARD_1."
+    },
+    "user_scenario": {
+      "persona": "HARD_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Jordan Smith with account acc_202 and card card_202",
+        "known_info": "You are Jordan Smith with phone number +15558675309, date of birth 1994-09-02, and email user.002@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "cards",
+          "dispute"
+        ]
+      }
+    },
+    "ticket": "Customer Jordan Smith requests multi-step banking assistance covering authentication, cards, dispute.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15558675309",
+          "customer_id": "cust_202",
+          "primary_account_id": "acc_202",
+          "primary_card_id": "card_202"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15558675309"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_202",
+        "card_202"
+      ]
+    }
+  },
+  {
+    "id": "91_systematic",
+    "description": {
+      "purpose": "Balanced test case 91 for customer Taylor Johnson",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Taylor Johnson with persona EASY_2."
+    },
+    "user_scenario": {
+      "persona": "EASY_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Taylor Johnson with account acc_303 and card card_303",
+        "known_info": "You are Taylor Johnson with phone number +15551230987, date of birth 1991-05-06, and email user.003@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "account_info",
+          "transactions"
+        ]
+      }
+    },
+    "ticket": "Customer Taylor Johnson requests multi-step banking assistance covering authentication, account_info, transactions.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551230987",
+          "customer_id": "cust_303",
+          "primary_account_id": "acc_303",
+          "primary_card_id": "card_303"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551230987"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_303",
+        "card_303"
+      ]
+    }
+  },
+  {
+    "id": "92_systematic",
+    "description": {
+      "purpose": "Balanced test case 92 for customer Casey Williams",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Casey Williams with persona EASY_1."
+    },
+    "user_scenario": {
+      "persona": "EASY_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Casey Williams with account acc_401 and card card_401",
+        "known_info": "You are Casey Williams with phone number +15551234590, date of birth 1982-03-09, and email user.004@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "cards"
+        ]
+      }
+    },
+    "ticket": "Customer Casey Williams requests multi-step banking assistance covering authentication, fraud_response, cards.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551234590",
+          "customer_id": "cust_401",
+          "primary_account_id": "acc_401",
+          "primary_card_id": "card_401"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234590"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_401",
+        "card_401"
+      ]
+    }
+  },
+  {
+    "id": "93_systematic",
+    "description": {
+      "purpose": "Balanced test case 93 for customer Riley Brown",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Riley Brown with persona HARD_1."
+    },
+    "user_scenario": {
+      "persona": "HARD_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Riley Brown with account acc_505 and card card_505",
+        "known_info": "You are Riley Brown with phone number +15559876543, date of birth 1989-10-21, and email user.005@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "payments",
+          "transactions"
+        ]
+      }
+    },
+    "ticket": "Customer Riley Brown requests multi-step banking assistance covering authentication, payments, transactions.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15559876543",
+          "customer_id": "cust_505",
+          "primary_account_id": "acc_505",
+          "primary_card_id": "card_505"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15559876543"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_505",
+        "card_505"
+      ]
+    }
+  },
+  {
+    "id": "94_systematic",
+    "description": {
+      "purpose": "Balanced test case 94 for customer Alex Morgan",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Alex Morgan with persona EASY_1."
+    },
+    "user_scenario": {
+      "persona": "EASY_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Alex Morgan with account acc_001 and card card_001",
+        "known_info": "You are Alex Morgan with phone number 555-123-7890, date of birth 1980-04-15, and email alex.morgan@email.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "account_info"
+        ]
+      }
+    },
+    "ticket": "Customer Alex Morgan requests multi-step banking assistance covering authentication, fraud_response, account_info.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "555-123-7890",
+          "customer_id": "cust_001",
+          "primary_account_id": "acc_001",
+          "primary_card_id": "card_001"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "555-123-7890"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_001",
+        "card_001"
+      ]
+    }
+  },
+  {
+    "id": "95_systematic",
+    "description": {
+      "purpose": "Balanced test case 95 for customer Maria Santos",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Maria Santos with persona HARD_1."
+    },
+    "user_scenario": {
+      "persona": "HARD_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Maria Santos with account acc_101 and card card_101",
+        "known_info": "You are Maria Santos with phone number +15551234567, date of birth 1986-02-11, and email user.001@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "account_info",
+          "transactions"
+        ]
+      }
+    },
+    "ticket": "Customer Maria Santos requests multi-step banking assistance covering authentication, account_info, transactions.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551234567",
+          "customer_id": "cust_101",
+          "primary_account_id": "acc_101",
+          "primary_card_id": "card_101"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234567"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_101"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_101",
+        "card_101"
+      ]
+    }
+  },
+  {
+    "id": "96_systematic",
+    "description": {
+      "purpose": "Balanced test case 96 for customer Jordan Smith",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Jordan Smith with persona HARD_1."
+    },
+    "user_scenario": {
+      "persona": "HARD_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Jordan Smith with account acc_202 and card card_202",
+        "known_info": "You are Jordan Smith with phone number +15558675309, date of birth 1994-09-02, and email user.002@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "account_info"
+        ]
+      }
+    },
+    "ticket": "Customer Jordan Smith requests multi-step banking assistance covering authentication, fraud_response, account_info.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15558675309",
+          "customer_id": "cust_202",
+          "primary_account_id": "acc_202",
+          "primary_card_id": "card_202"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15558675309"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_202"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_202",
+        "card_202"
+      ]
+    }
+  },
+  {
+    "id": "97_systematic",
+    "description": {
+      "purpose": "Balanced test case 97 for customer Taylor Johnson",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Taylor Johnson with persona MEDIUM_2."
+    },
+    "user_scenario": {
+      "persona": "MEDIUM_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Taylor Johnson with account acc_303 and card card_303",
+        "known_info": "You are Taylor Johnson with phone number +15551230987, date of birth 1991-05-06, and email user.003@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "account_info"
+        ]
+      }
+    },
+    "ticket": "Customer Taylor Johnson requests multi-step banking assistance covering authentication, fraud_response, account_info.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551230987",
+          "customer_id": "cust_303",
+          "primary_account_id": "acc_303",
+          "primary_card_id": "card_303"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551230987"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_303"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_303",
+        "card_303"
+      ]
+    }
+  },
+  {
+    "id": "98_systematic",
+    "description": {
+      "purpose": "Balanced test case 98 for customer Casey Williams",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Casey Williams with persona EASY_2."
+    },
+    "user_scenario": {
+      "persona": "EASY_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Casey Williams with account acc_401 and card card_401",
+        "known_info": "You are Casey Williams with phone number +15551234590, date of birth 1982-03-09, and email user.004@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "cards"
+        ]
+      }
+    },
+    "ticket": "Customer Casey Williams requests multi-step banking assistance covering authentication, fraud_response, cards.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15551234590",
+          "customer_id": "cust_401",
+          "primary_account_id": "acc_401",
+          "primary_card_id": "card_401"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15551234590"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_401"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_401",
+        "card_401"
+      ]
+    }
+  },
+  {
+    "id": "99_systematic",
+    "description": {
+      "purpose": "Balanced test case 99 for customer Riley Brown",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Riley Brown with persona EASY_2."
+    },
+    "user_scenario": {
+      "persona": "EASY_2",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Riley Brown with account acc_505 and card card_505",
+        "known_info": "You are Riley Brown with phone number +15559876543, date of birth 1989-10-21, and email user.005@example.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "cards"
+        ]
+      }
+    },
+    "ticket": "Customer Riley Brown requests multi-step banking assistance covering authentication, fraud_response, cards.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "+15559876543",
+          "customer_id": "cust_505",
+          "primary_account_id": "acc_505",
+          "primary_card_id": "card_505"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "+15559876543"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_505"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_505",
+        "card_505"
+      ]
+    }
+  },
+  {
+    "id": "100_systematic",
+    "description": {
+      "purpose": "Balanced test case 100 for customer Alex Morgan",
+      "relevant_policies": "Banking and Financial Services Chatbot Policy",
+      "notes": "Scenario involves Alex Morgan with persona EASY_1."
+    },
+    "user_scenario": {
+      "persona": "EASY_1",
+      "instructions": {
+        "domain": "banking",
+        "reason_for_call": "Scenario for Alex Morgan with account acc_001 and card card_001",
+        "known_info": "You are Alex Morgan with phone number 555-123-7890, date of birth 1980-04-15, and email alex.morgan@email.com.",
+        "unknown_info": "Depends on goals (e.g., recent transactions, dispute steps, fraud resolution)",
+        "task_instructions": "Progress naturally through at least 3 banking needs, shifting at least twice."
+      },
+      "goal_shifts": {
+        "required_shifts": 2,
+        "goals": [
+          "authentication",
+          "fraud_response",
+          "cards"
+        ]
+      }
+    },
+    "ticket": "Customer Alex Morgan requests multi-step banking assistance covering authentication, fraud_response, cards.",
+    "initial_state": {
+      "initialization_data": {
+        "agent_data": null,
+        "user_data": {
+          "authenticated": false,
+          "phone_number": "555-123-7890",
+          "customer_id": "cust_001",
+          "primary_account_id": "acc_001",
+          "primary_card_id": "card_001"
+        }
+      },
+      "message_history": []
+    },
+    "evaluation_criteria": {
+      "action_sets": [
+        {
+          "action_id": "authenticate_customer",
+          "allowed_tools": [
+            {
+              "function_name": "get_customer_by_phone",
+              "params": {
+                "phone_number": "555-123-7890"
+              }
+            },
+            {
+              "function_name": "get_customer_by_id",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "account_info_or_balances",
+          "allowed_tools": [
+            {
+              "function_name": "get_accounts",
+              "params": {
+                "customer_id": "cust_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        },
+        {
+          "action_id": "transactions_or_disputes",
+          "allowed_tools": [
+            {
+              "function_name": "get_transactions",
+              "params": {
+                "account_id": "acc_001"
+              }
+            }
+          ],
+          "max_score": 1.0,
+          "scoring_rules": {
+            "parameter_accuracy": 1.0,
+            "tool_usage": 1.0
+          }
+        }
+      ],
+      "nl_assertions": [
+        "Agent verified customer identity before accessing account information",
+        "Agent adapted smoothly across multiple goal shifts",
+        "Agent handled payments, disputes, or fraud actions according to policy",
+        "Agent provided clear, organized information at each stage",
+        "Agent did not transfer the customer to a human agent when the goal changed"
+      ],
+      "communicate_info": [
+        "acc_001",
+        "card_001"
+      ]
+    }
   }
 ]
