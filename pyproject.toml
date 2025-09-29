@@ -51,6 +51,8 @@ setup-vllms   = "vllms.entrypoints:setup_vllms"
 vllms-qwen    = "vllms.entrypoints:run_qwen" # export PYTORCH_CUDA_ALLOC_CONF="max_split_size_mb:128,expandable_segments:True"
 vllms-mistral = "vllms.entrypoints:run_mistral" # export PYTORCH_CUDA_ALLOC_CONF="max_split_size_mb:128,expandable_segments:True"
 vllms-deepseek = "vllms.entrypoints:run_deepseek"
+vllms-llama3 = "vllms.entrypoints:run_llama3"
+vllms-llama4-scout = "vllms.entrypoints:run_llama4_scout"
 
 [tool.pdm.build]
 package-dir = "src"

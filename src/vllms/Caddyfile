@@ -11,6 +11,14 @@
         uri strip_prefix /deepseek
         reverse_proxy 127.0.0.1:{env.DEEPSEEK_PORT}
     }
+    handle /llama3/* {
+        uri strip_prefix /llama3
+        reverse_proxy 127.0.0.1:{env.LLAMA3_PORT}
+    }
+    handle /llama4-scout/* {
+        uri strip_prefix /llama4-scout
+        reverse_proxy 127.0.0.1:{env.LLAMA4_SCOUT_PORT}
+    }
 
     respond /health "ok" 200
 }

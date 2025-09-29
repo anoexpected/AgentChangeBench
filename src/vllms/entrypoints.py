@@ -35,6 +35,11 @@ def run_single(
     dtype = os.getenv(dtype_env, "float16")
 
     extra = f"{extra_flags.strip()}" if extra_flags and extra_flags.strip() else ""
+    
+    # Build tool choice flags
+    tool_flags = ""
+    if "--disable-auto-tool-choice" not in extra:
+        tool_flags = f"--enable-auto-tool-choice --tool-call-parser {tool_parser}"
 
     return subprocess.call(
         [
@@ -46,7 +51,7 @@ def run_single(
             f"--served-model-name {served_name} "
             f"--dtype {dtype} "
             f"--host 0.0.0.0 --port {port} "
-            f"--enable-auto-tool-choice --tool-call-parser {tool_parser} {extra}",
+            f"{tool_flags} {extra}",
             f"caddy run --config src/vllms/Caddyfile --adapter caddyfile",
         ]
     )
@@ -77,4 +82,25 @@ def run_mistral():
         "DTYPE_MISTRAL",
         tool_parser="mistral",
         extra_flags=mistral_flags,
+    )
+
+
+def run_llama3():
+    llama3_flags = os.getenv("LLAMA3_FLAGS", "--enable_auto_tool_choice --tool-call-parser llama3_json --chat-template src/vllms/examples/tool_chat_template_llama3.1_json.jinja")
+    return run_single(
+        "LLAMA3_MODEL",
+        "LLAMA3_PORT", 
+        "DTYPE_LLAMA3",
+        extra_flags=llama3_flags,
+    )
+
+
+def run_llama4_scout():
+    llama4_flags = os.getenv("LLAMA4_SCOUT_FLAGS", "--quantization fp8 --kv-cache-dtype fp8 --gpu-memory-utilization 0.90 --chat-template examples/tool_chat_template_llama4_pythonic.jinja --override-generation-config='{\"attn_temperature_tuning\": true}'")
+    return run_single(
+        "LLAMA4_SCOUT_MODEL",
+        "LLAMA4_SCOUT_PORT",
+        "DTYPE_LLAMA4_SCOUT", 
+        tool_parser="pythonic",
+        extra_flags=llama4_flags,
     )
