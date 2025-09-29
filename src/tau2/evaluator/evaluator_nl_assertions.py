@@ -17,6 +17,8 @@ class NLAssertionsEvaluator:
         cls,
         task: Task,
         full_trajectory: list[Message],
+        model: str = None,
+        llm_args: dict = None,
     ) -> RewardInfo:
         """
         Calculate the reward for the simulation by using an LLM to evaluate whether the trajectory adheres to all the natural-language assertions
@@ -38,7 +40,7 @@ class NLAssertionsEvaluator:
             )
 
         nl_assertions_checks = cls.evaluate_nl_assertions(
-            full_trajectory, nl_assertions
+            full_trajectory, nl_assertions, model, llm_args
         )
 
         # Calculate reward: 1 if all expectations are met, 0 otherwise
@@ -56,6 +58,8 @@ class NLAssertionsEvaluator:
         cls,
         trajectory: list[Message],
         nl_assertions: list[str],
+        model: str = None,
+        llm_args: dict = None,
     ) -> list[NLAssertionCheck]:
         """
         Evaluate whether the trajectory meets each expected outcome.
@@ -112,10 +116,16 @@ class NLAssertionsEvaluator:
             UserMessage(role="user", content=user_prompt),
         ]
 
+        # Use provided model/args or fall back to defaults
+        if model is None:
+            model = DEFAULT_LLM_NL_ASSERTIONS
+        if llm_args is None:
+            llm_args = DEFAULT_LLM_NL_ASSERTIONS_ARGS
+            
         assistant_message = generate(
-            model=DEFAULT_LLM_NL_ASSERTIONS,
+            model=model,
             messages=messages,
-            **DEFAULT_LLM_NL_ASSERTIONS_ARGS,
+            **llm_args,
         )
         result_data = json.loads(assistant_message.content)
         return [

@@ -142,12 +142,14 @@ def run_domain(config: RunConfig) -> Results:
         max_errors=config.max_errors,
         save_to=save_to,
         console_display=True,
-        evaluation_type=EvaluationType.ALL,
+        evaluation_type=EvaluationType(config.evaluation_type),
         max_concurrency=config.max_concurrency,
         seed=config.seed,
         log_level=config.log_level,
         gsrt_judge_llm=config.gsrt_judge_llm,
         gsrt_judge_llm_args=config.gsrt_judge_llm_args,
+        nl_assertions_judge_llm=config.nl_assertions_judge_llm,
+        nl_assertions_judge_llm_args=config.nl_assertions_judge_llm_args,
     )
     metrics = compute_metrics(simulation_results)
     ConsoleDisplay.display_agent_metrics(metrics)
@@ -175,6 +177,8 @@ def run_tasks(
     log_level: Optional[str] = "INFO",
     gsrt_judge_llm: Optional[str] = None,
     gsrt_judge_llm_args: Optional[dict] = None,
+    nl_assertions_judge_llm: Optional[str] = None,
+    nl_assertions_judge_llm_args: Optional[dict] = None,
 ) -> Results:
     """
     Runs tasks for a given domain.
@@ -350,13 +354,15 @@ def run_tasks(
                 max_errors=max_errors,
                 evaluation_type=evaluation_type,
                 seed=seed,
+                nl_assertions_judge_llm=nl_assertions_judge_llm,
+                nl_assertions_judge_llm_args=nl_assertions_judge_llm_args,
             )
             simulation.trial = trial
             # Compute and persist GSRT v2 judge output so it's saved in JSON
             try:
                 from tau2.metrics.gsrt import detect_gsrt_enhanced as detect_gsrt_v2
 
-                judge_model = gsrt_judge_llm or "gpt-5"
+                judge_model = gsrt_judge_llm or "gpt-4o-mini"
                 judge_args = gsrt_judge_llm_args or {"temperature": 0.0}
                 res = detect_gsrt_v2(
                     task, simulation, model=judge_model, llm_args=judge_args
@@ -414,6 +420,8 @@ def run_task(
     max_errors: int = 10,
     evaluation_type: EvaluationType = EvaluationType.ALL,
     seed: Optional[int] = None,
+    nl_assertions_judge_llm: Optional[str] = None,
+    nl_assertions_judge_llm_args: Optional[dict] = None,
 ) -> SimulationRun:
     """
     Runs tasks for a given domain.
@@ -519,7 +527,7 @@ def run_task(
 
         # Compute TSR directly
         weights = get_tsr_weights()
-        tsr_result = compute_tsr_for_task(task, simulation, weights)
+        tsr_result = compute_tsr_for_task(task, simulation, weights, nl_assertions_judge_llm, nl_assertions_judge_llm_args)
         reward = tsr_result["overall_tsr"]
 
         # Create reward_breakdown based on TSR components

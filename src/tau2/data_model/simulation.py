@@ -155,13 +155,31 @@ class RunConfig(BaseModel):
     ]
     gsrt_judge_llm: Annotated[
         Optional[str],
-        Field(description="Judge model for GSRT v2 (default gpt-5)", default="gpt-5"),
+        Field(description="Judge model for GSRT v2 (default gpt-4o-mini)", default="gpt-4o-mini"),
     ]
     gsrt_judge_llm_args: Annotated[
         Optional[dict],
         Field(
             description="Judge model args for GSRT v2",
             default_factory=lambda: {"temperature": 0.0},
+        ),
+    ]
+    nl_assertions_judge_llm: Annotated[
+        Optional[str],
+        Field(description="Judge model for NL assertions (default gpt-4o-mini)", default="gpt-4o-mini"),
+    ]
+    nl_assertions_judge_llm_args: Annotated[
+        Optional[dict],
+        Field(
+            description="Judge model args for NL assertions",
+            default_factory=lambda: {"temperature": 0.0},
+        ),
+    ]
+    evaluation_type: Annotated[
+        str,
+        Field(
+            description="Type of evaluation to perform (env, nl_assertions, communicate, action, all, none)",
+            default="all",
         ),
     ]
 

@@ -184,7 +184,7 @@ def _params_match(actual_params: dict, expected_params: dict) -> bool:
 
 
 def evaluate_nl_assertions_for_task(
-    task: Task, sim: SimulationRun
+    task: Task, sim: SimulationRun, model: str = None, llm_args: dict = None
 ) -> tuple[float, bool, list]:
     """Evaluate NL assertions component for a single task.
 
@@ -207,7 +207,7 @@ def evaluate_nl_assertions_for_task(
 
         # Use the class method that returns detailed results
         nl_checks = NLAssertionsEvaluator.evaluate_nl_assertions(
-            [msg for msg in sim.messages], nl_assertions
+            [msg for msg in sim.messages], nl_assertions, model, llm_args
         )
         passed_count = sum(1 for check in nl_checks if check.met)
         return passed_count / len(nl_assertions), True, nl_checks
@@ -223,7 +223,8 @@ def evaluate_nl_assertions_for_task(
 
 
 def compute_tsr_for_task(
-    task: Task, sim: SimulationRun, weights: Dict[str, float]
+    task: Task, sim: SimulationRun, weights: Dict[str, float], 
+    nl_assertions_judge_llm: str = None, nl_assertions_judge_llm_args: dict = None
 ) -> Dict[str, float]:
     """Compute TSR for a single task with dynamic reweighting for missing components."""
     communicate_score, has_communicate_info = evaluate_communicate_info_for_task(
@@ -231,7 +232,7 @@ def compute_tsr_for_task(
     )
     action_score, has_actions = evaluate_actions_for_task(task, sim)
     nl_score, has_nl_assertions, nl_assertion_details = evaluate_nl_assertions_for_task(
-        task, sim
+        task, sim, nl_assertions_judge_llm, nl_assertions_judge_llm_args
     )
 
     # Dynamic reweighting: exclude components that don't exist

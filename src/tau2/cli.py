@@ -133,14 +133,33 @@ def add_run_args(parser):
     parser.add_argument(
         "--gsrt-judge-llm",
         type=str,
-        default="gpt-5",
-        help="LLM to use for GSRT v2 judge (default: gpt-5)",
+        default="gpt-4o-mini",
+        help="LLM to use for GSRT v2 judge (default: gpt-4o-mini)",
     )
     parser.add_argument(
         "--gsrt-judge-llm-args",
         type=dict,
         default={"temperature": 0.0},
         help="LLM args for GSRT v2 judge (default: {temperature: 0.0})",
+    )
+    parser.add_argument(
+        "--nl-assertions-judge-llm",
+        type=str,
+        default="gpt-4o-mini",
+        help="LLM to use for NL assertions judge (default: gpt-4o-mini)",
+    )
+    parser.add_argument(
+        "--nl-assertions-judge-llm-args",
+        type=dict,
+        default={"temperature": 0.0},
+        help="LLM args for NL assertions judge (default: {temperature: 0.0})",
+    )
+    parser.add_argument(
+        "--evaluation-type",
+        type=str,
+        choices=["env", "nl_assertions", "communicate", "action", "all", "none"],
+        default="all",
+        help="Type of evaluation to perform (default: all). Use 'none' for user/agent-only simulations.",
     )
 
 
@@ -173,6 +192,9 @@ def main():
                 log_level=args.log_level,
                 gsrt_judge_llm=args.gsrt_judge_llm,
                 gsrt_judge_llm_args=args.gsrt_judge_llm_args,
+                nl_assertions_judge_llm=args.nl_assertions_judge_llm,
+                nl_assertions_judge_llm_args=args.nl_assertions_judge_llm_args,
+                evaluation_type=args.evaluation_type,
             )
         )
     )

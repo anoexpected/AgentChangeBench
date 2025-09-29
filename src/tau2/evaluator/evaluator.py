@@ -15,6 +15,7 @@ class EvaluationType(str, Enum):
     COMMUNICATE = "communicate"
     ACTION = "action"
     ALL = "all"
+    NONE = "none"
 
 
 def evaluate_simulation(
@@ -126,6 +127,12 @@ def evaluate_simulation(
                 "communicate": communicate_reward_info.info,
                 "action": action_reward_info.info,
             },
+        )
+    elif evaluation_type == EvaluationType.NONE:
+        # Return minimal reward info for user/agent-only simulations
+        reward_info = RewardInfo(
+            reward=1.0,
+            info={"note": "No evaluation performed - user/agent simulation only"},
         )
     else:
         raise ValueError(f"Unknown evaluation type: {evaluation_type}")
