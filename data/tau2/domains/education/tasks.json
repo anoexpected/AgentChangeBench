@@ -82,8 +82,8 @@
                     "requestor": "assistant",
                     "name": "search_courses",
                     "arguments": {
-                        "department": "department_placeholder",
-                        "level": "level_placeholder"
+                        "level": "Undergraduate",
+                        "subject": "CS"
                     },
                     "compare_args": [
                         "department",
@@ -668,10 +668,7 @@
                     "action_id": "search_courses_1",
                     "requestor": "assistant",
                     "name": "search_courses",
-                    "arguments": {
-                        "query": "query_placeholder",
-                        "filters": "filters_placeholder"
-                    },
+                    "arguments": {},
                     "compare_args": [
                         "query",
                         "filters"
@@ -783,7 +780,7 @@
                     "requestor": "assistant",
                     "name": "get_technology_support",
                     "arguments": {
-                        "issue_type": "issue_type_placeholder"
+                        "issue_type": "general support"
                     },
                     "compare_args": [
                         "issue_type"
@@ -896,7 +893,7 @@
                     "requestor": "assistant",
                     "name": "get_degree_requirements",
                     "arguments": {
-                        "major": "major_placeholder"
+                        "major": "History"
                     },
                     "compare_args": [
                         "major"
@@ -1638,7 +1635,7 @@
                     "requestor": "assistant",
                     "name": "get_degree_requirements",
                     "arguments": {
-                        "major": "major_placeholder"
+                        "major": "Art"
                     },
                     "compare_args": [
                         "major"
@@ -1863,7 +1860,7 @@
                     "requestor": "assistant",
                     "name": "search_campus_resources",
                     "arguments": {
-                        "resource_type": "resource_type_placeholder"
+                        "resource_type": "student services"
                     },
                     "compare_args": [
                         "resource_type"
@@ -2451,8 +2448,8 @@
                     "requestor": "assistant",
                     "name": "search_courses",
                     "arguments": {
-                        "term": "term_placeholder",
-                        "department": "department_placeholder"
+                        "subject": "CS",
+                        "semester": "Fall 2024"
                     },
                     "compare_args": [
                         "term",
@@ -2579,7 +2576,7 @@
                     "requestor": "assistant",
                     "name": "get_degree_requirements",
                     "arguments": {
-                        "major": "major_placeholder"
+                        "major": "Biology"
                     },
                     "compare_args": [
                         "major"
@@ -2817,7 +2814,7 @@
                     "requestor": "assistant",
                     "name": "get_technology_support",
                     "arguments": {
-                        "issue_type": "issue_type_placeholder"
+                        "issue_type": "general support"
                     },
                     "compare_args": [
                         "issue_type"
@@ -3288,10 +3285,7 @@
                     "action_id": "search_courses_1",
                     "requestor": "assistant",
                     "name": "search_courses",
-                    "arguments": {
-                        "query": "query_placeholder",
-                        "filters": "filters_placeholder"
-                    },
+                    "arguments": {},
                     "compare_args": [
                         "query",
                         "filters"
@@ -4130,7 +4124,7 @@
                     "requestor": "assistant",
                     "name": "search_campus_resources",
                     "arguments": {
-                        "resource_type": "resource_type_placeholder"
+                        "resource_type": "student services"
                     },
                     "compare_args": [
                         "resource_type"
@@ -4605,7 +4599,7 @@
                     "requestor": "assistant",
                     "name": "get_degree_requirements",
                     "arguments": {
-                        "major": "major_placeholder"
+                        "major": "Engineering"
                     },
                     "compare_args": [
                         "major"
@@ -4842,10 +4836,7 @@
                     "action_id": "search_courses_1",
                     "requestor": "assistant",
                     "name": "search_courses",
-                    "arguments": {
-                        "query": "query_placeholder",
-                        "filters": "filters_placeholder"
-                    },
+                    "arguments": {},
                     "compare_args": [
                         "query",
                         "filters"
@@ -4958,7 +4949,7 @@
                     "requestor": "assistant",
                     "name": "get_degree_requirements",
                     "arguments": {
-                        "major": "major_placeholder"
+                        "major": "Business Administration"
                     },
                     "compare_args": [
                         "major"
@@ -5083,7 +5074,7 @@
                     "requestor": "assistant",
                     "name": "get_technology_support",
                     "arguments": {
-                        "issue_type": "issue_type_placeholder"
+                        "issue_type": "general support"
                     },
                     "compare_args": [
                         "issue_type"
@@ -5681,8 +5672,8 @@
                     "requestor": "assistant",
                     "name": "search_courses",
                     "arguments": {
-                        "term": "term_placeholder",
-                        "department": "department_placeholder"
+                        "subject": "CS",
+                        "semester": "Fall 2024"
                     },
                     "compare_args": [
                         "term",
@@ -6287,7 +6278,7 @@
                     "requestor": "assistant",
                     "name": "get_degree_requirements",
                     "arguments": {
-                        "major": "major_placeholder"
+                        "major": "English Literature"
                     },
                     "compare_args": [
                         "major"
@@ -6512,7 +6503,7 @@
                     "requestor": "assistant",
                     "name": "search_campus_resources",
                     "arguments": {
-                        "resource_type": "resource_type_placeholder"
+                        "resource_type": "student services"
                     },
                     "compare_args": [
                         "resource_type"
@@ -7112,7 +7103,7 @@
                     "requestor": "assistant",
                     "name": "get_technology_support",
                     "arguments": {
-                        "issue_type": "issue_type_placeholder"
+                        "issue_type": "general support"
                     },
                     "compare_args": [
                         "issue_type"
@@ -7688,7 +7679,7 @@
                     "requestor": "assistant",
                     "name": "get_degree_requirements",
                     "arguments": {
-                        "major": "major_placeholder"
+                        "major": "Computer Science"
                     },
                     "compare_args": [
                         "major"
@@ -8405,8 +8396,8 @@
                     "requestor": "assistant",
                     "name": "search_courses",
                     "arguments": {
-                        "term": "term_placeholder",
-                        "department": "department_placeholder"
+                        "subject": "CS",
+                        "semester": "Fall 2024"
                     },
                     "compare_args": [
                         "term",
@@ -8544,7 +8535,7 @@
                     "requestor": "assistant",
                     "name": "get_degree_requirements",
                     "arguments": {
-                        "major": "major_placeholder"
+                        "major": "Art"
                     },
                     "compare_args": [
                         "major"
@@ -8780,7 +8771,7 @@
                     "requestor": "assistant",
                     "name": "search_campus_resources",
                     "arguments": {
-                        "resource_type": "resource_type_placeholder"
+                        "resource_type": "student services"
                     },
                     "compare_args": [
                         "resource_type"
@@ -9118,10 +9109,7 @@
                     "action_id": "search_courses_1",
                     "requestor": "assistant",
                     "name": "search_courses",
-                    "arguments": {
-                        "query": "query_placeholder",
-                        "filters": "filters_placeholder"
-                    },
+                    "arguments": {},
                     "compare_args": [
                         "query",
                         "filters"
@@ -9847,7 +9835,7 @@
                     "requestor": "assistant",
                     "name": "get_degree_requirements",
                     "arguments": {
-                        "major": "major_placeholder"
+                        "major": "Psychology"
                     },
                     "compare_args": [
                         "major"
@@ -10087,7 +10075,7 @@
                     "requestor": "assistant",
                     "name": "search_campus_resources",
                     "arguments": {
-                        "resource_type": "resource_type_placeholder"
+                        "resource_type": "student services"
                     },
                     "compare_args": [
                         "resource_type"
@@ -10893,10 +10881,7 @@
                     "action_id": "search_courses_1",
                     "requestor": "assistant",
                     "name": "search_courses",
-                    "arguments": {
-                        "query": "query_placeholder",
-                        "filters": "filters_placeholder"
-                    },
+                    "arguments": {},
                     "compare_args": [
                         "query",
                         "filters"
@@ -11257,7 +11242,7 @@
                     "requestor": "assistant",
                     "name": "get_technology_support",
                     "arguments": {
-                        "issue_type": "issue_type_placeholder"
+                        "issue_type": "general support"
                     },
                     "compare_args": [
                         "issue_type"
@@ -11381,7 +11366,7 @@
                     "requestor": "assistant",
                     "name": "get_degree_requirements",
                     "arguments": {
-                        "major": "major_placeholder"
+                        "major": "English Literature"
                     },
                     "compare_args": [
                         "major"
@@ -11844,8 +11829,8 @@
                     "requestor": "assistant",
                     "name": "search_courses",
                     "arguments": {
-                        "term": "term_placeholder",
-                        "department": "department_placeholder"
+                        "subject": "CS",
+                        "semester": "Fall 2024"
                     },
                     "compare_args": [
                         "term",
