@@ -57,103 +57,120 @@ class EducationUserSimulator(BaseUser):
             llm: LLM model to use
             llm_args: Additional arguments for the LLM
         """
-        super().__init__(tools, instructions, llm, llm_args)
-        self.education_user_policy = load_file(EDUCATION_USER_POLICY_PATH)
+        super().__init__(instructions=instructions, llm=llm, llm_args=llm_args)
+        self.tools = tools
 
-    def _get_system_message(self, instructions: UserInstructions) -> SystemMessage:
+    @property
+    def education_user_policy(self) -> str:
         """
-        Get the system message with education user policy and scenario instructions.
-
-        Args:
-            instructions: User instructions for the scenario
-
-        Returns:
-            SystemMessage with education context and scenario
+        Load the education user policy from file.
+        The policy includes both tool and non-tool instructions.
         """
-        system_content = EDUCATION_USER_SYSTEM_PROMPT.format(
+        return load_file(EDUCATION_USER_POLICY_PATH)
+
+    @property
+    def system_prompt(self) -> str:
+        """
+        The system prompt for the education user simulator.
+        Uses education user policy which includes domain-specific instructions.
+        """
+        if self.instructions is None:
+            logger.warning("No instructions provided for education user simulator")
+
+        system_prompt = EDUCATION_USER_SYSTEM_PROMPT.format(
             education_user_policy=self.education_user_policy,
-            instructions=instructions.format(),
+            instructions=self.instructions,
         )
-        return SystemMessage(content=system_content)
+        return system_prompt
 
-    def get_next_user_message(
-        self,
-        state: UserState,
-        agent_message: Optional[Message] = None,
-    ) -> Tuple[ValidUserInputMessage, UserState]:
+    def get_init_state(
+        self, message_history: Optional[list[Message]] = None
+    ) -> UserState:
         """
-        Generate the next user message based on education domain context.
+        Get the initial state of the education user simulator.
+        """
+        if message_history is None:
+            message_history = []
+        assert all(is_valid_user_history_message(m) for m in message_history), (
+            "Invalid user message history. User messages must be of type UserMessage, AssistantMessage, or ToolMessage to User."
+        )
+
+        user_state = UserState(
+            system_messages=[SystemMessage(role="system", content=self.system_prompt)],
+            messages=message_history,
+        )
+        return user_state
+
+    @classmethod
+    def is_stop(cls, message: UserMessage) -> bool:
+        """
+        Check if the message is a stop message.
+        """
+        if message.is_tool_call():
+            return False
+        assert message.content is not None
+        return (
+            STOP in message.content
+            or TRANSFER in message.content
+            or OUT_OF_SCOPE in message.content
+        )
+
+    def generate_next_message(
+        self, message: ValidUserInputMessage, state: UserState
+    ) -> Tuple[UserMessage, UserState]:
+        return self._generate_next_message(message, state)
+
+    def _generate_next_message(
+        self, message: ValidUserInputMessage, state: UserState
+    ) -> Tuple[UserMessage, UserState]:
+        """Get the response from the education user simulator.
 
         Args:
-            state: Current user state
-            agent_message: Last message from the agent
+            message: The assistant or tool message.
+            state: The user simulator's state.
 
         Returns:
-            Tuple of (next user message, updated state)
+            A tuple containing the user message and the updated user state.
         """
-        logger.debug("Generating next education user message...")
+        # Updating state with new message
+        if isinstance(message, MultiToolMessage):
+            state.messages.extend(message.tool_messages)
+        else:
+            state.messages.append(message)
+        messages = state.system_messages + state.flip_roles()
 
-        # Build conversation history
-        conversation_history = []
+        # Generate response
+        assistant_message = generate(
+            model=self.llm,
+            messages=messages,
+            tools=self.tools,
+            **self.llm_args,
+        )
 
-        if state.instructions:
-            system_msg = self._get_system_message(state.instructions)
-            conversation_history.append(system_msg)
+        user_response = assistant_message.content
+        logger.debug(f"Response: {user_response}")
 
-        # Add previous conversation messages
-        for msg in state.history:
-            if is_valid_user_history_message(msg):
-                conversation_history.append(msg)
+        user_message = UserMessage(
+            role="user",
+            content=user_response,
+            cost=assistant_message.cost,
+            usage=assistant_message.usage,
+            raw_data=assistant_message.raw_data,
+        )
 
-        # Add the latest agent message if provided
-        if agent_message:
-            conversation_history.append(agent_message)
-
-        # Generate response using LLM
-        try:
-            response = generate(
-                messages=conversation_history,
-                tools=self.tools,
-                model=self.llm,
-                **self.llm_args,
-            )
-
-            logger.debug(f"Generated education user response: {response}")
-
-            # Handle special control messages
-            if response.content and response.content.strip() in [STOP, TRANSFER, OUT_OF_SCOPE]:
-                return response.content.strip(), state
-
-            # Handle tool calls (if user has tools)
-            if isinstance(response, MultiToolMessage) and response.tool_calls:
-                # Update state with new message
-                new_state = UserState(
-                    instructions=state.instructions,
-                    history=state.history + [response],
+        # flip the requestor of the tool calls
+        if assistant_message.tool_calls:
+            user_message.tool_calls = []
+            for tool_call in assistant_message.tool_calls:
+                user_message.tool_calls.append(
+                    ToolCall(
+                        id=tool_call.id,
+                        name=tool_call.name,
+                        arguments=tool_call.arguments,
+                        requestor="user",
+                    )
                 )
-                return response, new_state
 
-            # Handle regular user message
-            if isinstance(response, UserMessage):
-                # Update state with new message
-                new_state = UserState(
-                    instructions=state.instructions,
-                    history=state.history + [response],
-                )
-                return response, new_state
-
-            # Fallback for unexpected response types
-            logger.warning(f"Unexpected response type in education user simulator: {type(response)}")
-            fallback_msg = UserMessage(content="I need help with my academic planning.")
-            new_state = UserState(
-                instructions=state.instructions,
-                history=state.history + [fallback_msg],
-            )
-            return fallback_msg, new_state
-
-        except Exception as e:
-            logger.error(f"Error generating education user message: {str(e)}")
-            # Return a fallback message
-            fallback_msg = UserMessage(content="I'm having trouble with my request. Can you help me?")
-            return fallback_msg, state
-
+        # Updating state with response
+        state.messages.append(user_message)
+        return user_message, state
