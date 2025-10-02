@@ -92,27 +92,20 @@
                 }
             ],
             "communicate_info": [
-                "student40000006",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
+                "Student66",
+                "Doe",
+                "student40000006@university.edu",
+                "Dean'S List",
                 "English Literature",
+                "Philosophy",
+                "2.2",
+                "95",
+                "Sophomore",
                 "120",
                 "2.0",
-                "major requirements",
-                "core courses",
-                "electives",
-                "CS courses",
-                "course codes",
-                "course titles",
-                "credits",
-                "prerequisites",
-                "availability"
+                "CS101",
+                "CS102",
+                "CS201"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -233,14 +226,13 @@
             ],
             "communicate_info": [
                 "Student20000006",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Smith",
+                "Student20000006@university.edu",
+                "Dean'S List",
+                "Business Administration",
+                "2.5",
+                "116",
+                "Junior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -360,20 +352,14 @@
             ],
             "communicate_info": [
                 "Student10000013",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "academic standing",
-                "GPA",
-                "credits",
-                "advisor name",
-                "advisor email",
-                "office hours"
+                "Smith",
+                "Student10000013@university.edu",
+                "Dean'S List",
+                "Biology",
+                "2.2",
+                "83",
+                "Sophomore",
+                "joshua.thompson@university.edu"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -483,14 +469,13 @@
             ],
             "communicate_info": [
                 "Student40000019",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Smith",
+                "Student40000019@university.edu",
+                "Dean'S List",
+                "Engineering",
+                "3.7",
+                "89",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -599,18 +584,13 @@
             ],
             "communicate_info": [
                 "Student10000006",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "total credits",
-                "cumulative GPA",
-                "courses completed",
-                "grades"
+                "Smith",
+                "Student10000006@university.edu",
+                "Probation",
+                "Business Administration",
+                "3.6",
+                "76",
+                "Junior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -718,15 +698,15 @@
                 }
             ],
             "communicate_info": [
-                "student20000002",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student22",
+                "Doe",
+                "student20000002@university.edu",
+                "Good Standing",
+                "Business Administration",
+                "Business",
+                "2.0",
+                "51",
+                "Sophomore"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -834,15 +814,14 @@
                 }
             ],
             "communicate_info": [
-                "student50000018",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student98",
+                "Doe",
+                "student50000018@university.edu",
+                "Probation",
+                "History",
+                "3.3",
+                "127",
+                "Sophomore"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -964,21 +943,16 @@
                 }
             ],
             "communicate_info": [
-                "student50000008",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
+                "Student88",
+                "Doe",
+                "student50000008@university.edu",
+                "Good Standing",
                 "History",
+                "2.3",
+                "117",
+                "Senior",
                 "120",
-                "2.0",
-                "major requirements",
-                "core courses",
-                "electives"
+                "2.0"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1100,17 +1074,13 @@
             ],
             "communicate_info": [
                 "Student40000015",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "course schedule",
-                "course times",
-                "locations"
+                "Smith",
+                "Student40000015@university.edu",
+                "Probation",
+                "Computer Science",
+                "3.3",
+                "85",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1232,17 +1202,16 @@
                 }
             ],
             "communicate_info": [
-                "student20000004",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "hold types",
-                "hold details"
+                "Student24",
+                "Doe",
+                "student20000004@university.edu",
+                "Dean'S List",
+                "Biology",
+                "Art",
+                "2.2",
+                "53",
+                "Senior",
+                "hold_4"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1352,18 +1321,16 @@
                 }
             ],
             "communicate_info": [
-                "student20000014",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "CHEM101",
-                "prerequisite courses",
-                "eligibility status"
+                "Student34",
+                "Doe",
+                "student20000014@university.edu",
+                "Good Standing",
+                "Biology",
+                "Art",
+                "3.2",
+                "63",
+                "Sophomore",
+                "CHEM101"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1476,17 +1443,15 @@
             ],
             "communicate_info": [
                 "Student20000010",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "enrollment status",
-                "enrolled courses",
-                "total credits"
+                "Smith",
+                "Student20000010@university.edu",
+                "Good Standing",
+                "Computer Science",
+                "Mathematics",
+                "2.9",
+                "120",
+                "Junior",
+                "Active"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1606,18 +1571,18 @@
                 }
             ],
             "communicate_info": [
-                "student10000017",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "graduation eligibility",
-                "credits remaining",
-                "requirements status"
+                "Student17",
+                "Doe",
+                "student10000017@university.edu",
+                "Probation",
+                "Mathematics",
+                "Statistics",
+                "3.6",
+                "46",
+                "Freshman",
+                "120",
+                "2.0",
+                "74"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1737,23 +1702,18 @@
                 }
             ],
             "communicate_info": [
-                "student20000019",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "available majors",
-                "requirements",
+                "Student39",
+                "Doe",
+                "student20000019@university.edu",
+                "Dean'S List",
                 "Art",
+                "3.7",
+                "68",
+                "Junior",
+                "Computer Science",
+                "Business Administration",
                 "120",
-                "2.0",
-                "major requirements",
-                "core courses",
-                "electives"
+                "2.0"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1861,18 +1821,15 @@
                 }
             ],
             "communicate_info": [
-                "student50000012",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "academic standing",
-                "GPA",
-                "credits"
+                "Student92",
+                "Doe",
+                "student50000012@university.edu",
+                "Probation",
+                "Business Administration",
+                "Business",
+                "2.7",
+                "121",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1981,15 +1938,14 @@
                 }
             ],
             "communicate_info": [
-                "student20000008",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student28",
+                "Doe",
+                "student20000008@university.edu",
+                "Good Standing",
+                "History",
+                "2.6",
+                "57",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -2108,15 +2064,14 @@
                 }
             ],
             "communicate_info": [
-                "student50000018",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student98",
+                "Doe",
+                "student50000018@university.edu",
+                "Probation",
+                "History",
+                "3.3",
+                "127",
+                "Sophomore"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -2226,14 +2181,14 @@
             ],
             "communicate_info": [
                 "Student10000011",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Smith",
+                "Student10000011@university.edu",
+                "Good Standing",
+                "Business Administration",
+                "Business",
+                "2.0",
+                "81",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -2354,18 +2309,16 @@
                 }
             ],
             "communicate_info": [
-                "student20000012",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "advisor name",
-                "advisor email",
-                "office hours"
+                "Student32",
+                "Doe",
+                "student20000012@university.edu",
+                "Probation",
+                "Business Administration",
+                "Business",
+                "3.0",
+                "61",
+                "Senior",
+                "matthew.anderson@university.edu"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -2476,15 +2429,14 @@
                 }
             ],
             "communicate_info": [
-                "student30000005",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student45",
+                "Doe",
+                "student30000005@university.edu",
+                "Dean'S List",
+                "Music",
+                "2.2",
+                "74",
+                "Freshman"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -2608,23 +2560,18 @@
             ],
             "communicate_info": [
                 "Student40000014",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "CS courses",
-                "course codes",
-                "course titles",
-                "credits",
-                "prerequisites",
-                "availability",
-                "ART101",
-                "prerequisite courses",
-                "eligibility status"
+                "Smith",
+                "Student40000014@university.edu",
+                "Good Standing",
+                "Engineering",
+                "Music",
+                "3.2",
+                "84",
+                "Junior",
+                "CS101",
+                "CS102",
+                "CS201",
+                "ART101"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -2747,20 +2694,15 @@
             ],
             "communicate_info": [
                 "Student20000008",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
+                "Smith",
+                "Student20000008@university.edu",
+                "Probation",
+                "2.7",
+                "118",
+                "Freshman",
                 "Biology",
                 "120",
-                "2.0",
-                "major requirements",
-                "core courses",
-                "electives"
+                "2.0"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -2868,19 +2810,14 @@
                 }
             ],
             "communicate_info": [
-                "student30000013",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "total credits",
-                "cumulative GPA",
-                "courses completed",
-                "grades"
+                "Student53",
+                "Doe",
+                "student30000013@university.edu",
+                "Probation",
+                "Psychology",
+                "3.0",
+                "82",
+                "Freshman"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -2989,15 +2926,15 @@
                 }
             ],
             "communicate_info": [
-                "student40000004",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student64",
+                "Doe",
+                "student40000004@university.edu",
+                "Good Standing",
+                "Biology",
+                "Art",
+                "2.0",
+                "93",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -3106,14 +3043,13 @@
             ],
             "communicate_info": [
                 "Student50000003",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Smith",
+                "Student50000003@university.edu",
+                "Dean'S List",
+                "Biology",
+                "3.1",
+                "113",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -3233,21 +3169,16 @@
                 }
             ],
             "communicate_info": [
-                "student50000004",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "academic standing",
-                "GPA",
-                "credits",
-                "advisor name",
-                "advisor email",
-                "office hours"
+                "Student84",
+                "Doe",
+                "student50000004@university.edu",
+                "Dean'S List",
+                "Biology",
+                "Art",
+                "4.0",
+                "113",
+                "Senior",
+                "david.kim@university.edu"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -3366,18 +3297,18 @@
                 }
             ],
             "communicate_info": [
-                "student40000012",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "graduation eligibility",
-                "credits remaining",
-                "requirements status"
+                "Student72",
+                "Doe",
+                "student40000012@university.edu",
+                "Dean'S List",
+                "Business Administration",
+                "Business",
+                "2.8",
+                "101",
+                "Senior",
+                "120",
+                "2.0",
+                "19"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -3485,15 +3416,15 @@
                 }
             ],
             "communicate_info": [
-                "student30000014",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student54",
+                "Doe",
+                "student30000014@university.edu",
+                "Dean'S List",
+                "Biology",
+                "Art",
+                "3.1",
+                "83",
+                "Sophomore"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -3612,15 +3543,15 @@
                 }
             ],
             "communicate_info": [
-                "student10000007",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student7",
+                "Doe",
+                "student10000007@university.edu",
+                "Good Standing",
+                "Mathematics",
+                "Statistics",
+                "2.6",
+                "36",
+                "Junior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -3742,17 +3673,15 @@
                 }
             ],
             "communicate_info": [
-                "student20000015",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "hold types",
-                "hold details"
+                "Student35",
+                "Doe",
+                "student20000015@university.edu",
+                "Probation",
+                "Music",
+                "3.3",
+                "64",
+                "Junior",
+                "hold_5"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -3874,17 +3803,14 @@
             ],
             "communicate_info": [
                 "Student30000009",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "course schedule",
-                "course times",
-                "locations"
+                "Smith",
+                "Student30000009@university.edu",
+                "Good Standing",
+                "Engineering",
+                "Music",
+                "3.8",
+                "39",
+                "Sophomore"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -3996,14 +3922,13 @@
             ],
             "communicate_info": [
                 "Student20000018",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Smith",
+                "Student20000018@university.edu",
+                "Dean'S List",
+                "Biology",
+                "3.7",
+                "128",
+                "Junior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -4111,18 +4036,15 @@
                 }
             ],
             "communicate_info": [
-                "student30000016",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "academic standing",
-                "GPA",
-                "credits"
+                "Student56",
+                "Doe",
+                "student30000016@university.edu",
+                "Probation",
+                "English Literature",
+                "Philosophy",
+                "3.3",
+                "85",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -4244,18 +4166,15 @@
                 }
             ],
             "communicate_info": [
-                "student50000003",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "advisor name",
-                "advisor email",
-                "office hours"
+                "Student83",
+                "Doe",
+                "student50000003@university.edu",
+                "Probation",
+                "Psychology",
+                "3.9",
+                "112",
+                "Junior",
+                "emily.rodriguez@university.edu"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -4363,15 +4282,15 @@
                 }
             ],
             "communicate_info": [
-                "student20000002",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student22",
+                "Doe",
+                "student20000002@university.edu",
+                "Good Standing",
+                "Business Administration",
+                "Business",
+                "2.0",
+                "51",
+                "Sophomore"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -4482,18 +4401,17 @@
                 }
             ],
             "communicate_info": [
-                "student40000006",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
+                "Student66",
+                "Doe",
+                "student40000006@university.edu",
+                "Dean'S List",
+                "English Literature",
+                "Philosophy",
+                "2.2",
+                "95",
+                "Sophomore",
                 "CS202",
-                "prerequisite courses",
-                "eligibility status"
+                "CS102"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -4614,17 +4532,16 @@
             ],
             "communicate_info": [
                 "Student40000003",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "graduation eligibility",
-                "credits remaining",
-                "requirements status"
+                "Smith",
+                "Student40000003@university.edu",
+                "Probation",
+                "Biology",
+                "2.1",
+                "73",
+                "Senior",
+                "120",
+                "2.0",
+                "47"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -4733,19 +4650,15 @@
                 }
             ],
             "communicate_info": [
-                "student50000016",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "total credits",
-                "cumulative GPA",
-                "courses completed",
-                "grades"
+                "Student96",
+                "Doe",
+                "student50000016@university.edu",
+                "Dean'S List",
+                "English Literature",
+                "Philosophy",
+                "3.1",
+                "125",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -4865,22 +4778,17 @@
             ],
             "communicate_info": [
                 "Student50000009",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "available majors",
-                "requirements",
+                "Smith",
+                "Student50000009@university.edu",
+                "Dean'S List",
                 "Engineering",
+                "3.7",
+                "119",
+                "Sophomore",
+                "Computer Science",
+                "Business Administration",
                 "120",
-                "2.0",
-                "major requirements",
-                "core courses",
-                "electives"
+                "2.0"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -5002,17 +4910,16 @@
                 }
             ],
             "communicate_info": [
-                "student50000016",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "hold types",
-                "hold details"
+                "Student96",
+                "Doe",
+                "student50000016@university.edu",
+                "Dean'S List",
+                "English Literature",
+                "Philosophy",
+                "3.1",
+                "125",
+                "Senior",
+                "hold_1"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -5119,15 +5026,14 @@
                 }
             ],
             "communicate_info": [
-                "student40000009",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student69",
+                "Doe",
+                "student40000009@university.edu",
+                "Dean'S List",
+                "Art",
+                "2.5",
+                "98",
+                "Freshman"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -5250,20 +5156,15 @@
             ],
             "communicate_info": [
                 "Student20000011",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
+                "Smith",
+                "Student20000011@university.edu",
+                "Probation",
                 "Business Administration",
+                "3.0",
+                "121",
+                "Senior",
                 "120",
-                "2.0",
-                "major requirements",
-                "core courses",
-                "electives"
+                "2.0"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -5372,14 +5273,14 @@
             ],
             "communicate_info": [
                 "Student50000016",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Smith",
+                "Student50000016@university.edu",
+                "Good Standing",
+                "Business Administration",
+                "Business",
+                "2.3",
+                "126",
+                "Freshman"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -5499,15 +5400,14 @@
                 }
             ],
             "communicate_info": [
-                "student10000013",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student13",
+                "Doe",
+                "student10000013@university.edu",
+                "Good Standing",
+                "Psychology",
+                "3.2",
+                "42",
+                "Freshman"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -5629,17 +5529,14 @@
             ],
             "communicate_info": [
                 "Student10000012",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "advisor name",
-                "advisor email",
-                "office hours"
+                "Smith",
+                "Student10000012@university.edu",
+                "Probation",
+                "Psychology",
+                "2.1",
+                "82",
+                "Freshman",
+                "stephanie.white@university.edu"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -5760,17 +5657,15 @@
             ],
             "communicate_info": [
                 "Student50000010",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "graduation eligibility",
-                "credits remaining",
-                "requirements status"
+                "Smith",
+                "Student50000010@university.edu",
+                "Good Standing",
+                "Computer Science",
+                "Mathematics",
+                "3.8",
+                "120",
+                "Junior",
+                "2.0"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -5878,18 +5773,14 @@
                 }
             ],
             "communicate_info": [
-                "student10000019",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "academic standing",
-                "GPA",
-                "credits"
+                "Student19",
+                "Doe",
+                "student10000019@university.edu",
+                "Good Standing",
+                "Art",
+                "3.8",
+                "48",
+                "Junior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6014,23 +5905,17 @@
             ],
             "communicate_info": [
                 "Student40000016",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "CS courses",
-                "course codes",
-                "course titles",
-                "credits",
-                "prerequisites",
-                "availability",
-                "ART101",
-                "prerequisite courses",
-                "eligibility status"
+                "Smith",
+                "Student40000016@university.edu",
+                "Dean'S List",
+                "Business Administration",
+                "3.4",
+                "86",
+                "Freshman",
+                "CS101",
+                "CS102",
+                "CS201",
+                "ART101"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6138,15 +6023,15 @@
                 }
             ],
             "communicate_info": [
-                "student30000007",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student47",
+                "Doe",
+                "student30000007@university.edu",
+                "Probation",
+                "Mathematics",
+                "Statistics",
+                "2.4",
+                "76",
+                "Junior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6257,15 +6142,14 @@
                 }
             ],
             "communicate_info": [
-                "student50000018",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student98",
+                "Doe",
+                "student50000018@university.edu",
+                "Probation",
+                "History",
+                "3.3",
+                "127",
+                "Sophomore"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6375,18 +6259,16 @@
                 }
             ],
             "communicate_info": [
-                "student40000007",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "enrollment status",
-                "enrolled courses",
-                "total credits"
+                "Student67",
+                "Doe",
+                "student40000007@university.edu",
+                "Good Standing",
+                "Mathematics",
+                "Statistics",
+                "2.3",
+                "96",
+                "Junior",
+                "Active"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6510,17 +6392,13 @@
             ],
             "communicate_info": [
                 "Student10000018",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "course schedule",
-                "course times",
-                "locations"
+                "Smith",
+                "Student10000018@university.edu",
+                "Probation",
+                "Biology",
+                "2.7",
+                "88",
+                "Junior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6639,23 +6517,19 @@
                 }
             ],
             "communicate_info": [
-                "student40000006",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "available majors",
-                "requirements",
+                "Student66",
+                "Doe",
+                "student40000006@university.edu",
+                "Dean'S List",
                 "English Literature",
+                "Philosophy",
+                "2.2",
+                "95",
+                "Sophomore",
+                "Computer Science",
+                "Business Administration",
                 "120",
-                "2.0",
-                "major requirements",
-                "core courses",
-                "electives"
+                "2.0"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6765,18 +6639,13 @@
             ],
             "communicate_info": [
                 "Student50000007",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "total credits",
-                "cumulative GPA",
-                "courses completed",
-                "grades"
+                "Smith",
+                "Student50000007@university.edu",
+                "Good Standing",
+                "Psychology",
+                "3.5",
+                "117",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6884,15 +6753,14 @@
                 }
             ],
             "communicate_info": [
-                "student10000005",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student5",
+                "Doe",
+                "student10000005@university.edu",
+                "Probation",
+                "Music",
+                "2.4",
+                "34",
+                "Freshman"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7012,15 +6880,15 @@
                 }
             ],
             "communicate_info": [
-                "student10000017",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student17",
+                "Doe",
+                "student10000017@university.edu",
+                "Probation",
+                "Mathematics",
+                "Statistics",
+                "3.6",
+                "46",
+                "Freshman"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7129,14 +6997,14 @@
             ],
             "communicate_info": [
                 "Student30000018",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Smith",
+                "Student30000018@university.edu",
+                "Good Standing",
+                "Biology",
+                "Art",
+                "2.6",
+                "48",
+                "Junior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7259,16 +7127,14 @@
             ],
             "communicate_info": [
                 "Student40000004",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "hold types",
-                "hold details"
+                "Smith",
+                "Student40000004@university.edu",
+                "Dean'S List",
+                "Engineering",
+                "2.2",
+                "74",
+                "Freshman",
+                "hold_5"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7389,18 +7255,15 @@
                 }
             ],
             "communicate_info": [
-                "student50000010",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "advisor name",
-                "advisor email",
-                "office hours"
+                "Student90",
+                "Doe",
+                "student50000010@university.edu",
+                "Dean'S List",
+                "Chemistry",
+                "2.5",
+                "119",
+                "Sophomore",
+                "daniel.brown@university.edu"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7510,14 +7373,14 @@
             ],
             "communicate_info": [
                 "Student30000003",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Smith",
+                "Student30000003@university.edu",
+                "Good Standing",
+                "Biology",
+                "Art",
+                "3.2",
+                "33",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7628,17 +7491,16 @@
             ],
             "communicate_info": [
                 "Student50000004",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
+                "Smith",
+                "Student50000004@university.edu",
+                "Good Standing",
+                "Engineering",
+                "Music",
+                "3.2",
+                "114",
+                "Freshman",
                 "CS202",
-                "prerequisite courses",
-                "eligibility status"
+                "CS102"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7759,18 +7621,18 @@
                 }
             ],
             "communicate_info": [
-                "student30000015",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "graduation eligibility",
-                "credits remaining",
-                "requirements status"
+                "Student55",
+                "Doe",
+                "student30000015@university.edu",
+                "Good Standing",
+                "Engineering",
+                "Music",
+                "3.2",
+                "84",
+                "Junior",
+                "120",
+                "2.0",
+                "36"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7878,15 +7740,14 @@
                 }
             ],
             "communicate_info": [
-                "student50000009",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student89",
+                "Doe",
+                "student50000009@university.edu",
+                "Probation",
+                "Art",
+                "2.4",
+                "118",
+                "Freshman"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7996,17 +7857,13 @@
             ],
             "communicate_info": [
                 "Student20000011",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "academic standing",
-                "GPA",
-                "credits"
+                "Smith",
+                "Student20000011@university.edu",
+                "Probation",
+                "Business Administration",
+                "3.0",
+                "121",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -8128,20 +7985,15 @@
             ],
             "communicate_info": [
                 "Student10000015",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
+                "Smith",
+                "Student10000015@university.edu",
+                "Probation",
                 "Computer Science",
+                "2.4",
+                "85",
+                "Senior",
                 "120",
-                "2.0",
-                "major requirements",
-                "core courses",
-                "electives"
+                "2.0"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -8252,15 +8104,15 @@
                 }
             ],
             "communicate_info": [
-                "student20000011",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student31",
+                "Doe",
+                "student20000011@university.edu",
+                "Good Standing",
+                "Computer Science",
+                "Mathematics",
+                "2.9",
+                "60",
+                "Junior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -8381,18 +8233,14 @@
                 }
             ],
             "communicate_info": [
-                "student50000013",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "course schedule",
-                "course times",
-                "locations"
+                "Student93",
+                "Doe",
+                "student50000013@university.edu",
+                "Dean'S List",
+                "Psychology",
+                "2.8",
+                "122",
+                "Freshman"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -8504,17 +8352,15 @@
             ],
             "communicate_info": [
                 "Student20000013",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "enrollment status",
-                "enrolled courses",
-                "total credits"
+                "Smith",
+                "Student20000013@university.edu",
+                "Good Standing",
+                "Biology",
+                "Art",
+                "3.2",
+                "123",
+                "Sophomore",
+                "Active"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -8635,14 +8481,13 @@
             ],
             "communicate_info": [
                 "Student20000003",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Smith",
+                "Student20000003@university.edu",
+                "Dean'S List",
+                "Biology",
+                "2.2",
+                "113",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -8751,19 +8596,14 @@
                 }
             ],
             "communicate_info": [
-                "student30000010",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "total credits",
-                "cumulative GPA",
-                "courses completed",
-                "grades"
+                "Student50",
+                "Doe",
+                "student30000010@university.edu",
+                "Probation",
+                "Chemistry",
+                "2.7",
+                "79",
+                "Sophomore"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -8886,24 +8726,18 @@
                 }
             ],
             "communicate_info": [
-                "student40000003",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "CS courses",
-                "course codes",
-                "course titles",
-                "credits",
-                "prerequisites",
-                "availability",
-                "PSYC101",
-                "prerequisite courses",
-                "eligibility status"
+                "Student63",
+                "Doe",
+                "student40000003@university.edu",
+                "Dean'S List",
+                "Psychology",
+                "4.0",
+                "92",
+                "Junior",
+                "CS101",
+                "CS102",
+                "CS201",
+                "PSYC101"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9023,23 +8857,18 @@
                 }
             ],
             "communicate_info": [
-                "student30000019",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "available majors",
-                "requirements",
+                "Student59",
+                "Doe",
+                "student30000019@university.edu",
+                "Probation",
                 "Art",
+                "3.6",
+                "88",
+                "Junior",
+                "Computer Science",
+                "Business Administration",
                 "120",
-                "2.0",
-                "major requirements",
-                "core courses",
-                "electives"
+                "2.0"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9159,17 +8988,15 @@
             ],
             "communicate_info": [
                 "Student20000018",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "graduation eligibility",
-                "credits remaining",
-                "requirements status"
+                "Smith",
+                "Student20000018@university.edu",
+                "Dean'S List",
+                "Biology",
+                "3.7",
+                "128",
+                "Junior",
+                "120",
+                "2.0"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9279,14 +9106,14 @@
             ],
             "communicate_info": [
                 "Student50000010",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Smith",
+                "Student50000010@university.edu",
+                "Good Standing",
+                "Computer Science",
+                "Mathematics",
+                "3.8",
+                "120",
+                "Junior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9396,15 +9223,15 @@
                 }
             ],
             "communicate_info": [
-                "student20000001",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student21",
+                "Doe",
+                "student20000001@university.edu",
+                "Dean'S List",
+                "Computer Science",
+                "Mathematics",
+                "4.0",
+                "50",
+                "Freshman"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9514,17 +9341,13 @@
             ],
             "communicate_info": [
                 "Student10000015",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "academic standing",
-                "GPA",
-                "credits"
+                "Smith",
+                "Student10000015@university.edu",
+                "Probation",
+                "Computer Science",
+                "2.4",
+                "85",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9632,14 +9455,13 @@
             ],
             "communicate_info": [
                 "Student30000001",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Smith",
+                "Student30000001@university.edu",
+                "Probation",
+                "Business Administration",
+                "3.0",
+                "31",
+                "Sophomore"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9760,14 +9582,13 @@
             ],
             "communicate_info": [
                 "Student10000010",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Smith",
+                "Student10000010@university.edu",
+                "Dean'S List",
+                "Computer Science",
+                "4.0",
+                "80",
+                "Junior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9877,18 +9698,16 @@
                 }
             ],
             "communicate_info": [
-                "student40000011",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "enrollment status",
-                "enrolled courses",
-                "total credits"
+                "Student71",
+                "Doe",
+                "student40000011@university.edu",
+                "Probation",
+                "Computer Science",
+                "Mathematics",
+                "2.7",
+                "100",
+                "Junior",
+                "Active"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -10011,18 +9830,16 @@
                 }
             ],
             "communicate_info": [
-                "student50000006",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "advisor name",
-                "advisor email",
-                "office hours"
+                "Student86",
+                "Doe",
+                "student50000006@university.edu",
+                "Probation",
+                "English Literature",
+                "Philosophy",
+                "2.1",
+                "115",
+                "Sophomore",
+                "james.wilson@university.edu"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -10144,17 +9961,13 @@
             ],
             "communicate_info": [
                 "Student10000007",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "course schedule",
-                "course times",
-                "locations"
+                "Smith",
+                "Student10000007@university.edu",
+                "Dean'S List",
+                "Psychology",
+                "3.7",
+                "77",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -10275,17 +10088,17 @@
             ],
             "communicate_info": [
                 "Student40000008",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "graduation eligibility",
-                "credits remaining",
-                "requirements status"
+                "Smith",
+                "Student40000008@university.edu",
+                "Good Standing",
+                "Biology",
+                "Art",
+                "2.6",
+                "78",
+                "Freshman",
+                "120",
+                "2.0",
+                "42"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -10407,20 +10220,15 @@
             ],
             "communicate_info": [
                 "Student20000012",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
+                "Smith",
+                "Student20000012@university.edu",
+                "Dean'S List",
                 "Psychology",
+                "3.1",
+                "122",
+                "Freshman",
                 "120",
-                "2.0",
-                "major requirements",
-                "core courses",
-                "electives"
+                "2.0"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -10531,15 +10339,14 @@
                 }
             ],
             "communicate_info": [
-                "student20000018",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student38",
+                "Doe",
+                "student20000018@university.edu",
+                "Probation",
+                "History",
+                "3.6",
+                "67",
+                "Sophomore"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -10648,14 +10455,13 @@
             ],
             "communicate_info": [
                 "Student30000020",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Smith",
+                "Student30000020@university.edu",
+                "Dean'S List",
+                "Computer Science",
+                "2.8",
+                "50",
+                "Freshman"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -10766,18 +10572,15 @@
                 }
             ],
             "communicate_info": [
-                "student20000003",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "PHYS101",
-                "prerequisite courses",
-                "eligibility status"
+                "Student23",
+                "Doe",
+                "student20000003@university.edu",
+                "Probation",
+                "Psychology",
+                "2.1",
+                "52",
+                "Junior",
+                "PHYS101"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -10887,17 +10690,14 @@
             ],
             "communicate_info": [
                 "Student50000016",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "academic standing",
-                "GPA",
-                "credits"
+                "Smith",
+                "Student50000016@university.edu",
+                "Good Standing",
+                "Business Administration",
+                "Business",
+                "2.3",
+                "126",
+                "Freshman"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -11007,14 +10807,13 @@
             ],
             "communicate_info": [
                 "Student40000017",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Smith",
+                "Student40000017@university.edu",
+                "Good Standing",
+                "Psychology",
+                "3.5",
+                "87",
+                "Sophomore"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -11123,18 +10922,13 @@
             ],
             "communicate_info": [
                 "Student30000001",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "total credits",
-                "cumulative GPA",
-                "courses completed",
-                "grades"
+                "Smith",
+                "Student30000001@university.edu",
+                "Probation",
+                "Business Administration",
+                "3.0",
+                "31",
+                "Sophomore"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -11257,16 +11051,13 @@
             ],
             "communicate_info": [
                 "Student20000019",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "hold types",
-                "hold details"
+                "Smith",
+                "Student20000019@university.edu",
+                "Good Standing",
+                "Music",
+                "3.8",
+                "129",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -11376,18 +11167,15 @@
                 }
             ],
             "communicate_info": [
-                "student40000013",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "enrollment status",
-                "enrolled courses",
-                "total credits"
+                "Student73",
+                "Doe",
+                "student40000013@university.edu",
+                "Good Standing",
+                "Psychology",
+                "2.9",
+                "102",
+                "Freshman",
+                "Active"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -11497,14 +11285,13 @@
             ],
             "communicate_info": [
                 "Student10000019",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Smith",
+                "Student10000019@university.edu",
+                "Dean'S List",
+                "Engineering",
+                "2.8",
+                "89",
+                "Senior"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -11623,15 +11410,15 @@
                 }
             ],
             "communicate_info": [
-                "student50000005",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student85",
+                "Doe",
+                "student50000005@university.edu",
+                "Good Standing",
+                "Engineering",
+                "Music",
+                "2.0",
+                "114",
+                "Freshman"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -11754,17 +11541,15 @@
             ],
             "communicate_info": [
                 "Student10000005",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "advisor name",
-                "advisor email",
-                "office hours"
+                "Smith",
+                "Student10000005@university.edu",
+                "Good Standing",
+                "Computer Science",
+                "Mathematics",
+                "3.5",
+                "75",
+                "Sophomore",
+                "james.wilson@university.edu"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -11872,15 +11657,15 @@
                 }
             ],
             "communicate_info": [
-                "student20000006",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Student26",
+                "Doe",
+                "student20000006@university.edu",
+                "Probation",
+                "English Literature",
+                "Philosophy",
+                "2.4",
+                "55",
+                "Sophomore"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -12000,23 +11785,19 @@
                 }
             ],
             "communicate_info": [
-                "student30000016",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "available majors",
-                "requirements",
+                "Student56",
+                "Doe",
+                "student30000016@university.edu",
+                "Probation",
                 "English Literature",
+                "Philosophy",
+                "3.3",
+                "85",
+                "Senior",
+                "Computer Science",
+                "Business Administration",
                 "120",
-                "2.0",
-                "major requirements",
-                "core courses",
-                "electives"
+                "2.0"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -12136,17 +11917,16 @@
             ],
             "communicate_info": [
                 "Student20000007",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "graduation eligibility",
-                "credits remaining",
-                "requirements status"
+                "Smith",
+                "Student20000007@university.edu",
+                "Good Standing",
+                "Psychology",
+                "2.6",
+                "117",
+                "Senior",
+                "120",
+                "2.0",
+                "3"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -12256,17 +12036,14 @@
             ],
             "communicate_info": [
                 "Student50000016",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "academic standing",
-                "GPA",
-                "credits"
+                "Smith",
+                "Student50000016@university.edu",
+                "Good Standing",
+                "Business Administration",
+                "Business",
+                "2.3",
+                "126",
+                "Freshman"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -12377,14 +12154,13 @@
             ],
             "communicate_info": [
                 "Student30000012",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year"
+                "Smith",
+                "Student30000012@university.edu",
+                "Good Standing",
+                "Psychology",
+                "2.0",
+                "42",
+                "Freshman"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -12508,24 +12284,18 @@
                 }
             ],
             "communicate_info": [
-                "student50000005",
-                "first_name",
-                "last_name",
-                "email",
-                "academic_standing",
-                "major",
-                "gpa",
-                "total_credits",
-                "year",
-                "CS courses",
-                "course codes",
-                "course titles",
-                "credits",
-                "prerequisites",
-                "availability",
-                "ART101",
-                "prerequisite courses",
-                "eligibility status"
+                "Student85",
+                "Doe",
+                "student50000005@university.edu",
+                "Good Standing",
+                "Music",
+                "2.0",
+                "114",
+                "Freshman",
+                "CS101",
+                "CS102",
+                "CS201",
+                "ART101"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
