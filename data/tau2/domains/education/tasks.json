@@ -92,11 +92,27 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Degree requirements explanation",
-                "Course recommendations",
-                "Prerequisites information"
+                "student40000006",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "English Literature",
+                "120",
+                "2.0",
+                "major requirements",
+                "core courses",
+                "electives",
+                "CS courses",
+                "course codes",
+                "course titles",
+                "credits",
+                "prerequisites",
+                "availability"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -216,11 +232,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Financial aid status",
-                "Available aid options",
-                "Application deadlines"
+                "Student20000006",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -339,11 +359,21 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Academic standing",
-                "Advisor contact information",
-                "Academic recommendations"
+                "Student10000013",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "academic standing",
+                "GPA",
+                "credits",
+                "advisor name",
+                "advisor email",
+                "office hours"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -452,11 +482,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Career resources",
-                "Job market information",
-                "Skill development recommendations"
+                "Student40000019",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -564,11 +598,19 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Transcript availability",
-                "Processing time",
-                "Delivery options"
+                "Student10000006",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "total credits",
+                "cumulative GPA",
+                "courses completed",
+                "grades"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -676,11 +718,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Course search results",
-                "Course details and availability",
-                "Registration instructions"
+                "student20000002",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -788,11 +834,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Technical issue resolution",
-                "Support contact information",
-                "Prevention tips"
+                "student50000018",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -914,11 +964,21 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Major requirements",
-                "Impact on graduation timeline",
-                "Required approvals"
+                "student50000008",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "History",
+                "120",
+                "2.0",
+                "major requirements",
+                "core courses",
+                "electives"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1039,11 +1099,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Current schedule",
-                "Optimization suggestions",
-                "Conflict resolution"
+                "Student40000015",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "course schedule",
+                "course times",
+                "locations"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1165,11 +1232,17 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Academic hold details",
-                "Resolution steps",
-                "Required documentation"
+                "student20000004",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "hold types",
+                "hold details"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1279,11 +1352,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Prerequisites status",
-                "Missing prerequisites",
-                "Alternative options"
+                "student20000014",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "CHEM101",
+                "prerequisite courses",
+                "eligibility status"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1395,11 +1475,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Waitlist status",
-                "Position on waitlist",
-                "Next steps"
+                "Student20000010",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "enrollment status",
+                "enrolled courses",
+                "total credits"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1519,11 +1606,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Graduation requirements",
-                "Timeline to graduation",
-                "Remaining requirements"
+                "student10000017",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "graduation eligibility",
+                "credits remaining",
+                "requirements status"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1643,11 +1737,23 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available majors",
-                "Major requirements",
-                "Career prospects"
+                "student20000019",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "available majors",
+                "requirements",
+                "Art",
+                "120",
+                "2.0",
+                "major requirements",
+                "core courses",
+                "electives"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1755,11 +1861,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Academic standing status",
-                "GPA information",
-                "Academic recommendations"
+                "student50000012",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "academic standing",
+                "GPA",
+                "credits"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1868,11 +1981,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available campus resources",
-                "Resource locations and hours",
-                "Contact information"
+                "student20000008",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -1991,11 +2108,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Financial aid status",
-                "Available aid options",
-                "Application deadlines"
+                "student50000018",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -2104,11 +2225,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Career resources",
-                "Job market information",
-                "Skill development recommendations"
+                "Student10000011",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -2229,11 +2354,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Advisor availability",
-                "Meeting scheduling options",
-                "Meeting preparation requirements"
+                "student20000012",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "advisor name",
+                "advisor email",
+                "office hours"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -2344,11 +2476,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Study abroad programs",
-                "Application requirements",
-                "Academic credit information"
+                "student30000005",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -2471,11 +2607,24 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available courses",
-                "Registration instructions",
-                "Prerequisites status"
+                "Student40000014",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "CS courses",
+                "course codes",
+                "course titles",
+                "credits",
+                "prerequisites",
+                "availability",
+                "ART101",
+                "prerequisite courses",
+                "eligibility status"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -2597,11 +2746,21 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Major requirements",
-                "Impact on graduation timeline",
-                "Required approvals"
+                "Student20000008",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "Biology",
+                "120",
+                "2.0",
+                "major requirements",
+                "core courses",
+                "electives"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -2709,11 +2868,19 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Transcript availability",
-                "Processing time",
-                "Delivery options"
+                "student30000013",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "total credits",
+                "cumulative GPA",
+                "courses completed",
+                "grades"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -2822,11 +2989,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Technical issue resolution",
-                "Support contact information",
-                "Prevention tips"
+                "student40000004",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -2934,11 +3105,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Career resources",
-                "Job market information",
-                "Skill development recommendations"
+                "Student50000003",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -3058,11 +3233,21 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Academic standing",
-                "Advisor contact information",
-                "Academic recommendations"
+                "student50000004",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "academic standing",
+                "GPA",
+                "credits",
+                "advisor name",
+                "advisor email",
+                "office hours"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -3181,11 +3366,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Graduation requirements",
-                "Timeline to graduation",
-                "Remaining requirements"
+                "student40000012",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "graduation eligibility",
+                "credits remaining",
+                "requirements status"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -3293,11 +3485,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Course search results",
-                "Course details and availability",
-                "Registration instructions"
+                "student30000014",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -3416,11 +3612,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Financial aid status",
-                "Available aid options",
-                "Application deadlines"
+                "student10000007",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -3542,11 +3742,17 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Academic hold details",
-                "Resolution steps",
-                "Required documentation"
+                "student20000015",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "hold types",
+                "hold details"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -3667,11 +3873,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Current schedule",
-                "Optimization suggestions",
-                "Conflict resolution"
+                "Student30000009",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "course schedule",
+                "course times",
+                "locations"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -3782,11 +3995,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available internships",
-                "Application requirements",
-                "Deadlines and contact information"
+                "Student20000018",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -3894,11 +4111,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Academic standing status",
-                "GPA information",
-                "Academic recommendations"
+                "student30000016",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "academic standing",
+                "GPA",
+                "credits"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -4020,11 +4244,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Advisor availability",
-                "Meeting scheduling options",
-                "Meeting preparation requirements"
+                "student50000003",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "advisor name",
+                "advisor email",
+                "office hours"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -4132,11 +4363,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available campus resources",
-                "Resource locations and hours",
-                "Contact information"
+                "student20000002",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -4247,11 +4482,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Prerequisites status",
-                "Missing prerequisites",
-                "Alternative options"
+                "student40000006",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "CS202",
+                "prerequisite courses",
+                "eligibility status"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -4371,11 +4613,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Graduation requirements",
-                "Timeline to graduation",
-                "Remaining requirements"
+                "Student40000003",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "graduation eligibility",
+                "credits remaining",
+                "requirements status"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -4484,11 +4733,19 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Transcript availability",
-                "Processing time",
-                "Delivery options"
+                "student50000016",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "total credits",
+                "cumulative GPA",
+                "courses completed",
+                "grades"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -4607,11 +4864,23 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available majors",
-                "Major requirements",
-                "Career prospects"
+                "Student50000009",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "available majors",
+                "requirements",
+                "Engineering",
+                "120",
+                "2.0",
+                "major requirements",
+                "core courses",
+                "electives"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -4733,11 +5002,17 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Academic hold details",
-                "Resolution steps",
-                "Required documentation"
+                "student50000016",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "hold types",
+                "hold details"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -4844,11 +5119,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Course search results",
-                "Course details and availability",
-                "Registration instructions"
+                "student40000009",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -4970,11 +5249,21 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Major requirements",
-                "Impact on graduation timeline",
-                "Required approvals"
+                "Student20000011",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "Business Administration",
+                "120",
+                "2.0",
+                "major requirements",
+                "core courses",
+                "electives"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -5082,11 +5371,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Technical issue resolution",
-                "Support contact information",
-                "Prevention tips"
+                "Student50000016",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -5206,11 +5499,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Financial aid status",
-                "Available aid options",
-                "Application deadlines"
+                "student10000013",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -5331,11 +5628,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Advisor availability",
-                "Meeting scheduling options",
-                "Meeting preparation requirements"
+                "Student10000012",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "advisor name",
+                "advisor email",
+                "office hours"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -5455,11 +5759,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Graduation requirements",
-                "Timeline to graduation",
-                "Remaining requirements"
+                "Student50000010",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "graduation eligibility",
+                "credits remaining",
+                "requirements status"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -5567,11 +5878,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Academic standing status",
-                "GPA information",
-                "Academic recommendations"
+                "student10000019",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "academic standing",
+                "GPA",
+                "credits"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -5695,11 +6013,24 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available courses",
-                "Registration instructions",
-                "Prerequisites status"
+                "Student40000016",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "CS courses",
+                "course codes",
+                "course titles",
+                "credits",
+                "prerequisites",
+                "availability",
+                "ART101",
+                "prerequisite courses",
+                "eligibility status"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -5807,11 +6138,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Career resources",
-                "Job market information",
-                "Skill development recommendations"
+                "student30000007",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -5922,11 +6257,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Study abroad programs",
-                "Application requirements",
-                "Academic credit information"
+                "student50000018",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6036,11 +6375,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Waitlist status",
-                "Position on waitlist",
-                "Next steps"
+                "student40000007",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "enrollment status",
+                "enrolled courses",
+                "total credits"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6163,11 +6509,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Current schedule",
-                "Optimization suggestions",
-                "Conflict resolution"
+                "Student10000018",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "course schedule",
+                "course times",
+                "locations"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6286,11 +6639,23 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available majors",
-                "Major requirements",
-                "Career prospects"
+                "student40000006",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "available majors",
+                "requirements",
+                "English Literature",
+                "120",
+                "2.0",
+                "major requirements",
+                "core courses",
+                "electives"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6399,11 +6764,19 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Transcript availability",
-                "Processing time",
-                "Delivery options"
+                "Student50000007",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "total credits",
+                "cumulative GPA",
+                "courses completed",
+                "grades"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6511,11 +6884,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available campus resources",
-                "Resource locations and hours",
-                "Contact information"
+                "student10000005",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6635,11 +7012,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Financial aid status",
-                "Available aid options",
-                "Application deadlines"
+                "student10000017",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6747,11 +7128,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Career resources",
-                "Job market information",
-                "Skill development recommendations"
+                "Student30000018",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6873,11 +7258,17 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Academic hold details",
-                "Resolution steps",
-                "Required documentation"
+                "Student40000004",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "hold types",
+                "hold details"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -6998,11 +7389,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Advisor availability",
-                "Meeting scheduling options",
-                "Meeting preparation requirements"
+                "student50000010",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "advisor name",
+                "advisor email",
+                "office hours"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7111,11 +7509,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Technical issue resolution",
-                "Support contact information",
-                "Prevention tips"
+                "Student30000003",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7225,11 +7627,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Prerequisites status",
-                "Missing prerequisites",
-                "Alternative options"
+                "Student50000004",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "CS202",
+                "prerequisite courses",
+                "eligibility status"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7350,11 +7759,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Graduation requirements",
-                "Timeline to graduation",
-                "Remaining requirements"
+                "student30000015",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "graduation eligibility",
+                "credits remaining",
+                "requirements status"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7462,11 +7878,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Career resources",
-                "Job market information",
-                "Skill development recommendations"
+                "student50000009",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7575,11 +7995,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Academic standing status",
-                "GPA information",
-                "Academic recommendations"
+                "Student20000011",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "academic standing",
+                "GPA",
+                "credits"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7700,11 +8127,21 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Major requirements",
-                "Impact on graduation timeline",
-                "Required approvals"
+                "Student10000015",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "Computer Science",
+                "120",
+                "2.0",
+                "major requirements",
+                "core courses",
+                "electives"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7815,11 +8252,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Study abroad programs",
-                "Application requirements",
-                "Academic credit information"
+                "student20000011",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -7940,11 +8381,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Current schedule",
-                "Optimization suggestions",
-                "Conflict resolution"
+                "student50000013",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "course schedule",
+                "course times",
+                "locations"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -8055,11 +8503,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Waitlist status",
-                "Position on waitlist",
-                "Next steps"
+                "Student20000013",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "enrollment status",
+                "enrolled courses",
+                "total credits"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -8179,11 +8634,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Financial aid status",
-                "Available aid options",
-                "Application deadlines"
+                "Student20000003",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -8292,11 +8751,19 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Transcript availability",
-                "Processing time",
-                "Delivery options"
+                "student30000010",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "total credits",
+                "cumulative GPA",
+                "courses completed",
+                "grades"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -8419,11 +8886,24 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available courses",
-                "Registration instructions",
-                "Prerequisites status"
+                "student40000003",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "CS courses",
+                "course codes",
+                "course titles",
+                "credits",
+                "prerequisites",
+                "availability",
+                "PSYC101",
+                "prerequisite courses",
+                "eligibility status"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -8543,11 +9023,23 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available majors",
-                "Major requirements",
-                "Career prospects"
+                "student30000019",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "available majors",
+                "requirements",
+                "Art",
+                "120",
+                "2.0",
+                "major requirements",
+                "core courses",
+                "electives"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -8666,11 +9158,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Graduation requirements",
-                "Timeline to graduation",
-                "Remaining requirements"
+                "Student20000018",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "graduation eligibility",
+                "credits remaining",
+                "requirements status"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -8779,11 +9278,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available campus resources",
-                "Resource locations and hours",
-                "Contact information"
+                "Student50000010",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -8893,11 +9396,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available internships",
-                "Application requirements",
-                "Deadlines and contact information"
+                "student20000001",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9006,11 +9513,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Academic standing status",
-                "GPA information",
-                "Academic recommendations"
+                "Student10000015",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "academic standing",
+                "GPA",
+                "credits"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9117,11 +9631,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Course search results",
-                "Course details and availability",
-                "Registration instructions"
+                "Student30000001",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9241,11 +9759,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Financial aid status",
-                "Available aid options",
-                "Application deadlines"
+                "Student10000010",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9355,11 +9877,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Waitlist status",
-                "Position on waitlist",
-                "Next steps"
+                "student40000011",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "enrollment status",
+                "enrolled courses",
+                "total credits"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9482,11 +10011,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Advisor availability",
-                "Meeting scheduling options",
-                "Meeting preparation requirements"
+                "student50000006",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "advisor name",
+                "advisor email",
+                "office hours"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9607,11 +10143,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Current schedule",
-                "Optimization suggestions",
-                "Conflict resolution"
+                "Student10000007",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "course schedule",
+                "course times",
+                "locations"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9731,11 +10274,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Graduation requirements",
-                "Timeline to graduation",
-                "Remaining requirements"
+                "Student40000008",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "graduation eligibility",
+                "credits remaining",
+                "requirements status"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9856,11 +10406,21 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Major requirements",
-                "Impact on graduation timeline",
-                "Required approvals"
+                "Student20000012",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "Psychology",
+                "120",
+                "2.0",
+                "major requirements",
+                "core courses",
+                "electives"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -9971,11 +10531,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Study abroad programs",
-                "Application requirements",
-                "Academic credit information"
+                "student20000018",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -10083,11 +10647,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available campus resources",
-                "Resource locations and hours",
-                "Contact information"
+                "Student30000020",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -10198,11 +10766,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Prerequisites status",
-                "Missing prerequisites",
-                "Alternative options"
+                "student20000003",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "PHYS101",
+                "prerequisite courses",
+                "eligibility status"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -10311,11 +10886,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Academic standing status",
-                "GPA information",
-                "Academic recommendations"
+                "Student50000016",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "academic standing",
+                "GPA",
+                "credits"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -10424,11 +11006,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Career resources",
-                "Job market information",
-                "Skill development recommendations"
+                "Student40000017",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -10536,11 +11122,19 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Transcript availability",
-                "Processing time",
-                "Delivery options"
+                "Student30000001",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "total credits",
+                "cumulative GPA",
+                "courses completed",
+                "grades"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -10662,11 +11256,17 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Academic hold details",
-                "Resolution steps",
-                "Required documentation"
+                "Student20000019",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "hold types",
+                "hold details"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -10776,11 +11376,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Waitlist status",
-                "Position on waitlist",
-                "Next steps"
+                "student40000013",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "enrollment status",
+                "enrolled courses",
+                "total credits"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -10889,11 +11496,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Course search results",
-                "Course details and availability",
-                "Registration instructions"
+                "Student10000019",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -11012,11 +11623,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Financial aid status",
-                "Available aid options",
-                "Application deadlines"
+                "student50000005",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -11138,11 +11753,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Advisor availability",
-                "Meeting scheduling options",
-                "Meeting preparation requirements"
+                "Student10000005",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "advisor name",
+                "advisor email",
+                "office hours"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -11250,11 +11872,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Technical issue resolution",
-                "Support contact information",
-                "Prevention tips"
+                "student20000006",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -11374,11 +12000,23 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available majors",
-                "Major requirements",
-                "Career prospects"
+                "student30000016",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "available majors",
+                "requirements",
+                "English Literature",
+                "120",
+                "2.0",
+                "major requirements",
+                "core courses",
+                "electives"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -11497,11 +12135,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Graduation requirements",
-                "Timeline to graduation",
-                "Remaining requirements"
+                "Student20000007",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "graduation eligibility",
+                "credits remaining",
+                "requirements status"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -11610,11 +12255,18 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Academic standing status",
-                "GPA information",
-                "Academic recommendations"
+                "Student50000016",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "academic standing",
+                "GPA",
+                "credits"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -11724,11 +12376,15 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available internships",
-                "Application requirements",
-                "Deadlines and contact information"
+                "Student30000012",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
@@ -11852,11 +12508,24 @@
                 }
             ],
             "communicate_info": [
-                "Student ID verification",
-                "Clear explanation of next steps",
-                "Available courses",
-                "Registration instructions",
-                "Prerequisites status"
+                "student50000005",
+                "first_name",
+                "last_name",
+                "email",
+                "academic_standing",
+                "major",
+                "gpa",
+                "total_credits",
+                "year",
+                "CS courses",
+                "course codes",
+                "course titles",
+                "credits",
+                "prerequisites",
+                "availability",
+                "ART101",
+                "prerequisite courses",
+                "eligibility status"
             ],
             "nl_assertions": [
                 "Agent maintains professional and helpful tone",
